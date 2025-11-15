@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ - EXAMES</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #C7D2FE;
+            --secondary: #10B981;
+            --accent: #F59E0B;
+            --danger: #EF4444;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Improved responsive background */
+        @media (max-width: 768px) {
+            body {
+                background: linear-gradient(135deg, #6B73FF 0%, #8B5CF6 100%);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+            }
+        }
+        
+        .quiz-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .quiz-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+        
+        .option-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+        
+        .option-button:focus:not(.selected):not(.correct):not(.incorrect)::after {
+            animation: ripple 1s ease-out;
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(20, 20);
+                opacity: 0;
+            }
+        }
+        
+        .option-button:hover:not(.selected):not(.correct):not(.incorrect) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .option-button.selected {
+            border-color: var(--primary);
+            background-color: var(--primary-light);
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+        }
+        
+        .option-button.correct {
+            background-color: #D1FAE5;
+            border-color: var(--secondary);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.2);
+            animation: pulse-green 1s;
+        }
+        
+        .option-button.incorrect {
+            background-color: #FEE2E2;
+            border-color: var(--danger);
+            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.2);
+            animation: shake 0.5s;
+        }
+        
+        @keyframes pulse-green {
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+        
+        @keyframes shake {
+            0%, 100% {transform: translateX(0);}
+            10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
+            20%, 40%, 60%, 80% {transform: translateX(5px);}
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: #E5E7EB;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary);
+            opacity: 0;
+            z-index: 1000;
+        }
+        
+        .bounce-in {
+            animation: bounceIn 0.6s;
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.5s forwards;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.5s forwards;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+            }
+        }
+        
+        /* Custom scrollbar for results */
+        #results-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        #results-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        #results-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        #results-container::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        
+        #results-container::-webkit-scrollbar-thumb:hover {
+            background: #4338CA;
+        }
+        
+        .score-display {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            top: -150px;
+            right: -150px;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: var(--secondary);
+            bottom: -100px;
+            left: -100px;
+        }
+        
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            background: var(--accent);
+            top: 50%;
+            left: 10%;
+        }
+        
+        /* Improved responsive styles */
+        @media (max-width: 768px) {
+            .shape-1, .shape-2, .shape-3 {
+                display: none;
+            }
+            
+            .quiz-card {
+                margin: 0 10px;
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2rem !important;
+                padding: 0 10px;
+            }
+            
+            .option-button {
+                padding: 15px 12px !important;
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px 5px !important;
+            }
+            
+            .quiz-card {
+                border-radius: 15px;
+                padding: 15px 10px !important;
+            }
+            
+            h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            .option-button {
+                padding: 12px 10px !important;
+                margin: 8px 0 !important;
+            }
+            
+            #progress-text {
+                font-size: 1rem !important;
+                padding: 8px 16px !important;
+            }
+            
+            .progress-bar {
+                margin: 15px 0;
+            }
+        }
+        
+        /* Enhanced mobile animations */
+        @media (max-width: 768px) {
+            .slide-in-left, .slide-in-right {
+                animation: fadeIn 0.5s forwards;
+            }
+        }
+        
+        /* Improved button sizing for mobile */
+        @media (max-width: 480px) {
+            button {
+                padding: 14px 12px !important;
+                font-size: 1rem !important;
+            }
+            
+            #next-button, .retake-button {
+                font-size: 1.1rem !important;
+            }
+        }
+        
+        /* Enhanced background with animated gradient */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #6B46C1, #5A67D8);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        /* Mobile-first responsive grid */
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .responsive-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Improved text readability on mobile */
+        .mobile-optimized-text {
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 480px) {
+            .mobile-optimized-text {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+        
+        /* Navigation Buttons Styling */
+        #navigation-area {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 7px;
+        }
+        
+        #navigation-area::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        #navigation-area::-webkit-scrollbar-thumb {
+            background: rgba(34, 34, 34, 0.4);
+            border-radius: 10px;
+        }
+        
+        .nav-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            margin: 0 4px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #1F2937;
+            transition: all 0.3s;
+            flex-shrink: 0;
+            border: 2px solid #D1D5DB;
+            background-color: #F3F4F6; /* Default: White/Light Gray */
+        }
+        
+        .nav-button.current {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-light);
+            transform: scale(1.1);
+        }
+
+        /* Colors based on userAnswers status */
+        .nav-button[data-status="correct"] {
+            background-color: #34D399; /* Green - Correct */
+            color: white;
+            border-color: #059669;
+        }
+        
+        .nav-button[data-status="incorrect"] {
+            background-color: #F87171; /* Red - Incorrect */
+            color: white;
+            border-color: #DC2626;
+        }
+        
+        .nav-button[data-status="unanswered"] {
+            background-color: #FFFFFF; /* White - Unanswered */
+            color: #1F2937;
+            border-color: #D1D5DB;
+        }
+
+        /* Ensure current question gets selected style even if answered */
+        .nav-button.current[data-status="correct"] {
+            box-shadow: 0 0 0 3px #10B981;
+        }
+
+        .nav-button.current[data-status="incorrect"] {
+            box-shadow: 0 0 0 3px #EF4444;
+        }
+    </style>
+</head>
+<body class="p-4 ">
+    <div class="animated-bg"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-4 sm:mb-8">
+            <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-1 sm:py-2 mb-4">
+                <p id="progress-text" class="text-lg sm:text-xl font-medium text-white">Let's get started</p>
+            </div>
+            <div class="progress-bar mt-2 sm:mt-4">
+                <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+            </div>
+        </header>
+
+        <main id="quiz-area" class="quiz-card p-4 sm:p-6 md:p-8 mt-4 sm:mt-8 bounce-in">
+            </main>
+
+        <div id="navigation-area" class="mt-4 bg-white/70 backdrop-blur-sm rounded-xl shadow-lg p-2 flex justify-start items-center">
+            </div>
+        <div id="results-area" class="quiz-card p-4 sm:p-6 md:p-8 mt-4 sm:mt-8 hidden">
+            </div>
+    </div>
+
+    <script>
+        // --- Quiz Data Initialization ---
+        
+            const questionsData = [
+    // I. Foundational Concepts & CIA Triad (Q1-Q30)
+    {
+        "text": "Computer Security is the protection afforded to an automated information system to attain the objectives of preserving integrity, availability, and:",
+        "options": ["Authorization", "Auditing", "Confidentiality", "Cryptography"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Information system resources that Computer Security aims to protect include hardware, software, firmware, information/data, and:",
+        "options": ["Human resources", "Physical buildings", "Telecommunications", "Financial assets"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which of the following is NOT one of the three core objectives of Computer Security, often referred to as the CIA Triad?",
+        "options": ["Confidentiality", "Integrity", "Authentication", "Availability"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "What is the primary focus of Confidentiality in the CIA Triad?",
+        "options": ["Guarding against improper information modification", "Ensuring timely and reliable access", "Preserving authorized restrictions on information access and disclosure", "Assuring that a system performs its intended function"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The objective of \"Data confidentiality\" is to assure that private or confidential information is not made available or disclosed to:",
+        "options": ["The public", "System administrators", "Unauthorized individuals", "Network engineers"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "What assures that individuals control or influence what information related to them may be collected, stored, and disclosed?",
+        "options": ["Data confidentiality", "Non-repudiation", "Privacy", "Authenticity"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which term covers both Data confidentiality and Privacy?",
+        "options": ["Integrity", "Availability", "Confidentiality", "Non-repudiation"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "What is the primary purpose of Integrity in the CIA Triad?",
+        "options": ["Protecting personal privacy", "Guarding against improper information modification or destruction", "Ensuring systems work promptly", "Preserving authorized access restrictions"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "\"Data integrity\" assures that information is changed only in a:",
+        "options": ["Timely and efficient manner", "Specified and authorized manner", "Encrypted format", "Publicly visible process"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "What assures that a system performs its intended function in an unimpaired manner, free from deliberate or inadvertent unauthorized manipulation?",
+        "options": ["Data integrity", "System integrity", "Availability", "Confidentiality"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Besides guarding against improper modification or destruction, Integrity also includes ensuring information authenticity and:",
+        "options": ["Privacy", "Nonrepudiation", "Availability", "Access control"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "The objective of Availability is to assure that systems work promptly and service is not denied to:",
+        "options": ["Outsiders", "Attackers", "Authorized users", "Unregistered users"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Availability is defined as ensuring timely and reliable access to and use of:",
+        "options": ["Hardware", "Software", "Information", "Telecommunications"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The statement, \"No one can change my information unless authorized,\" is an example of which security principle?",
+        "options": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "The statement, \"My bank account’s information must be confidential,\" is an example of which security principle?",
+        "options": ["Integrity", "Availability", "Confidentiality", "System integrity"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The statement, \"The banking system/online website and app are always available,\" is an example of which security principle?",
+        "options": ["Confidentiality", "Integrity", "Availability", "Data integrity"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "A flaw or weakness in a system’s design, implementation, or operation that could be exploited to violate the security policy is defined as a:",
+        "options": ["Threat", "Attack", "Vulnerability", "Risk"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "A potential danger that may exploit a vulnerability to breach security and cause harm is defined as a:",
+        "options": ["Vulnerability", "Attack", "Threat", "Risk"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "A deliberate act by an intelligent threat to evade security services and violate system policy is defined as an:",
+        "options": ["Vulnerability", "Attack", "Threat", "Risk"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Something that has value and is in need of protection, such as data or a service provided by a system, is defined as an:",
+        "options": ["Risk", "Vulnerability", "Threat", "Asset"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which of the following is NOT an example of an Asset that Computer Security protects?",
+        "options": ["Data contained in an information system", "A service provided by a system", "System equipment (hardware, software)", "A security policy"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "An expectation of loss expressed as the probability that a particular threat will exploit a particular vulnerability with a particular harmful result is defined as:",
+        "options": ["Attack", "Threat consequence", "Risk", "Usurpation"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The formula for calculating Risk is:",
+        "options": ["Risk = Impact + Vulnerability", "Risk = Threat × Impact", "Risk = P(T → V) × Impact", "Risk = P(V → T) / Impact"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Non-repudiation is the protection against an individual falsely denying having performed a particular action, such as having created, altered, observed, or:",
+        "options": ["Disclosed data", "Encrypted data", "Transmitted data", "Deleted data"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which CIA goal includes preserving authorized restrictions and protecting personal privacy and proprietary information?",
+        "options": ["Availability", "Integrity", "Confidentiality", "Non-repudiation"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which assurance is part of System Integrity?",
+        "options": ["Ensuring timely and reliable access", "Guarding against improper destruction", "Assuring a system performs its intended function in an unimpaired manner", "Protecting personal privacy"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The principle of preserving authorized restrictions on information access and disclosure relates to which security objective?",
+        "options": ["Integrity", "Availability", "Confidentiality", "Authorization"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The principle of guarding against improper information modification or destruction relates to which security objective?",
+        "options": ["Confidentiality", "Integrity", "Availability", "Access Control"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "The principle of ensuring timely and reliable access to and use of information relates to which security objective?",
+        "options": ["Confidentiality", "Integrity", "Availability", "Authorization"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The resources of an automated information system that computer security protects include hardware, software, firmware, information/data, and telecommunications. This means the resources include:",
+        "options": ["Hardware only", "Software and firmware only", "Information/data only", "All of the above"],
+        "correctAnswer": "d"
+    },
+    // II. Access Control & Authentication (Q31-Q40)
+    {
+        "text": "The process to prove the identity of the requestor is known as:",
+        "options": ["Authorization", "Non-repudiation", "Authentication", "Confidentiality"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which of the following is categorized as a \"Something you know\" method of Authentication?",
+        "options": ["Tokens", "Biometrics", "Passwords", "Smart Cards"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Tokens and Smart Cards are examples of which method of Authentication?",
+        "options": ["Something you are", "Something you know", "Something you have", "Something you see"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Biometrics and measurable characteristics are examples of which method of Authentication?",
+        "options": ["Something you know", "Something you have", "Something you are", "Something you do"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The function of specifying access rights/privileges to resources is known as:",
+        "options": ["Authentication", "Authorization", "Non-repudiation", "Integrity"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Once a subject has been authenticated, when does the system check its Authorization?",
+        "options": ["Before the subject attempts any action.", "To see if it is allowed to complete the action it is attempting.", "The system checks only during the authentication process.", "Authorization is checked only once per session."],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "An authentication method that relies on only one type of factor (e.g., only a password) is called:",
+        "options": ["Multi-factor authentication (MFA)", "Biometric authentication", "Single-factor authentication (SFA)", "Token-based authentication"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "What type of authentication uses two or more distinct factors (e.g., password + token)?",
+        "options": ["Single-factor authentication (SFA)", "Biometric authentication", "Password-based authentication", "Multi-factor authentication (MFA)"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which authentication method utilizes measurable characteristics like fingerprints or retinal scans?",
+        "options": ["Passwords", "Tokens", "Smart Cards", "Biometrics"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "What is the process that confirms the identity of the subject?",
+        "options": ["Authorization", "Authentication", "Non-repudiation", "Encryption"],
+        "correctAnswer": "b"
+    },
+    // III. Security Challenges (Q41-Q50)
+    {
+        "text": "Computer security often appears simple, but it requires subtle reasoning and _____ mechanisms to achieve its goals.",
+        "options": ["Cheap", "Simple", "Complex", "Obvious"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Security mechanisms must be designed with potential _____ in mind, as many succeed by exploiting unexpected weaknesses.",
+        "options": ["Budget cuts", "System updates", "Attacks", "User errors"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The value of security mechanisms often becomes clear when considering the full range of:",
+        "options": ["Features", "User demands", "Threats", "Operating systems"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "After designing security mechanisms, one must decide their proper physical and logical _____ within the system or network.",
+        "options": ["Budget", "Placement", "Documentation", "Cost"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Security mechanisms require secret information and depend on communication protocols, but their effectiveness can be complicated by key management and:",
+        "options": ["Hardware failures", "Unpredictable delays", "Software bugs", "User training"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Computer security is described as a battle where the attacker needs only one weakness, but the defenders must eliminate _____ to ensure security.",
+        "options": ["The most critical ones", "Only external threats", "All weaknesses", "The known vulnerabilities"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "According to the challenges listed, who often undervalues security investments until a failure happens?",
+        "options": ["Attackers and criminals", "Users and managers", "Security experts", "Hardware manufacturers"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Security demands continuous monitoring, which is challenging in today’s fast-paced, overloaded environment, leading to:",
+        "options": ["Decreased costs", "Increased difficulty in maintaining security", "Easier system management", "Higher user satisfaction"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Security is often treated as a(n) _____ instead of being built into the system design from the start.",
+        "options": ["Core requirement", "Feature", "Afterthought", "High priority"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Strong security is often seen by users and administrators as a barrier to ease of use and:",
+        "options": ["Budget constraints", "System updates", "Efficiency", "Compatibility"],
+        "correctAnswer": "c"
+    },
+    // IV. Vulnerabilities & Attack Types (Q51-Q55)
+    {
+        "text": "Which category of vulnerability means stored data values may differ from what they should be because they have been improperly modified?",
+        "options": ["Leaky", "Unavailable", "Corrupted", "Obstructed"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which category of vulnerability means someone who should not have access to some or all of the information obtains such access?",
+        "options": ["Corrupted", "Leaky", "Unavailable", "Disrupted"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which category of vulnerability means using the system or network becomes impossible or impractical?",
+        "options": ["Corrupted", "Leaky", "Unavailable", "Disrupted"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "An attempt to alter system resources or affect their operation is defined as a(n):",
+        "options": ["Passive attack", "Active attack", "Inside attack", "Outside attack"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "An attempt to learn or make use of information from the system that does not affect system resources is defined as a(n):",
+        "options": ["Active attack", "Passive attack", "Inside attack", "Outside attack"],
+        "correctAnswer": "b"
+    },
+    // V. Threat Consequences and Actions - Unauthorized Disclosure (Q56-Q65)
+    {
+        "text": "A circumstance or event whereby an entity gains access to data for which the entity is not authorized is known as:",
+        "options": ["Deception", "Disruption", "Usurpation", "Unauthorized Disclosure"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which type of threat action involves sensitive data being directly released to an unauthorized entity (e.g., accidentally sending a file to the wrong email)?",
+        "options": ["Interception", "Inference", "Intrusion", "Exposure"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which type of threat action involves unauthorized access to sensitive data in transit between legitimate parties (e.g., using a packet sniffer)?",
+        "options": ["Exposure", "Interception", "Inference", "Intrusion"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "The threat action of indirectly obtaining sensitive data by analyzing characteristics or by-products of communications (e.g., analyzing spikes in encrypted traffic) is called:",
+        "options": ["Exposure", "Interception", "Inference", "Intrusion"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which type of threat action involves an unauthorized entity gaining access to sensitive data by circumventing a system’s security protections (e.g., exploiting a vulnerability in a web server)?",
+        "options": ["Exposure", "Interception", "Inference", "Intrusion"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which threat action is described by: \"A hospital staff member accidentally sends a file containing patients' medical records to the wrong email address without encryption.\"",
+        "options": ["Interception", "Intrusion", "Exposure", "Misuse"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "A hacker exploiting a vulnerability in a company’s web server to gain unauthorized access to an internal database is an example of:",
+        "options": ["Interception", "Exposure", "Intrusion", "Misuse"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The threat action of capturing usernames and passwords on a public Wi-Fi network using a packet sniffer is an example of:",
+        "options": ["Exposure", "Interception", "Inference", "Falsification"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Analyzing spikes in encrypted traffic to infer sensitive military activities without reading the messages is an example of:",
+        "options": ["Intrusion", "Inference", "Exposure", "Corruption"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Exposure, Interception, Inference, and Intrusion are all threat actions that fall under the consequence category of:",
+        "options": ["Deception", "Disruption", "Usurpation", "Unauthorized Disclosure"],
+        "correctAnswer": "d"
+    },
+    // V. Threat Consequences and Actions - Deception (Q66-Q75)
+    {
+        "text": "A circumstance or event that may result in an authorized entity receiving false data and believing it to be true is known as:",
+        "options": ["Disruption", "Unauthorized Disclosure", "Usurpation", "Deception"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which threat action involves an unauthorized entity gaining access or performing a malicious act by posing as an authorized entity (e.g., using stolen credentials)?",
+        "options": ["Falsification", "Repudiation", "Masquerade", "Misuse"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action occurs when false data deceive an authorized entity (e.g., attacker changes or forges data)?",
+        "options": ["Masquerade", "Repudiation", "Falsification", "Misappropriation"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action involves an entity deceiving another by falsely denying responsibility for an act (e.g., denying an online purchase)?",
+        "options": ["Masquerade", "Falsification", "Repudiation", "Misuse"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "An attacker stealing a user’s login credentials through phishing and then logging into the system as that legitimate user is an example of:",
+        "options": ["Falsification", "Masquerade", "Repudiation", "Misuse"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "The threat action where an attacker changes or forges data to mislead or gain advantage is:",
+        "options": ["Misappropriation", "Masquerade", "Falsification", "Obstruction"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Masquerade, Falsification, and Repudiation are all threat actions that fall under the consequence category of:",
+        "options": ["Unauthorized Disclosure", "Disruption", "Usurpation", "Deception"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "A user making an online purchase and later denying having placed the order because the system lacks proper logging or digital signatures is an example of:",
+        "options": ["Masquerade", "Falsification", "Repudiation", "Misuse"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "If an attacker logs into a system pretending to be a legitimate user after stealing their credentials, this is a form of:",
+        "options": ["Interference", "Corruption", "Masquerade", "Obstruction"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which of the following threat actions is aimed at causing an authorized entity to receive and believe false data?",
+        "options": ["Repudiation", "Masquerade", "Falsification", "All of the above"],
+        "correctAnswer": "d"
+    },
+    // V. Threat Consequences and Actions - Disruption (Q76-Q85)
+    {
+        "text": "A circumstance or event that interrupts or prevents the correct operation of system services and functions is known as:",
+        "options": ["Deception", "Unauthorized Disclosure", "Usurpation", "Disruption"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which threat action prevents or interrupts system operation by disabling a system component (e.g., a DDoS attack)?",
+        "options": ["Corruption", "Obstruction", "Incapacitation", "Misuse"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action undesirably alters system operation by adversely modifying system functions or data (e.g., a ransomware attack encrypting files)?",
+        "options": ["Incapacitation", "Obstruction", "Corruption", "Misappropriation"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action interrupts delivery of system services by hindering system operation (e.g., an insider changing network firewall rules)?",
+        "options": ["Incapacitation", "Corruption", "Obstruction", "Misuse"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action is described by: \"A Distributed Denial-of-Service (DDoS) attack floods a company's web server, overwhelming its resources and making it unavailable\"?",
+        "options": ["Corruption", "Obstruction", "Incapacitation", "Misappropriation"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action is described by: \"A ransomware attack encrypts the files on a hospital’s database, rendering the data unusable until a ransom is paid\"?",
+        "options": ["Incapacitation", "Obstruction", "Corruption", "Exposure"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Incapacitation, Corruption, and Obstruction are all threat actions that fall under the consequence category of:",
+        "options": ["Deception", "Unauthorized Disclosure", "Usurpation", "Disruption"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "The action of an insider deliberately changing the network firewall rules to block access to critical services is an example of:",
+        "options": ["Corruption", "Incapacitation", "Obstruction", "Misappropriation"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Disabling a system component to prevent or interrupt system operation is the primary characteristic of which threat action?",
+        "options": ["Corruption", "Obstruction", "Incapacitation", "Misuse"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Undesirably altering system operation by adversely modifying system functions or data is the primary characteristic of which threat action?",
+        "options": ["Incapacitation", "Obstruction", "Corruption", "Misuse"],
+        "correctAnswer": "c"
+    },
+    // V. Threat Consequences and Actions - Usurpation (Q86-Q93)
+    {
+        "text": "A circumstance or event that results in control of system services or functions by an unauthorized entity is known as:",
+        "options": ["Deception", "Disruption", "Unauthorized Disclosure", "Usurpation"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which threat action involves an entity assuming unauthorized logical or physical control of a system resource (e.g., copying proprietary source code)?",
+        "options": ["Misuse", "Obstruction", "Misappropriation", "Falsification"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action causes a system component to perform a function or service that is detrimental to system security (e.g., a system administrator reading private emails)?",
+        "options": ["Misappropriation", "Incapacitation", "Misuse", "Corruption"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action is described by: \"An employee copies proprietary source code from their company’s software and uses it to start their own competing business.\"",
+        "options": ["Misuse", "Intrusion", "Misappropriation", "Exposure"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which threat action is described by: \"A system administrator, who has legitimate access to user accounts, uses those privileges to read private emails out of curiosity.\"",
+        "options": ["Misappropriation", "Masquerade", "Misuse", "Inference"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Misappropriation and Misuse are both threat actions that fall under the consequence category of:",
+        "options": ["Deception", "Disruption", "Unauthorized Disclosure", "Usurpation"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Assuming unauthorized logical control of a system resource falls under which threat action?",
+        "options": ["Misuse", "Corruption", "Misappropriation", "Incapacitation"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Causing a system component to perform a function or service that is detrimental to system security is an example of:",
+        "options": ["Misappropriation", "Misuse", "Obstruction", "Exposure"],
+        "correctAnswer": "b"
+    },
+    // V. Attack Types and VI. General Review (Q94-Q100)
+    {
+        "text": "An attack initiated when an authorized insider misuses their access beyond approved purposes is called a(n):",
+        "options": ["Passive attack", "Active attack", "Inside attack", "Outside attack"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "An attack launched by unauthorized outsiders, ranging from pranksters to criminals or hostile governments, is called a(n):",
+        "options": ["Passive attack", "Active attack", "Inside attack", "Outside attack"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "The course reference textbook, *Computer Security: Principles and Practice*, was authored by William Stallings and:",
+        "options": ["Dr. Hadeer Mostafa", "Eng. Ahmed Gomaa", "Lawrie Brown", "Ahmed Ibrahim"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "According to the \"General Program\" course grades, the Final Exam is worth:",
+        "options": ["20", "10", "60", "50"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The lecture \"Intro to Computer Security [Lecture 1]\" was presented by:",
+        "options": ["William Stallings", "Lawrie Brown", "Eng. Ahmed Gomaa", "Dr. Hadeer Mostafa"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "Which threat consequence category includes the threat action of **Corruption**?",
+        "options": ["Deception", "Usurpation", "Unauthorized Disclosure", "Disruption"],
+        "correctAnswer": "d"
+    },
+    {
+        "text": "The threat action **Intrusion** falls under which threat consequence category?",
+        "options": ["Deception", "Usurpation", "Unauthorized Disclosure", "Disruption"],
+        "correctAnswer": "c"
+    }
+]        
+
+        // --- Global State ---
+        let currentQuestionIndex = 0;
+        let score = 0;
+        const incorrectAnswers = [];
+        let isAnswered = false; // Flag to prevent multiple clicks
+        
+        // New: Array to store the status of each question: 'correct', 'incorrect', or 'unanswered'
+        const userAnswers = Array(questionsData.length).fill('unanswered'); 
+
+        // --- DOM Elements ---
+        const quizArea = document.getElementById('quiz-area');
+        const resultsArea = document.getElementById('results-area');
+        const progressText = document.getElementById('progress-text');
+        const progressFill = document.getElementById('progress-fill');
+        const navigationArea = document.getElementById('navigation-area'); // New DOM element
+
+        // --- Helper Functions ---
+        /**
+         * Converts index (0, 1, 2, 3) to its letter label ('a', 'b', 'c', 'd').
+         * @param {number} index
+         * @returns {string}
+         */
+        function indexToLabel(index) {
+            return String.fromCharCode('a'.charCodeAt(0) + index);
+        }
+
+        /**
+         * Updates the progress bar
+         */
+        function updateProgressBar() {
+            // Use number of answered questions for progress
+            const answeredCount = userAnswers.filter(status => status !== 'unanswered').length;
+            const progress = (answeredCount / questionsData.length) * 100;
+            progressFill.style.width = `${progress}%`;
+        }
+
+        /**
+         * Creates floating particles effect
+         */
+        function createParticles(x, y, color) {
+            for (let i = 0; i < 10; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = `${x}px`;
+                particle.style.top = `${y}px`;
+                particle.style.width = `${Math.random() * 10 + 5}px`;
+                particle.style.height = particle.style.width;
+                particle.style.backgroundColor = color;
+                
+                document.body.appendChild(particle);
+                
+                const angle = Math.random() * Math.PI * 2;
+                const velocity = 2 + Math.random() * 2;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                let opacity = 1;
+                const animate = () => {
+                    x += vx;
+                    y += vy;
+                    opacity -= 0.02;
+                    
+                    particle.style.left = `${x}px`;
+                    particle.style.top = `${y}px`;
+                    particle.style.opacity = opacity;
+                    
+                    if (opacity > 0) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        document.body.removeChild(particle);
+                    }
+                };
+                
+                animate();
+            }
+        }
+
+        /**
+         * Creates confetti effect
+         */
+        function createConfetti() {
+            const colors = ['#4F46E5', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.top = '-10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                
+                document.body.appendChild(confetti);
+                
+                const animation = confetti.animate([
+                    { transform: `translateY(0) rotate(0deg)`, opacity: 1 },
+                    { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: 1000 + Math.random() * 2000,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
+                });
+                
+                animation.onfinish = () => {
+                    document.body.removeChild(confetti);
+                };
+            }
+        }
+
+        /**
+         * Renders the navigation buttons at the bottom.
+         */
+        function renderNavigationButtons() {
+            navigationArea.innerHTML = ''; // Clear previous buttons
+            
+            questionsData.forEach((_, index) => {
+                const button = document.createElement('button');
+                button.textContent = index + 1;
+                button.classList.add('nav-button');
+                button.setAttribute('data-status', userAnswers[index]);
+                button.setAttribute('onclick', `goToQuestion(${index})`);
+
+                if (index === currentQuestionIndex) {
+                    button.classList.add('current');
+                }
+
+                // Apply colors based on status
+                if (userAnswers[index] === 'correct') {
+                    button.classList.add('bg-green-400', 'hover:bg-green-500'); // Green
+                } else if (userAnswers[index] === 'incorrect') {
+                    button.classList.add('bg-red-400', 'hover:bg-red-500'); // Red
+                } else {
+                    button.classList.add('bg-white', 'hover:bg-gray-200'); // White/Default
+                }
+
+                navigationArea.appendChild(button);
+            });
+
+            // Scroll to center the current button
+            const currentButton = navigationArea.querySelector('.nav-button.current');
+            if (currentButton) {
+                const navScroll = navigationArea.scrollLeft;
+                const navWidth = navigationArea.offsetWidth;
+                const btnCenter = currentButton.offsetLeft + currentButton.offsetWidth / 2;
+                navigationArea.scrollLeft = btnCenter - navWidth / 2;
+            }
+        }
+        
+        /**
+         * Navigates to a specific question index.
+         * @param {number} index - The index of the question to go to.
+         */
+        function goToQuestion(index) {
+            if (index >= 0 && index < questionsData.length) {
+                currentQuestionIndex = index;
+                quizArea.classList.remove('bounce-in');
+                void quizArea.offsetWidth; // Trigger reflow
+                quizArea.classList.add('bounce-in');
+                renderQuestion();
+            }
+        }
+
+        /**
+         * Renders the current question and options to the screen.
+         */
+        function renderQuestion() {
+            if (currentQuestionIndex >= questionsData.length) {
+                showResults();
+                return;
+            }
+
+            const currentQ = questionsData[currentQuestionIndex];
+            
+            // Check if the current question has already been answered
+            const isQAnswered = userAnswers[currentQuestionIndex] !== 'unanswered';
+            isAnswered = isQAnswered; // Set flag based on stored status
+            
+            // Update progress text and bar
+            progressText.textContent = `Question ${currentQuestionIndex + 1} of ${questionsData.length}`;
+            updateProgressBar();
+            
+            // Generate HTML for the question
+            let optionsHtml = '';
+            currentQ.options.forEach((optionText, index) => {
+                const label = indexToLabel(index);
+                const animationDelay = index * 0.1;
+                
+                // Determine initial class for options (important when navigating back)
+                let initialClass = 'border-gray-300';
+                let isDisabled = '';
+                
+                if (isQAnswered) {
+                    isDisabled = 'disabled';
+                    const answerWas = questionsData[currentQuestionIndex].userSelection; // Assuming we store user selection
+                    if (label === currentQ.correctAnswer) {
+                        initialClass = 'correct';
+                    } else if (label === answerWas) {
+                        initialClass = 'incorrect';
+                    } else {
+                        initialClass = 'opacity-50 border-gray-300'; // Dim unselected wrong options
+                    }
+                }
+
+                optionsHtml += `
+                    <button id="option-${label}" data-answer="${label}" ${isDisabled}
+                        class="option-button w-full text-left p-3 sm:p-4 my-2 sm:my-3 border-2 rounded-lg sm:rounded-xl text-base sm:text-lg text-gray-700 transition-all duration-300 mobile-optimized-text ${initialClass}"
+                        onclick="handleAnswer('${label}', this)"
+                        style="animation-delay: ${animationDelay}s">
+                        <span class="font-bold text-indigo-600 mr-2 sm:mr-3">${label.toUpperCase()}.</span> ${optionText}
+                    </button>
+                `;
+            });
+
+            // Determine feedback message and next button state
+            let feedbackContent = '';
+            let nextButtonClass = 'bg-gray-400 cursor-not-allowed';
+            let nextButtonDisabled = 'disabled';
+            
+            if (isQAnswered) {
+                nextButtonDisabled = '';
+                nextButtonClass = 'bg-indigo-600 hover:bg-indigo-700 cursor-pointer pulse-button';
+                
+                if (userAnswers[currentQuestionIndex] === 'correct') {
+                    feedbackContent = `<span class="text-green-600">✓ Correct! Well done!</span>`;
+                } else {
+                    const correctLabel = currentQ.correctAnswer;
+                    feedbackContent = `<span class="text-red-600">✗ Incorrect. The right answer is ${correctLabel.toUpperCase()}.</span>`;
+                }
+            }
+
+
+            // Set the quiz area content with animation
+            quizArea.innerHTML = `
+                <div class="mb-4 sm:mb-6 slide-in-left">
+                    <p class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 mobile-optimized-text">${currentQuestionIndex + 1}. ${currentQ.text}</p>
+                </div>
+                <div id="options-container" class="space-y-2 sm:space-y-3">
+                    ${optionsHtml}
+                </div>
+                <div id="feedback-message" class="mt-4 sm:mt-6 text-lg sm:text-xl font-bold text-center h-8 fade-in">${feedbackContent}</div>
+
+                <button id="next-button"
+                    class="mt-4 sm:mt-6 w-full text-white font-bold py-3 px-4 rounded-lg sm:rounded-xl shadow-md transition duration-300 transform hover:scale-105 mobile-optimized-text ${nextButtonClass}"
+                    ${nextButtonDisabled}
+                    onclick="nextQuestion()">
+                    Next Question <span class="ml-2">→</span>
+                </button>
+            `;
+
+            // Add animation to options on initial render (not on navigation back)
+            if (!isQAnswered) {
+                 setTimeout(() => {
+                    const options = document.querySelectorAll('.option-button');
+                    options.forEach((option, index) => {
+                        option.classList.add('slide-in-right');
+                    });
+                }, 100);
+            }
+            
+            renderNavigationButtons(); // Render navigation buttons after question is rendered
+        }
+
+        /**
+         * Handles user selection of an answer option.
+         * @param {string} selectedAnswerLabel - The letter ('a', 'b', 'c', 'd') chosen by the user.
+         * @param {HTMLElement} selectedButton - The button element clicked.
+         */
+        function handleAnswer(selectedAnswerLabel, selectedButton) {
+            if (isAnswered) return;
+
+            isAnswered = true;
+            const currentQ = questionsData[currentQuestionIndex];
+            const correctLabel = currentQ.correctAnswer;
+            const isCorrect = selectedAnswerLabel === correctLabel;
+            const feedbackDiv = document.getElementById('feedback-message');
+            const nextButton = document.getElementById('next-button');
+            const optionsContainer = document.getElementById('options-container');
+
+            // Store user selection and update status
+            questionsData[currentQuestionIndex].userSelection = selectedAnswerLabel;
+            userAnswers[currentQuestionIndex] = isCorrect ? 'correct' : 'incorrect';
+
+            // Create particles effect
+            const rect = selectedButton.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            createParticles(x, y, isCorrect ? '#10B981' : '#EF4444');
+
+            // Disable all buttons and show colors
+            Array.from(optionsContainer.children).forEach(btn => {
+                const label = btn.getAttribute('data-answer');
+                btn.disabled = true;
+                btn.classList.remove('hover:bg-gray-100');
+
+                if (label === correctLabel) {
+                    // Highlight correct answer in green
+                    btn.classList.add('correct');
+                } else if (label === selectedAnswerLabel) {
+                    // Highlight incorrect selection in red
+                    btn.classList.add('incorrect');
+                } else {
+                    // Dim unselected options
+                    btn.classList.add('opacity-50');
+                }
+            });
+
+            // Update score and feedback list only if it was unanswered before (handled by isAnswered check, but safe to re-check logic)
+            if (isCorrect) {
+                score++;
+                feedbackDiv.innerHTML = `<span class="text-green-600">✓ Correct! Well done!</span>`;
+                feedbackDiv.classList.add('animate__animated', 'animate__tada');
+            } else {
+                // Store incorrect answer if it's a new incorrect answer
+                const existingIncorrectIndex = incorrectAnswers.findIndex(item => item.question === currentQ.text);
+                if (existingIncorrectIndex === -1) {
+                    incorrectAnswers.push({
+                        question: currentQ.text,
+                        userAnswer: currentQ.options[selectedAnswerLabel.charCodeAt(0) - 'a'.charCodeAt(0)],
+                        correctAnswer: currentQ.options[correctLabel.charCodeAt(0) - 'a'.charCodeAt(0)]
+                    });
+                }
+                feedbackDiv.innerHTML = `<span class="text-red-600">✗ Incorrect. The right answer is ${correctLabel.toUpperCase()}.</span>`;
+                feedbackDiv.classList.add('animate__animated', 'animate__shakeX');
+            }
+
+            // Enable next button and update progress/navigation
+            nextButton.disabled = false;
+            nextButton.classList.remove('bg-gray-400', 'cursor-not-allowed');
+            nextButton.classList.add('bg-indigo-600', 'hover:bg-indigo-700', 'cursor-pointer', 'pulse-button');
+            
+            updateProgressBar();
+            renderNavigationButtons();
+        }
+
+        /**
+         * Moves to the next question.
+         */
+        function nextQuestion() {
+            currentQuestionIndex++;
+            quizArea.classList.remove('bounce-in');
+            void quizArea.offsetWidth; // Trigger reflow
+            quizArea.classList.add('bounce-in');
+            renderQuestion();
+        }
+
+        /**
+         * Displays the final results screen.
+         */
+        function showResults() {
+            quizArea.classList.add('hidden');
+            navigationArea.classList.add('hidden'); // Hide navigation buttons on results screen
+            resultsArea.classList.remove('hidden');
+            progressText.textContent = 'Test completed!';
+            progressFill.style.width = '100%';
+
+            const percentage = (score / questionsData.length * 100).toFixed(2);
+            let feedback = '';
+            let feedbackColor = '';
+            if (percentage >= 90) {
+                feedback = 'Excellent performance! You are a true DBA expert. 🏆';
+                feedbackColor = 'text-green-600';
+                createConfetti();
+            } else if (percentage >= 70) {
+                feedback = 'Very good performance! You need to review some points.';
+                feedbackColor = 'text-blue-600';
+            } else {
+                feedback = 'You need some review. Don\'t give up and try again! 💪';
+                feedbackColor = 'text-orange-600';
+            }
+            
+            // Generate HTML for incorrect answers
+            let incorrectHtml = '';
+            if (incorrectAnswers.length > 0) {
+                incorrectHtml = `
+                    <h3 class="text-lg sm:text-xl font-bold text-red-600 mt-6 sm:mt-8 mb-3 sm:mb-4 border-b pb-2">Incorrect Answers (${incorrectAnswers.length}):</h3>
+                    <div id="results-container" class="space-y-3 sm:space-y-4">
+                        ${incorrectAnswers.map((item, index) => `
+                            <div class="bg-red-50 p-3 sm:p-4 rounded-lg border border-red-200 slide-in-left" style="animation-delay: ${index * 0.1}s">
+                                <p class="font-semibold text-gray-800 mobile-optimized-text">Question ${index + 1}: <span class="text-gray-600">${item.question}</span></p>
+                                <p class="text-red-700 mt-1 mobile-optimized-text">Your answer: <span class="font-bold">${item.userAnswer}</span></p>
+                                <p class="text-green-700 mobile-optimized-text">Correct answer: <span class="font-bold">${item.correctAnswer}</span></p>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            } else {
+                incorrectHtml = `<p class="text-green-600 text-base sm:text-lg font-semibold mt-4 animate__animated animate__bounceIn">Congratulations! You didn't make any mistakes. 🎉</p>`;
+            }
+
+            resultsArea.innerHTML = `
+                <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-3 sm:mb-4 animate__animated animate__bounceIn">Test Results</h2>
+                <div class="text-center mb-4 sm:mb-6 animate__animated animate__fadeIn">
+                    <p class="text-4xl sm:text-6xl md:text-7xl font-extrabold score-display mb-2">${percentage}%</p>
+                    <p class="text-xl sm:text-2xl mt-2 text-gray-700 mobile-optimized-text">Score: ${score} out of ${questionsData.length}</p>
+                    <p class="text-lg sm:text-xl mt-2 sm:mt-3 font-semibold ${feedbackColor} mobile-optimized-text">${feedback}</p>
+                </div>
+                ${incorrectHtml}
+                <button 
+                    class="mt-6 sm:mt-8 w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-3 px-4 rounded-lg sm:rounded-xl shadow-md hover:from-indigo-700 hover:to-purple-700 transition duration-300 transform hover:scale-105 pulse-button mobile-optimized-text retake-button"
+                    onclick="window.location.reload()">
+                    Retake Test
+                </button>
+            `;
+            
+            resultsArea.classList.add('animate__animated', 'animate__zoomIn');
+        }
+
+        // --- Start Quiz on Load ---
+        window.onload = renderQuestion;
+    </script>
+</body>
+</html>
+
+
+
+
+
+

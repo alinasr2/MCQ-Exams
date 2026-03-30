@@ -555,1257 +555,160 @@
 
 
 const questionsData = [
+    // Parallel Computing Intro Lecture MCQs (Continued)
     {
-        "text": "Cloud computing is also known as:",
-        "options": ["Utility computing", "Local computing", "Desktop computing", "Physical computing"],
+        "text": "The simultaneous use of multiple compute resources to solve a single problem is known as ----------.",
+        "options": ["Serial Computing", "Parallel Computing", "Cloud Storage", "Sequential Processing"],
+        "correctAnswer": "b"
+    }, // [cite: 34]
+    {
+        "text": "The three pillars of the parallel computing process are Decompose, Distribute, and ----------.",
+        "options": ["Delete", "Design", "Coordinate", "Debug"],
+        "correctAnswer": "c"
+    }, // [cite: 189]
+    {
+        "text": "A ---------- is a physical processing unit on a CPU chip that executes instructions independently.",
+        "options": ["Node", "Thread", "Core", "Process"],
+        "correctAnswer": "c"
+    }, // [cite: 27, 28]
+    {
+        "text": "The ratio of serial execution time to parallel execution time ($S = T_{serial} / T_{parallel}$) is called ----------.",
+        "options": ["Latency", "Overhead", "Bandwidth", "Speedup"],
+        "correctAnswer": "d"
+    }, // [cite: 24]
+    {
+        "text": "Which concept refers to the task size relative to the cost of communication?",
+        "options": ["Granularity", "Latency", "Coherence", "Pipelining"],
         "correctAnswer": "a"
-    },
+    }, // [cite: 32]
     {
-        "text": "The name \"cloud computing\" was inspired by the symbol often used to represent the:",
-        "options": ["Network", "Servers", "Internet", "Database"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "In cloud computing, resources available in the cloud are known as:",
-        "options": ["Products", "Services", "Goods", "Software"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The resources available on-demand, without direct active management by the user, especially data storage and computing power, define:",
-        "options": ["Distributed systems", "Mainframe computing", "Grid computing", "Cloud computing"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "What is the core idea behind the payment model in cloud computing?",
-        "options": ["Monthly fixed fee", "Annual subscription", "Pay-as-you-go model", "One-time payment"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Cloud computing refers to the use of hosted services over the:",
-        "options": ["Local Area Network (LAN)", "Internet", "Intranet", "Storage Area Network (SAN)"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The user's local computer, when using cloud computing, requires only what to run the system?",
-        "options": ["A high-end server", "A cloud computing interface software, like a Web browser", "Dedicated Application Servers", "A Control Node"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud computing relies on the sharing of resources to achieve:",
-        "options": ["High complexity", "Redundancy", "Coherence", "Geographical proximity"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What stores the data on physical servers maintained by a cloud service provider?",
-        "options": ["The client computer", "The client's hard drive", "Cloud computing", "A local switch"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which technology acts as the interface through which cloud computing services interact with clients?",
-        "options": ["Virtualization", "Grid Computing", "Web 2.0", "Utility Computing"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which term describes concepts and objects related to software computation, referencing processing power, memory, networking, and storage?",
-        "options": ["Data center", "Application", "Compute", "Database"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The idea of renting computing services first came about in the:",
-        "options": ["1980s", "2000s", "1950s", "1990s"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which type of computing system first came into existence in 1951?",
-        "options": ["Distributed Computing", "Cluster Computing", "Mainframe Computing", "Utility Computing"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which computing model came as an alternative to mainframe computing to reduce cost?",
-        "options": ["Grid computing", "Distributed computing", "Cluster computing", "Utility computing"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Grid computing was introduced in the:",
-        "options": ["1950s", "1980s", "1990s", "2007"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Cloud computing is often referred to as the \"Successor\" of which technology?",
-        "options": ["Mainframe computing", "Distributed computing", "Grid computing", "Virtualization"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What is the process of creating a virtual layer over the hardware which allows running multiple instances simultaneously?",
-        "options": ["Grid computing", "Web 2.0", "Virtualization", "Service Orientation"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Web 2.0 gained major popularity in:",
-        "options": ["1990s", "2004", "2007", "1950s"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which characteristic means the cloud provider uses a multi-leaner model to deliver computing resources to various customers?",
-        "options": ["On-Demand Self-Service", "Easy Maintenance", "Resources Pooling", "Large Network Access"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The ability for a user to monitor computing functionalities, server uptimes, and network storage is part of which characteristic?",
-        "options": ["Availability", "Easy Maintenance", "Automatic System", "On-Demand Self-Service"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "Which characteristic is about the ability to access cloud data using a device and an Internet connection from anywhere?",
-        "options": ["Easy Maintenance", "Large Network Access", "Resources Pooling", "Availability"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The characteristic where the system analyzes the data required automatically and supports a service level of measuring capabilities is:",
-        "options": ["Easy Maintenance", "Economical", "Availability", "Automatic System"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "In cloud computing, users only pay for the service or space they use, which is known as:",
-        "options": ["Economical", "Easy Maintenance", "Pay as you go", "Resources Pooling"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which characteristic is crucial for disaster recovery as it provides a snapshot of the data stored?",
-        "options": ["Availability", "Measured Service", "Security", "Economical"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Cloud computing can help reduce:",
-        "options": ["Unexpected operating expenses", "Capital expenses", "Maintenance costs on the provider side", "Network bandwidth"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which advantage of cloud computing relates to the fast deployment of services with fewer clicks?",
-        "options": ["Cost efficiency", "High speed", "Unlimited storage capacity", "Mobility"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The ability to access stored information in the cloud anywhere and anytime, regardless of the machine, is referred to as:",
-        "options": ["Manageability", "Excellent accessibility", "Strategic Edge", "Reliability"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which advantage is about the service provider ensuring timely, guaranteed, and seamless delivery of services and managing IT services?",
-        "options": ["Back-up and restore data", "Manageability", "Sporadic batch processing", "Mobility"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud computing eliminates the need for a physical storage center because the cloud hosts everything, which relates to:",
-        "options": ["No hardware required", "Automatic Software Integration", "Collaboration", "High speed"],
-        "correctAnswer": "a"
-    },
-    {
-        "text": "The feature where software integration occurs automatically without additional efforts for customization is:",
-        "options": ["Reliability", "Unlimited storage capacity", "Automatic Software Integration", "Cost efficiency"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The cloud provides an almost limitless storage capacity that can be expanded for a nominal fee, which is:",
-        "options": ["Cost efficiency", "Unlimited storage capacity", "High speed", "Easy implementation"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is the biggest reason companies shift to cloud computing?",
-        "options": ["Excellent accessibility", "High speed", "Cost efficiency", "Collaboration"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which security risk involves confidential data being viewed, accessed, or stolen by a third party without authorization?",
-        "options": ["Data Loss", "Data Breach", "Account hijacking", "Vendor lock-in"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The security risk where transferring services from one vendor to another becomes problematic due to platform differences is:",
-        "options": ["Data Loss", "Data Breach", "Denial of Service (DoS) attacks", "Vendor lock-in"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "Which challenge arises when a server cannot efficiently split the incoming traffic, leading to latency?",
-        "options": ["Cost Management", "Lack of Knowledge and Expertise", "Interoperability and Flexibility", "Performance Challenges (due to inefficient load balancing)"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "Which issue can result in a potential business loss for smaller enterprises due to the high cost of maintaining it?",
-        "options": ["Data Security and Privacy", "Lack of Knowledge and Expertise", "High Dependence on Network (bandwidth/outages)", "Multi-Cloud Environments"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What is a major concern when switching to cloud computing, involving user authentication, identity management, and data encryption?",
-        "options": ["Cost Management", "Data Security and Privacy", "Interoperability and Flexibility", "Performance Challenges"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which challenge involves the process becoming highly complex for IT teams due to the differences between multiple cloud providers?",
-        "options": ["Cost Management", "Multi-Cloud Environments", "Performance Challenges", "High Dependence on Network"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What allows programs to view and steal data currently processed on the computer, including passwords and personal information?",
-        "options": ["Data Breach", "Account hijacking", "Spectre & Meltdown", "Data Loss"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The disadvantage of cloud computing that is often due to loss of power or low Internet connectivity is:",
-        "options": ["Vulnerability to attacks", "Network connectivity dependency", "Downtime", "Limited control"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which of the following is not explicitly listed as a service that cloud services include?",
-        "options": ["Infrastructure", "Development tools", "Data storage", "On-premise hardware maintenance"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "The \"workload shift\" in cloud computing primarily means that:",
-        "options": ["The client computer takes on a heavier load", "Local computers no longer have to do all the heavy lifting to run applications", "Hardware and software demands on the provider's side decrease", "The user's computer needs less networking"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud computing is considered utility computing or on-demand computing because:",
-        "options": ["It requires an operating system", "Resources are actively managed by a cloud provider", "It uses a single data center", "It relies on older computing models"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "If an application requires many gigs of RAM and multiple CPUs to run machine learning algorithms, the CPUs, RAM, and GPUs are called:",
-        "options": ["Compute-intensive applications", "Compute-neutral resources", "Compute resources", "Application servers"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Mainframe computing is responsible for handling large data such as:",
-        "options": ["Small text files", "Massive input-output operations", "Simple networking tasks", "Distributed system failures"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which characteristic of distributed systems was the main problem that led to the development of subsequent computing types?",
-        "options": ["Scalability", "Concurrency", "Requirement for all systems to be present at the same geographical location", "Heterogeneity"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "How were the machines in cluster computing connected to each other?",
-        "options": ["Through simple phone lines", "By a high-bandwidth network", "Using physical cables only", "Via a mainframe"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "A grid in grid computing consisted of heterogeneous nodes because:",
-        "options": ["They were all in the same location", "They belonged to different organizations", "They were all the same type of machine", "They were all connected via a LAN"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The main problem encountered with grid computing as the distance between nodes increased was:",
-        "options": ["High cost of systems", "Low availability of high bandwidth connectivity and network issues", "Lack of virtualization", "Reduced processing capabilities"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is a key technology used in cloud computing and the base on which major services like Amazon EC2 work?",
-        "options": ["Utility Computing", "Distributed Computing", "Virtualization", "Service Orientation"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Web 2.0 contributes to cloud computing by providing:",
-        "options": ["Physical data center infrastructure", "Interactive and dynamic web pages", "Low-cost hardware", "The pay-per-use model"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which two important concepts were introduced in the Service orientation computing model?",
-        "options": ["Web 2.0 and Virtualization", "Mainframe and Distributed Computing", "Quality of Service (QoS)/SLA and Software as a Service (SaaS)", "Utility Computing and Cluster Computing"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "In Resources Pooling, the customer generally has no control or information about the:",
-        "options": ["Location of the resources provided", "Service Level Agreement (SLA)", "Total storage capacity available", "Price of the service"],
-        "correctAnswer": "a"
-    },
-    {
-        "text": "The concept of Availability allows the consumer to buy additional cloud storage:",
-        "options": ["For a high, fixed monthly fee", "For a very small price, if necessary", "Only during initial setup", "With a major upgrade to the IT infrastructure"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The Automatic System characteristic supports a certain service level of measuring capabilities which provides accountability to:",
-        "options": ["The host only", "The customer only", "Both the host and the customer", "Government regulators"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The Economical characteristic is described as a one-off investment for the company (host) because:",
-        "options": ["They only pay for maintenance", "They can make the storage available to many companies", "They don't need to buy any storage", "The customer pays all the costs upfront"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The Measured Service characteristic analyzes resource use based on:",
-        "options": ["Annual contracts", "Charge-per-use capabilities", "The size of the company", "The number of employees"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Utility computing defines service provisioning techniques for services like computer services, storage, and infrastructure on what basis?",
-        "options": ["A fixed annual contract", "A pay-per-use basis", "A free-of-charge basis", "A one-time purchase basis"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The Strategic Edge advantage allows a company to focus on business competition by:",
-        "options": ["Installing and maintaining all applications in-house", "Not investing time and money in application installations", "Decreasing the speed of service deployment", "Limiting access to mission-critical applications"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "In terms of data, what is easier and less time-consuming in the cloud compared to on-premise technology?",
-        "options": ["Deletion of data", "Accessing data", "Backup and recovery", "Storing initial data"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The advantage of Sporadic batch processing means that if the workload is not 24/7:",
-        "options": ["Resources and services will be wasted", "Resources and services can be added or subtracted as needed", "The system is unable to handle it", "The company must pay for all resources regardless of use"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Mobility in cloud computing is provided because employees can easily access services:",
-        "options": ["Only from the main office location", "As long as they have an internet connection", "Only through a physical server", "Only using the latest hardware"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud computing platforms aid Collaboration by allowing employees in different locations to work together:",
-        "options": ["Only if they share the same desktop", "Conveniently and securely", "Only on text documents", "Without any network connection"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "When a company is using cloud computing, who is responsible for carrying out user authentication, authorization, and data encryption?",
-        "options": ["The regulatory body", "The cloud service provider only", "The user or organization", "A third-party security firm"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What is a \"hidden cost\" incurred in cloud computing?",
-        "options": ["The \"Pay As You Go\" fee", "Costs due to under optimization of resources (e.g., servers not used to full potential)", "The cost of high-speed network access", "The fee for data storage"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Forgetting to turn off services or an instance of the cloud when not in current use leads to an increase in cost due to:",
-        "options": ["Degradation of application performance", "Unused resources", "Fault tolerance", "Load balancing"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which challenge is described as a tedious procedure because applications written for one cloud's application stack often need to be re-written for another?",
-        "options": ["Lack of Knowledge and Expertise", "Multi-Cloud Environments", "Interoperability and Flexibility", "Performance Challenges"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The challenge of lack of flexibility when switching cloud solutions is exacerbated by issues like handling data movement and:",
-        "options": ["Decreased cost", "Setting up the security from scratch and network complexities", "Increased hardware capacity", "Automatic software integration"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is the key reason for the extensive gap between demand and supply in the cloud computing field, making it a highly paid job?",
-        "options": ["Low network bandwidth", "Lack of knowledge and expertise", "High dependence on network", "Vendor lock-in"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "In a Multi-Cloud Environment, a high percentage of companies (close to 84%) use which approach?",
-        "options": ["Single-cloud tactic", "Hybrid cloud tactics", "On-premise tactics", "Utility computing only"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Why is protecting interfaces and APIs crucial in cloud computing?",
-        "options": ["APIs are the least common way to communicate with cloud services", "Cloud computing is completely dependent on the Internet, and APIs are the easiest way to communicate with most services", "APIs are only used by the service provider", "Insecure APIs lead to Denial of Service attacks"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is the term for a cloud security risk where data is deleted, corrupted, and unreadable by a user, software, or application?",
-        "options": ["Data Breach", "Account hijacking", "Data Loss (or data leakage)", "Vendor lock-in"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which disadvantage stems from cloud services running on remote servers owned and managed by service providers?",
-        "options": ["Vulnerability to attacks", "Network connectivity dependency", "Limited control", "No Redundancy"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The risk of Account hijacking is a process where an individual user's or organization's cloud account is stolen by hackers to:",
-        "options": ["Provide better support to the user", "Perform unauthorized activities", "Reduce the company's monthly costs", "Ensure automatic software integration"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is the primary benefit of using cloud for Testing and development?",
-        "options": ["It eliminates the need for any coders", "Ready-made, tailored environments can expedite timelines and milestones", "It makes all code run faster", "It removes the need for hardware virtualization"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud storage for Big data analytics is described as flexible and scalable and helps provide:",
-        "options": ["Only raw data", "Valuable data-driven insights", "Only pre-computed values", "Low-speed network connectivity"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Using the cloud for Disaster recovery is beneficial because it offers:",
-        "options": ["Higher costs than traditional on-premises DR", "Slower recovery than traditional on-premises DR", "Faster recovery than traditional on-premises DR and lower costs", "Less reliable data backup"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Artificial intelligence as a service (AIaaS) via the cloud allows individuals without formal data science expertise to:",
-        "options": ["Build a data center", "Reap the benefits of AIaaS (e.g., create a facial recognition app)", "Manage cloud infrastructure", "Solve vendor lock-in issues"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is a benefit of using AIaaS via the cloud?",
-        "options": ["Increased need for manual tasks", "Enhanced decision-making by predicting outcomes based on historical datasets", "More personnel costs", "Reduced processing capacity"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud platforms simplify the processing and management of data from IoT devices by offering:",
-        "options": ["Low scalability and limited processing capacity", "The scalability and processing capacity required for enormous amounts of data", "Slower recovery than traditional methods", "Restricted network access"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "A defining element of cloud computing is the on-demand availability of computer system resources *without* what by the user?",
-        "options": ["Paying for the service", "Direct active management", "An internet connection", "A user device"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is the key advantage of Mainframe computing that makes it still used today for tasks like online transactions?",
-        "options": ["Low initial cost", "All systems are at the same location", "Almost no downtime with high fault tolerance", "Easy to add new nodes"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The shift from Cluster computing to Grid computing was necessitated to solve the problem related to:",
-        "options": ["High cost", "Geographical restrictions", "Lack of high computation capability", "Low bandwidth connectivity"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Hardware virtualization is a common type of virtualization. What does it allow the user to do over the hardware?",
-        "options": ["Directly access the physical data center", "Run multiple instances simultaneously", "Eliminate the need for any software", "Restrict access to a single instance"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The Service Orientation model supports applications with which three key properties?",
-        "options": ["High cost, inflexible, and complex", "Low-cost, flexible, and evolvable", "High speed, automatic, and scalable", "Distributed, centralized, and massive"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Although cloud computing helps in reducing capital expenses, the pay-as-you-go model may also lead to what for users?",
-        "options": ["Unexpected operating expenses", "Less computation power", "Mandatory direct active management", "Low fault tolerance"],
-        "correctAnswer": "a"
-    },
-    {
-        "text": "While the customer has no control or information about the resource location in Resources Pooling, what can they still choose on a higher level of abstraction?",
-        "options": ["The exact physical server", "Location", "The IP address of the virtual machine", "The cloud provider's internal networking layout"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The cloud characteristic Security ensures that data cannot get lost even if one of the servers is damaged, due to what mechanism?",
-        "options": ["Data encryption", "User authentication", "Providing a snapshot of the data stored", "Account hijacking prevention"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "In what scenario does the advantage of Sporadic batch processing become most valuable to the user?",
-        "options": ["When the workload is constant and high 24/7", "When resources and services are only needed intermittently or as the workload changes", "When the company decides to shift entirely to on-premise technology", "When a fixed, non-variable monthly fee is preferred"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The advantage of Reliability in cloud hosting is linked to:",
-        "options": ["The user's local network speed", "The constant need for physical storage", "Instant updates that prevent worry about changes", "The ability to only pay for what is used"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The challenge of Data Security and Privacy includes security issues like identity theft and data breaches, which eventually decrease what among the users of your applications?",
-        "options": ["Cost efficiency", "Trust", "Network speed", "Manageability"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Interoperability and Flexibility challenges arise because of the difficulties in:",
-        "options": ["Writing applications for the first cloud provider", "Moving and re-writing applications from one cloud provider to another", "Connecting to the internet from a remote location", "Scaling up services on a single cloud"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The problem with Denial of Service (DoS) attacks is that the system receives:",
-        "options": ["Too little traffic", "Too much traffic to buffer the server", "Only authorized access requests", "Encrypted data only"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "When an organization uses a Hybrid cloud tactic, it means they are using the appropriate cloud (private or public) for different workloads to:",
-        "options": ["Complicate management for the IT team", "Increase overall cost", "Optimize cost and efficiency according to the circumstance", "Ensure they only use a single cloud service provider"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "In Production workload hosting, what requires careful design and architecture of cloud resources and services?",
-        "options": ["The need to turn off services when not in use", "Creating an adequate operational environment for the workload and its required level of resilience", "The process of automatic software integration", "The elimination of all hardware requirements"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "How does PaaS (Platform as a Service) help companies develop, run, and manage applications more easily and flexibly?",
-        "options": ["By providing only data storage", "At a lower cost than maintaining a platform on premises", "By completely removing all coding requirements", "By restricting access to development tools"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is the consequence of one tenant's attack or harmful activity in a cloud environment where applications run on a shared server?",
-        "options": ["Only that tenant is affected", "The performance of the shared resources could be affected", "The cloud provider will automatically switch to a private cloud", "The issue of vendor lock-in is solved"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What key function does cloud computing facilitate for IoT devices like Google Nest, using the gathered data?",
-        "options": ["Eliminates the need for any physical device", "Analyzes the data to make recommendations (e.g., on reducing energy consumption)", "Restricts the amount of data transferred", "Reduces the required network bandwidth to zero"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The lack of proper support from cloud computing companies often forces customers to rely on:",
-        "options": ["Expensive external consultants", "FAQs or online help", "Developing their own support staff", "Upgrading their hardware"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Why is redundancy recommended for cloud backup and recovery, despite the cloud hosting everything?",
-        "options": ["Because the cloud server is always redundant and backed up", "Because technology sometimes fails, and redundancy is key for backup and recovery", "To save money on maintenance", "To limit control over deployments"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is a Cloud Computing Architecture a combination of?",
-        "options": ["Hardware components only", "Software components only", "Components required for a Cloud Computing service", "Network cables and routers"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The cloud architecture is typically divided into how many parts?",
-        "options": ["One", "Two", "Three", "Four"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which part of the cloud architecture is the GUI (Graphical User Interface) used by the user side?",
-        "options": ["Backend", "Management", "Security", "Frontend"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "What does the frontend of a cloud computing system primarily consist of?",
-        "options": ["Servers and storage", "The client part", "Virtual machines", "Security mechanisms"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Web browsers like Chrome and Firefox, clients, and mobile devices are included in which part of the cloud architecture?",
-        "options": ["Security", "Backend", "Frontend", "Cloud Runtime"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which term refers to the cloud itself, providing resources required for cloud computing services?",
-        "options": ["Frontend", "Client Infrastructure", "Backend", "Internet"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which platform is under the provider's control?",
-        "options": ["Frontend", "Client Infrastructure", "Backend", "Mobile Devices"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which component of the cloud architecture manages which type of service a client can access?",
-        "options": ["Infrastructure", "Application", "Services", "Storage"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which component provides the execution and Runtime platform/environment to the Virtual machine in the backend?",
-        "options": ["Application", "Services", "Runtime cloud", "Storage"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What is an in-built backend component that implements security mechanisms?",
-        "options": ["Management", "Security", "Client Infrastructure", "Cloud Access Device"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The component used to manage all other components in the backend is called:",
-        "options": ["Infrastructure", "Service", "Application", "Management"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "What are the three primary Cloud computing services mentioned in the notes?",
-        "options": ["Hardware, Software, Network", "SaaS, PaaS, IaaS", "Storage, Security, Management", "Application, Service, Runtime"],
+        "text": "In ---------- computing, independent computers (nodes) on a network collaborate to solve a problem.",
+        "options": ["Parallel", "Distributed", "Serial", "Instruction-level"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 57]
     {
-        "text": "Which backend component provides a large amount of storage capacity to store and manage data?",
-        "options": ["Runtime cloud", "Infrastructure", "Storage", "Application"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Virtual machines, servers, and data storage are included in which major cloud component?",
-        "options": ["Frontend", "Management", "Backend", "Internet"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What is the role of the Client Infrastructure component?",
-        "options": ["To provide execution environment.", "To provide GUI to interact with the cloud.", "To secure cloud resources.", "To manage backend components."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is the movement of software, hardware, and computing resources to remote servers on the internet called?",
-        "options": ["Security", "Storage", "Deployment", "Management"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which cloud deployment model supports all users on a subscription basis?",
-        "options": ["Private cloud", "Hybrid cloud", "Community cloud", "Public cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "In the Public cloud model, who owns the infrastructure?",
-        "options": ["The consumer", "The general public", "The entity that delivers the cloud services", "An industry group"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which cloud model is the exact opposite of the Public cloud deployment model?",
-        "options": ["Hybrid cloud", "Community cloud", "Private cloud", "Multi-cloud"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which deployment model is infrastructure used by a single organization?",
-        "options": ["Public cloud", "Hybrid cloud", "Community cloud", "Private cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "What is the combination of interconnected private and public cloud infrastructure called?",
-        "options": ["Private cloud", "Public cloud", "Hybrid cloud", "Community cloud"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which cloud deployment model allows systems and services to be accessible by a group of organizations?",
-        "options": ["Private cloud", "Public cloud", "Hybrid cloud", "Community cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "A Community cloud's infrastructure is typically shared between organizations that have:",
-        "options": ["Different requirements", "No shared concerns", "Shared concerns or tasks", "Competing business models"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What is one of the main advantages of the Public cloud model regarding upfront expenditure?",
-        "options": ["High maintenance cost", "Minimal Investment", "Required infrastructure management", "High customization"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "A disadvantage of the Public cloud model is that it is less secure because:",
-        "options": ["Resources are private", "Resources are public", "Maintenance is high", "Scalability is low"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which cloud model provides better control to the sole owner of the property?",
-        "options": ["Public cloud", "Hybrid cloud", "Community cloud", "Private cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "Which cloud model's infrastructure is protected by powerful firewalls and is under the supervision of an organization's IT department?",
-        "options": ["Public cloud", "Hybrid cloud", "Community cloud", "Private cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "What is a key disadvantage of the Private cloud model?",
-        "options": ["Less secure", "Low customization", "Costly", "High scalability"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What advantage does the Hybrid cloud model offer regarding cost?",
-        "options": ["It is the most expensive.", "Pay-per-use for extra capacity from public clouds.", "Fixed monthly cost regardless of use.", "It requires substantial upfront fees."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "A key disadvantage of the Hybrid cloud model is that it's difficult to manage because:",
-        "options": ["It is less scalable.", "It is less secure.", "It is a combination of both public and private cloud.", "It is cost-effective."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which cloud model is Cost Effective because it is shared by multiple organizations?",
-        "options": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "A disadvantage of the Community cloud model is its limited scalability because:",
-        "options": ["Resources are not shared.", "It is expensive.", "Many organizations share the same resources according to their collaborative interests.", "It's difficult to manage."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which key feature allows organizations to eliminate the high cost of hardware and installation by opting for a subscription-based model?",
-        "options": ["Security", "Mobility", "Cost Savings", "Flexibility"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Cloud computing actually makes servers and storage more secure by implementing robust intrusion detection and prevention systems, firewalls, and performing:",
-        "options": ["Manual software updates", "Security audits regularly", "Physical device checks", "Local data storage"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The nature of cloud computing that helps distribute workloads and allows remote access to end-users irrespective of location is called:",
-        "options": ["Mobility", "Flexibility", "Insight", "Loss Prevention"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which driver means 'no dependency on device or location' allowing users to work at any time, any place, on any device?",
-        "options": ["Flexibility", "Insight", "Mobility", "Collaboration"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Cloud-based storage solutions offering integrated cloud analytics for a bird's-eye view of your data relate to which key driver?",
-        "options": ["Quality Control", "Disaster Recovery", "Insight", "Competitive Edge"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The ability for team members to view and share information easily and securely across a cloud-based platform is an advantage of:",
-        "options": ["Sustainability", "Increased Collaboration", "Loss Prevention", "Automatic Updates"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Storing all documents in one place and in a single format to maintain data consistency and avoid human error relates to which driver?",
-        "options": ["Disaster Recovery", "Quality Control", "Mobility", "Cost Savings"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "When data is stored on a physical device, damage from fire or flood can lead to no recovery; using cloud-based storage provides an easy solution known as:",
-        "options": ["Insight", "Loss Prevention", "Disaster Recovery", "Sustainability"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What prevents the permanent loss of data if local hardware malfunctions or is stolen?",
-        "options": ["Quality Control", "Automatic Updates", "Loss Prevention", "Competitive Edge"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which key driver relates to cloud-based applications automatically refreshing and updating themselves, saving time and money?",
-        "options": ["Flexibility", "Mobility", "Automatic Software Updates", "Security"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Moving to cloud computing helps companies cut down their energy requirements and achieve:",
-        "options": ["High Cost", "Sustainable growth", "Local Data Storage", "Manual Updates"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which impact area benefits from cloud computing enabling students to access data anywhere and at any time?",
-        "options": ["Health", "Social impact", "Education", "Online Shopping"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Live stream of football matches, online gaming, and Google search engine are examples of the impact on which area?",
-        "options": ["Health", "Social impact", "Education", "Navigation"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "In the healthcare industry, cloud computing is used to manage and share patient data to reduce:",
-        "options": ["Security", "Operational costs", "Data access", "Mobile device usage"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud computing enables navigation programs in modern vehicles to:",
-        "options": ["Store a small amount of fixed data", "Only work offline", "Store large amounts of data and regularly update it", "Require manual updates"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Online shopping platforms use the cloud to store important client information to provide better customer experience and:",
-        "options": ["Reduce operational costs", "Develop a better marketing strategy", "Increase security risk", "Limit access to products"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which factor has Low data security and privacy but is the Most affordable?",
-        "options": ["Private cloud", "Hybrid cloud", "Community cloud", "Public cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "Which factor has Very high data security and privacy but is the Most expensive?",
-        "options": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The Frontend comprises interfaces and applications required to access the Cloud computing or Cloud programming platform, which is also known as the:",
-        "options": ["Cloud Runtime", "Client Infrastructure", "Backend Platform", "Security Mechanism"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "In the Cloud Computing Architecture diagram, what is the role of the component labeled 'Application' in the backend?",
-        "options": ["To provide the GUI.", "To provide the service as per the client requirement.", "To manage all other backend components.", "To offer services at the host level."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which component of the cloud architecture is responsible for providing services on the host level, network level, and application level?",
-        "options": ["Storage", "Application", "Infrastructure", "Services"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Cloud access devices, such as Smartphones and Tablets, connect to cloud storage services through:",
-        "options": ["Physical cables", "Dedicated applications", "In-house servers", "The Management component"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Deployment in cloud computing refers to the movement of resources to remote servers on the internet; what does a Cloud Deployment Model offer a choice of?",
-        "options": ["Only who will have access to the infrastructure.", "How much data users want to store and who will have access to the infrastructure.", "Only the software running on the server.", "Only the maintenance schedule."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The Public cloud is an excellent example of cloud hosting where service providers supply services to a variety of customers. How are the storage backup and retrieval services typically given?",
-        "options": ["Only for a fixed monthly fee.", "Only for free.", "For free, as a subscription, or on a per-user basis.", "Only on a per-user basis."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Why is the Private cloud model better able to address the security and privacy concerns of organizations today compared to the Public cloud?",
-        "options": ["It is cheaper.", "It has low customization.", "The infrastructure is used by a single organization and is protected by firewalls.", "It is less scalable."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which advantage of the Private cloud model makes it suitable for storing corporate information accessible only by authorized staff?",
-        "options": ["Supports Legacy Systems", "Better Control", "Data Security and Privacy", "Customization"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The Hybrid cloud model is often used by organizations that need to scale up their IT infrastructure rapidly by:",
-        "options": ["Shifting all data to a private environment.", "Leveraging public clouds to supplement the capacity available within a private cloud.", "Completely abandoning the private cloud.", "Investing in new local hardware."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "An example of a Hybrid cloud use case is an online retailer hosting its application securely via a Private cloud while leveraging the Public cloud for extra computing resources during peak seasons. This illustrates the benefit of:",
-        "options": ["Increased security only.", "Cost savings and a secure environment.", "Low customization only.", "High maintenance only."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What is the main reason for slow data transmission as a disadvantage in the Hybrid cloud model?",
-        "options": ["Data is stored only locally.", "Data transmission takes place through the public cloud, causing latency.", "Private cloud infrastructure is slow.", "Security mechanisms are too strict."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Community cloud is described as a distributed system created by integrating the services of different clouds to address:",
-        "options": ["Only the general public's needs.", "The specific needs of a single organization.", "The specific needs of a community, industry, or business.", "Only the cloud provider's needs."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Access to a community cloud environment is typically restricted to:",
-        "options": ["Anyone on the internet.", "Only the owner of the infrastructure.", "The members of the community.", "Employees of a single organization."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Why is the Community cloud model described as 'Rigid in customization'?",
-        "options": ["The infrastructure is owned by a single organization.", "Changes by one organization will impact other organizations sharing the resources.", "It is the exact opposite of the public cloud.", "It has very high scalability."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Moving to the cloud eliminates the high cost of hardware and installation. Which associated cost of on-premise solutions is also eliminated by moving to the cloud?",
-        "options": ["Subscription fees", "Costs related to continuous management and updating required from in-house personnel.", "Cloud access device cost", "Security audit costs"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "How do service providers further enhance client satisfaction regarding security?",
-        "options": ["By eliminating all security mechanisms.", "By closely monitoring and frequently auditing all activities on the cloud by a third party.", "By reducing the number of firewalls.", "By increasing the dependency on local storage."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud computing helps in distributing workloads across the company, which allows companies to hire a global and potentially cheaper workforce. This is a benefit of:",
-        "options": ["Quality Control", "Mobility", "Flexibility", "Insight"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The mobility feature in cloud computing is particularly useful for staff with busy schedules or remote employees because it offers:",
-        "options": ["Lower customization", "Instantly up-to-date access to clients and co-workers and a better work-life balance.", "Dependence on physical devices", "More downtime"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "By implementing tracking mechanisms and building customized reports with information stored in the cloud, what can organizations achieve from those insights?",
-        "options": ["Increased downtime.", "Reduced collaboration.", "Increased efficiencies and building action plans to meet organizational goals.", "Loss of data consistency."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Why is maintaining consistency in data and having a clear record of revisions an advantage of Quality Control in a cloud-based system?",
-        "options": ["Because all documents are stored in multiple formats.", "Because everyone is accessing the same information.", "Because the system is offline.", "Because updates are manual."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Downtime in services due to infrastructure damage can lead to a loss of productivity, revenue, and brand reputation. Cloud-based storage addresses this through:",
-        "options": ["Less secure environment.", "Disaster Recovery, with claims of data recovery in a few hours.", "Manual software updates.", "Low scalability."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Cloud-based servers ensure information remains safe and easily accessible from any computer with an internet connection, even if the computer you regularly use isn't working. This is a benefit of:",
-        "options": ["Disaster Recovery", "Loss Prevention", "Automatic Software Updates", "Sustainability"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "How does the implementation of a cloud-based solution provide a Competitive Edge?",
-        "options": ["By increasing the reliance on local hardware.", "By enabling a company to achieve higher outcomes before competitors.", "By reducing the need for automatic updates.", "By making the system less flexible."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Facilitating remote and hybrid work culture, which allows companies to use smaller office spaces and reduces the use of vehicles (cutting down on greenhouse gas emissions), is a key objective of green computing enabled by the cloud driver:",
-        "options": ["Competitive Edge", "Loss Prevention", "Sustainability", "Insight"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Cloud Computing revolutionizes daily lives by eliminating the need for local servers or personal devices to handle applications, including:",
-        "options": ["Only data storage.", "Data storage, data processing, and data security.", "Only GUI interfaces.", "Only network connectivity."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The application of cloud computing in the Health sector has seen the medical sector move from the traditional intranet to:",
-        "options": ["A slower, less secure solution.", "A quick and secure solution.", "Only physical data storage.", "Only patient-managed records."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "According to the comparative analysis, which cloud deployment model is cheaper than private but more expensive than public?",
-        "options": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "According to the comparative analysis, which deployment model has a Very high level of data control provided the environment is right?",
-        "options": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "According to the comparative analysis, which deployment model has Low reliability and requires No in-house hardware?",
-        "options": ["Private cloud", "Hybrid cloud", "Community cloud", "Public cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "The Community cloud has Relatively Higher reliability than which other model, according to the comparative analysis?",
-        "options": ["Private cloud", "Hybrid cloud", "Public cloud", "All of the above"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which pair of components are explicitly mentioned as surrounding the core backend functions (Application, Service, Cloud Runtime, Storage, Infrastructure) in the Cloud Computing Architecture diagram?",
-        "options": ["Internet and Client Infrastructure", "Application and Storage", "Management and Security", "Frontend and Backend"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The Infrastructure component includes hardware and software components needed to support the cloud computing model. What is one specific *software* component mentioned within this infrastructure?",
-        "options": ["Cloud Access Device", "Virtualization software", "Cloud Runtime", "NIC (Network Interface Card)"],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "The Private cloud may be managed by the organization itself or by a service provider either on-site or off-site. What is the key commonality across these management options that defines it as a Private cloud?",
-        "options": ["It must be on-site.", "It is infrastructure used by a single organization and the hardware is not shared.", "It is always managed by a third party.", "It is cheaper than a Public cloud."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "While Public cloud has minimal investment due to no substantial upfront fee, what is the trade-off in terms of security and customization?",
-        "options": ["High security and high customization.", "High security and low customization.", "Less secure and low customization.", "More secure and high customization."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Why are Private clouds considered 'Less scalable' compared to Public clouds?",
-        "options": ["Because they provide personalized facilities.", "Because there is a less number of clients, so they are scaled within a certain range.", "Because the maintenance costs are high.", "Because they support legacy systems."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which advantage of the Hybrid cloud model directly addresses the issue of scaling up IT infrastructure rapidly during periods of high demand?",
-        "options": ["Security, because data is properly separated.", "Flexibility, which allows for personalized solutions.", "Cost, as public clouds provide scalability, and you only pay for extra capacity when required.", "Slow data transmission is avoided."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which characteristic is common to the Public cloud, Hybrid cloud, and Community cloud but not the Private cloud?",
-        "options": ["High reliability", "High data security", "Does not require in-house hardware (as a 'Yes' demand for in-house hardware is only for Private).", "Very high data control"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The Community cloud is managed either by a third party or by a combination of one or more organizations in the community. What specifically determines the deployment model in this case?",
-        "options": ["The cost-effectiveness.", "The sharing of resources among organizations with shared concerns or tasks.", "The rigidity in customization.", "The limited scalability."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "On-premise solutions have various costs, including necessary hardware, implementation costs, and continuous management/updating by in-house personnel. What specific benefit does the cloud offer in contrast to this?",
-        "options": ["Paying for unwanted or unused services.", "The ability to pay for exactly what they need instead of unwanted/unused services.", "Higher cost of hardware.", "Increased in-house IT management."],
+        "text": "Parallel algorithms are considered the ----------, while parallel computing is the implementation.",
+        "options": ["Hardware", "Theory", "Network", "Bottleneck"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 58]
     {
-        "text": "In terms of security, cloud computing defines different levels of security and protects data by performing security audits regularly in their data centers. Who performs these audits to ensure security standards are met?",
-        "options": ["The client.", "The in-house personnel.", "A third party.", "The mobile device."],
+        "text": "According to ---------- Law, even a small percentage of serial code (e.g., 5%) significantly limits maximum speedup.",
+        "options": ["Moore's", "Gustafson's", "Amdahl's", "Newton's"],
         "correctAnswer": "c"
-    },
+    }, // [cite: 81, 140]
     {
-        "text": "The benefit of 'Insight' allows an organization to implement tracking mechanisms and build customized reports to analyze information. What does this lead to in terms of business strategy?",
-        "options": ["Loss of data consistency.", "Increased efficiencies and building action plans to meet organizational goals.", "Dependency on device or location.", "Reduced flexibility."],
+        "text": "Which of the following is a disadvantage of parallel computing?",
+        "options": ["Massive Speedup", "Programming Complexity", "Fault Tolerance", "Real-Time Capability"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 101, 102]
     {
-        "text": "Which two key drivers are most relevant to ensuring business continuity and data persistence when a local computer malfunctions or is physically damaged?",
-        "options": ["Flexibility and Mobility", "Insight and Collaboration", "Disaster Recovery and Loss Prevention", "Sustainability and Competitive Edge"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Remote work facilitated by cloud computing contributes to sustainable growth by enabling two main ecological benefits:",
-        "options": ["Eliminating local hardware and manual updates.", "Cutting down on energy requirements and reducing the emission of greenhouse gases from commuting.", "Focusing on in-house data centers and large office spaces.", "Increasing hardware consumption and physical device storage."],
+        "text": "A ---------- occurs when multiple threads read/write shared data simultaneously, leading to unpredictable results.",
+        "options": ["Deadlock", "Race Condition", "Load Imbalance", "Memory Wall"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 128, 130]
     {
-        "text": "Cloud computing has enabled institutions to use the storage cloud to store large amounts of data securely. Which component of the cloud architecture is providing this capability?",
-        "options": ["Client Infrastructure", "Application", "Storage", "Services"],
+        "text": "---------- Parallelism involves performing the same operation on multiple data elements simultaneously (SIMD).",
+        "options": ["Task", "Bit-level", "Data", "Instruction-level"],
         "correctAnswer": "c"
-    },
-    {
-        "text": "In the context of online shopping, cloud platforms use analytical data (like recently viewed items or customer recommendations). This usage primarily utilizes which key driver of cloud adoption?",
-        "options": ["Automatic Software Updates", "Insight", "Mobility", "Disaster Recovery"],
-        "correctAnswer": "b"
-    },
+    }, // [cite: 119, 121]
     {
-        "text": "Based on the comparative analysis, which cloud deployment model requires a professional IT team for setup and use, but offers High scalability and flexibility?",
-        "options": ["Public cloud", "Private cloud", "Community cloud", "None of the above"],
+        "text": "Which specialized hardware is primarily used for training Large Language Models like GPT-4?",
+        "options": ["Standard CPUs", "GPUs / TPUs", "DRAM", "Hard Drives"],
         "correctAnswer": "b"
-    },
-    {
-        "text": "If an organization has extremely high privacy and control requirements, making a public cloud unsuitable, but needs the potential for rapid, on-demand scaling, which deployment model offers the best compromise?",
-        "options": ["Public cloud (Lacks privacy/control)", "Private cloud (Lacks rapid on-demand scaling)", "Hybrid cloud (Offers better control/flexibility and uses public cloud for scalability)", "Community cloud (Lacks flexibility/customization)"],
-        "correctAnswer": "c"
-    },
+    }, // [cite: 146, 149, 170]
     {
-        "text": "Which cloud deployment model's data control is described as 'High, provided there is collaboration among the members'?",
-        "options": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "The core purpose of the Security component in the backend is to secure cloud resources, systems, files, and infrastructure. This is implemented in conjunction with which other component that controls access type?",
-        "options": ["Management", "Cloud Runtime", "Services", "Client Infrastructure"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "In the Public cloud model, the customer has low data control because the service provider exercises complete control over the data. This is a direct consequence of the advantage that the customer does not need to manage the:",
-        "options": ["Application", "Services", "Infrastructure", "Internet"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What is the primary characteristic of an AI agent?",
-        "options": ["It is a purely passive data storage unit.", "It is an autonomous entity that perceives, processes, and acts to achieve specific goals.", "It is a physical device incapable of software automation.", "It must always operate with direct human intervention."],
+        "text": "The 'Power Wall' and 'Memory Wall' are forces that led to the plateauing of ----------.",
+        "options": ["Data Growth", "Single-core speed", "Cloud availability", "Network latency"],
         "correctAnswer": "b"
-    },
-    {
-        "text": "Which of the following is a key component of an AI agent responsible for collecting data from the environment?",
-        "options": ["Actuators", "Decision-making", "Perception", "Sensors"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "What mechanism allows an AI agent to take action in its environment?",
-        "options": ["Learning", "Perception", "Actuators", "Sensors"],
-        "correctAnswer": "c"
-    },
+    }, // [cite: 62, 63, 64]
     {
-        "text": "The process of interpreting sensor data within an AI agent is called:",
-        "options": ["Actuation", "Decision-making", "Perception", "Learning"],
+        "text": "When tasks are unequal in size, causing some cores to sit idle, it is known as ----------.",
+        "options": ["Deadlock", "Latency", "Load Imbalance", "Overhead"],
         "correctAnswer": "c"
-    },
+    }, // [cite: 110, 111, 132]
     {
-        "text": "An AI agent that acts solely based on the current percept and has no memory is known as a:",
-        "options": ["Utility-Based Agent", "Simple Reflex Agent", "Goal-Based Agent", "Model-Based Reflex Agent"],
+        "text": "Which real-world application uses parallel processors to fuse LiDAR, camera, and radar data in under 10ms?",
+        "options": ["VFX Rendering", "Autonomous Vehicles", "Climate Modeling", "Financial Trading"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 176, 178]
     {
-        "text": "A basic motion sensor light is an example of which type of AI agent?",
-        "options": ["Model-Based Reflex Agent", "Learning Agent", "Simple Reflex Agent", "Goal-Based Agent"],
+        "text": "A lightweight unit of execution that shares memory with its siblings is called a ----------.",
+        "options": ["Node", "Core", "Thread", "Process"],
         "correctAnswer": "c"
-    },
+    }, // [cite: 25, 26]
     {
-        "text": "What do Model-Based Reflex Agents maintain to track the environment and predict outcomes?",
-        "options": ["An external database", "An internal state (model)", "A utility function", "A simple reflex loop"],
+        "text": "---------- is the extra cost of parallelization including synchronization and communication.",
+        "options": ["Latency", "Overhead", "Granularity", "Speedup"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 31]
     {
-        "text": "A smart thermostat that adjusts based on time and temperature history is an example of a:",
-        "options": ["Simple Reflex Agent", "Model-Based Reflex Agent", "Utility-Based Agent", "Learning Agent"],
+        "text": "In parallel computing, communication within a single system is typically ----------.",
+        "options": ["Slow (network)", "Fast (bus/cache)", "Theoretical only", "Abstract"],
         "correctAnswer": "b"
-    },
-    {
-        "text": "What is the defining characteristic of Goal-Based Agents?",
-        "options": ["Acting only on current percepts.", "Maximizing expected utility.", "Making decisions to achieve specific goals.", "Improving performance over time."],
-        "correctAnswer": "c"
-    },
+    }, // [cite: 57, 185]
     {
-        "text": "A navigation system finding the shortest route is an example of which type of AI agent?",
-        "options": ["Utility-Based Agent", "Goal-Based Agent", "Simple Reflex Agent", "Model-Based Reflex Agent"],
+        "text": "Moore's Law faces physical limits, making ---------- the only scalable path forward for hardware performance.",
+        "options": ["Higher clock speeds", "Adding more cores", "Single-core optimization", "Decreasing RAM"],
         "correctAnswer": "b"
-    },
-    {
-        "text": "Which type of AI agent chooses actions that maximize expected utility and considers trade-offs?",
-        "options": ["Simple Reflex Agent", "Model-Based Reflex Agent", "Goal-Based Agent", "Utility-Based Agent"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "What do Utility-Based Agents use to evaluate possible actions and select the one with the best outcome?",
-        "options": ["A state transition table", "A simple condition-action rule", "A utility function", "A historical percept log"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "A financial trading bot optimizing profit vs. risk is an example of a:",
-        "options": ["Learning Agent", "Simple Reflex Agent", "Utility-Based Agent", "Goal-Based Agent"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What distinguishes a Learning Agent from other types of agents?",
-        "options": ["It acts solely on current percepts.", "It operates without human intervention.", "It improves performance over time using past experiences.", "It strictly follows pre-programmed rules."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "AI in recommendation systems learning user preferences is an example of a:",
-        "options": ["Model-Based Reflex Agent", "Simple Reflex Agent", "Learning Agent", "Utility-Based Agent"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What role do sensors play in an AI agent's functionality?",
-        "options": ["Executing software commands", "Adapting behavior based on feedback", "Converting physical phenomena into digital signals for processing", "Choosing actions based on goals"],
-        "correctAnswer": "c"
-    },
+    }, // [cite: 64, 65]
     {
-        "text": "In the context of software agents, what may sensors include?",
-        "options": ["Motors or speakers", "Actuators or physical devices", "APIs or data streams from other systems", "A hypervisor"],
+        "text": "---------- Law offers a more optimistic view of scalability than Amdahl's Law.",
+        "options": ["Newton's", "Moore's", "Gustafson's", "Einstein's"],
         "correctAnswer": "c"
-    },
-    {
-        "text": "What is a key function of sensors in AI agents, besides data collection?",
-        "options": ["Maximizing expected utility", "Enabling environmental awareness for responding to changes", "Minimizing hardware needs", "Operating without human intervention"],
-        "correctAnswer": "b"
-    },
+    }, // [cite: 141]
     {
-        "text": "The characteristic of an intelligent agent to operate without human intervention is known as:",
-        "options": ["Proactiveness", "Reactivity", "Autonomy", "Social Ability"],
+        "text": "Which of these is NOT a level of parallelism mentioned in the lecture?",
+        "options": ["Bit-level", "Instruction-level", "Cloud-level", "Data-level"],
         "correctAnswer": "c"
-    },
-    {
-        "text": "When an intelligent agent takes initiative to achieve goals, it is exhibiting which characteristic?",
-        "options": ["Reactivity", "Social Ability", "Learning Capability", "Proactiveness"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "The ability of an intelligent agent to respond to environmental changes is called:",
-        "options": ["Reactivity", "Autonomy", "Proactiveness", "Social Ability"],
-        "correctAnswer": "a"
-    },
-    {
-        "text": "Which of the following is explicitly **NOT** considered a characteristic of intelligent agents?",
-        "options": ["Learning Capability", "Autonomy", "Goal-oriented behavior", "Random or aimless behavior"],
-        "correctAnswer": "d"
-    },
+    }, // [cite: 115, 117, 119]
     {
-        "text": "Utility-based agents are characterized by **rationality**, meaning they will always choose:",
-        "options": ["The simplest action", "The most beneficial action", "The fastest action", "A random action"],
+        "text": "A situation where Thread A waits for Thread B, and Thread B waits for Thread A, is called ----------.",
+        "options": ["Race Condition", "Deadlock", "Load Imbalance", "Pipelining"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 129, 131]
     {
-        "text": "What is virtualization?",
-        "options": ["The process of creating a single application on multiple physical servers.", "The process of creating multiple simulated environments on one physical hardware system.", "A mechanism used solely for data collection in robotics.", "A type of simple reflex agent."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "What component is used to manage multiple Virtual Machines (VMs) in a virtualization setup?",
-        "options": ["Actuator", "Sensor", "Utility Function", "Hypervisor"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "A key benefit of virtualization for AI deployment is:",
-        "options": ["Eliminating the need for software commands.", "Providing flexible, scalable environments for training and simulation.", "Restricting the agent to a single operating system.", "Removing the agent's ability to perceive the environment."],
-        "correctAnswer": "b"
-    },
-    {
-        "text": "Which AI agent is ideal for complex domains like logistics, finance, and strategic planning due to its quantitative evaluation capabilities?",
-        "options": ["Simple Reflex Agent", "Learning Agent", "Model-Based Reflex Agent", "Utility-Based Agent"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "The key components of an AI agent include Sensors, Actuators, Perception, Decision-making, and:",
-        "options": ["Virtualization", "Hypervisor", "Learning", "Utility Function"],
+        "text": "Which protocol is mentioned as a solution for managing cache coherence?",
+        "options": ["HTTP", "TCP/IP", "MESI", "MPI"],
         "correctAnswer": "c"
-    },
-    {
-        "text": "What is the main advantage of the 'Isolation' benefit of virtualization?",
-        "options": ["It reduces hardware needs.", "It allows each VM to operate independently.", "It enables easily adding or removing virtual environments.", "It improves performance over time."],
-        "correctAnswer": "b"
-    },
+    }, // [cite: 135]
     {
-        "text": "In a Learning Agent, what updates the agent's knowledge over time?",
-        "options": ["The utility function", "The learning element", "The simple reflex loop", "The hypervisor"],
+        "text": "---------- Computing involves combining CPUs, GPUs, FPGAs, and NPUs on the same system.",
+        "options": ["Homogeneous", "Heterogeneous", "Quantum", "Green"],
         "correctAnswer": "b"
-    },
-    {
-        "text": "AI agents are foundational to artificial intelligence systems and are used in all of the following *except*:",
-        "options": ["Robotics", "Software automation", "Decision support systems", "Standalone physical hardware without any software"],
-        "correctAnswer": "d"
-    },
-    {
-        "text": "What does a Goal-Based Agent evaluate actions based on?",
-        "options": ["Current percepts only", "Past experience and feedback", "Whether the action achieves a specific goal", "The quantitative numerical score"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "A simple AI agent example given in the text is a:",
-        "options": ["Autonomous vehicle", "Intelligent assistant", "Thermostat", "Financial trading bot"],
-        "correctAnswer": "c"
-    },
+    }, // [cite: 148, 150]
     {
-        "text": "What type of data do sensors collect in real-time?",
-        "options": ["Goal achievement metrics", "Knowledge updates", "Location, sound, or temperature information", "Utility function scores"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The characteristic of 'Social Ability' in intelligent agents refers to their capability to:",
-        "options": ["Act solely based on current percepts.", "Improve performance over time.", "Communicate with other agents or humans.", "Operate without human intervention."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which agent type uses internal state to track the environment?",
-        "options": ["Simple Reflex Agents", "Model-Based Reflex Agents", "Goal-Based Agents", "Utility-Based Agents"],
+        "text": "Quantum computers explore multiple states simultaneously using a property called ----------.",
+        "options": ["Pipelining", "Superposition", "Synchronicity", "Serialization"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 152, 155]
     {
-        "text": "The benefit of 'Cost Efficiency' in virtualization is achieved by:",
-        "options": ["Increasing the need for specialized hardware.", "Reducing the overall hardware needs.", "Allowing only one VM per physical system.", "Eliminating the need for an operating system."],
+        "text": "Processing-in-Memory (PIM) is a trend designed to attack the ---------- directly.",
+        "options": ["Power Wall", "Memory Wall", "Network Wall", "Software Wall"],
         "correctAnswer": "b"
-    },
-    {
-        "text": "Which component of an AI agent is responsible for choosing actions based on goals and environmental input?",
-        "options": ["Actuator", "Sensor", "Perception", "Decision-making"],
-        "correctAnswer": "d"
-    },
+    }, // [cite: 158, 161]
     {
-        "text": "Utility-based agents are characterized by 'Flexibility' due to their ability to:",
-        "options": ["Act solely on current percepts.", "Adapt to changing environments and goals.", "Use a hypervisor.", "Be simple and small in size."],
+        "text": "Which supercomputer is cited for achieving 1 EFLOP with high energy efficiency?",
+        "options": ["Summit", "Frontier", "Condor", "Grace Hopper"],
         "correctAnswer": "b"
-    },
+    }, // [cite: 163]
     {
-        "text": "What kind of systems is virtualization a key technology in, besides cloud computing and server management?",
-        "options": ["Simple reflex lighting", "Basic motion sensors", "AI deployment", "Manual operating systems"],
+        "text": "CERN's LHC generates data at a rate of ---------- per second, requiring thousands of parallel CPUs.",
+        "options": ["1 GB", "1 TB", "1 PB", "1 EB"],
         "correctAnswer": "c"
-    },
+    }, // [cite: 181]
     {
-        "text": "How do Learning Agents adapt their behavior?",
-        "options": ["By strictly following pre-programmed rules.", "By adapting behavior based on experience or feedback.", "By solely using the current percepts.", "By only responding to environmental changes."],
+        "text": "3D MRI reconstruction uses ---------- to reduce diagnosis time from hours to seconds.",
+        "options": ["Serial processors", "GPU clusters", "Single-core CPUs", "Quantum bits"],
         "correctAnswer": "b"
-    },
-    {
-        "text": "In Model-Based Reflex Agents, what is the 'model' used for?",
-        "options": ["To collect data from the environment.", "To evaluate numerical scores for actions.", "To predict outcomes.", "To communicate with other agents."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which characteristic of intelligent agents is described as 'Take initiative to achieve goals'?",
-        "options": ["Autonomy", "Reactivity", "Proactiveness", "Learning Capability"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What does a Utility-Based Agent's 'Quantitative Evaluation' involve?",
-        "options": ["Using sensor data directly as the action.", "Collecting real-time environmental data.", "Using numerical scores to compare options.", "Operating without human intervention."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "What type of environment does each Virtual Machine (VM) run?",
-        "options": ["The host system's operating system and applications.", "A shared, single operating system.", "Its own operating system and applications.", "A simple reflex loop only."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "The function of sensors to 'Provide input for algorithms to make informed choices' is related to:",
-        "options": ["Actuation", "Cost Efficiency", "Decision Support", "Isolation"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which type of agent does not maintain memory or track the environment?",
-        "options": ["Model-Based Reflex Agents", "Learning Agents", "Simple Reflex Agents", "Goal-Based Agents"],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Virtualization is beneficial for 'Testing and Development' because it allows running:",
-        "options": ["Only simple reflex agents.", "Only one VM at a time.", "Multiple configurations without affecting the host system.", "Only physical hardware systems."],
-        "correctAnswer": "c"
-    },
-    {
-        "text": "Which of these is considered a complex AI agent example?",
-        "options": ["A simple thermostat.", "A basic motion sensor light.", "An autonomous vehicle.", "A condition-action rule."],
-        "correctAnswer": "c"
-    },
+    }, // [cite: 184]
     {
-        "text": "The characteristic of an intelligent agent that describes its ability to 'Improve through experience' is:",
-        "options": ["Autonomy", "Social Ability", "Learning Capability", "Reactivity"],
+        "text": "In the summary table, which tool is associated with GPU Computing?",
+        "options": ["OpenMP", "Apache Spark", "CUDA", "AWS Batch"],
         "correctAnswer": "c"
-    }
-]
+    } // [cite: 185]
+
+    
+];
 
 
 let currentQuestionIndex = 0;

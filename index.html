@@ -855,7 +855,314 @@ const questionsData = [
     "text": "Training GPT-4 required thousands of GPUs (e.g., 25,000 A100s) running in parallel.",
     "options": ["True", "False"],
     "correctAnswer": "a"
-  }
+  },
+
+    {
+        "text": "According to Flynn’s Taxonomy, which architecture is most common in modern multi-core CPUs and clusters?",
+        "options": ["SISD", "MISD", "SIMD", "MIMD"],
+        "correctAnswer": "d"
+    }, // [cite: 28, 29]
+    {
+        "text": "Which architecture is characterized by a single instruction set operating on multiple data streams, such as in GPUs?",
+        "options": ["SISD", "MISD", "SIMD", "MIMD"],
+        "correctAnswer": "c"
+    }, // [cite: 26, 27]
+    {
+        "text": "Around which year did CPU clock speeds plateau, making parallelism the 'new frontier'?",
+        "options": ["1995", "2000", "2005", "2015"],
+        "correctAnswer": "c"
+    }, // [cite: 14, 15]
+    {
+        "text": "Which architecture is considered 'rare in practice' and used primarily in fault-tolerant systems?",
+        "options": ["SISD", "MISD", "SIMD", "MIMD"],
+        "correctAnswer": "b"
+    }, // [cite: 22, 24, 25]
+    {
+        "text": "Traditional sequential computers follow which architectural model?",
+        "options": ["SISD", "MISD", "SIMD", "MIMD"],
+        "correctAnswer": "a"
+    }, // [cite: 20, 21]
+
+    // Section 2: Shared vs. Distributed Memory (MCQs)
+    {
+        "text": "In a Shared Memory model, processors communicate implicitly through ----------.",
+        "options": ["Message Passing", "Shared Variables", "Network Sockets", "File I/O"],
+        "correctAnswer": "b"
+    }, // [cite: 41]
+    {
+        "text": "What is a major disadvantage of Shared Memory systems at large scales?",
+        "options": ["Programming complexity", "Manual data partitioning", "Memory bus bottleneck", "High latency"],
+        "correctAnswer": "c"
+    }, // [cite: 50]
+    {
+        "text": "Which memory architecture ensures all processors have the same latency to memory?",
+        "options": ["NUMA", "UMA", "Hybrid", "Distributed"],
+        "correctAnswer": "b"
+    }, // [cite: 41, 52]
+    {
+        "text": "In a NUMA system, which type of memory access is fastest?",
+        "options": ["Remote memory", "Global memory", "Local memory", "Virtual memory"],
+        "correctAnswer": "c"
+    }, // [cite: 59]
+    {
+        "text": "The standard programming interface for Distributed Memory systems is ----------.",
+        "options": ["OpenMP", "Pthreads", "MPI", "CUDA"],
+        "correctAnswer": "c"
+    }, // [cite: 66]
+    {
+        "text": "Which feature is a key advantage of Distributed Memory systems?",
+        "options": ["Low latency", "Automatic data sharing", "High scalability", "Implicit communication"],
+        "correctAnswer": "c"
+    }, // [cite: 67, 69]
+    {
+        "text": "A Hybrid Memory model typically utilizes MPI between nodes and ---------- within a node.",
+        "options": ["Pthreads", "OpenMP", "Java Threads", "Sockets"],
+        "correctAnswer": "b"
+    }, // [cite: 71]
+    {
+        "text": "Modern HPC clusters often combine both approaches to reduce ----------.",
+        "options": ["Clock speed", "Message passing overhead", "RAM capacity", "Number of cores"],
+        "correctAnswer": "b"
+    }, // [cite: 71]
+    {
+        "text": "The protocol used to ensure all cores see a consistent view of memory is ----------.",
+        "options": ["HTTP", "MESI", "TCP/IP", "FTP"],
+        "correctAnswer": "b"
+    }, // [cite: 73]
+    {
+        "text": "False sharing occurs when different variables are modified on the same ----------.",
+        "options": ["Processor", "Cache line", "Node", "Hard drive"],
+        "correctAnswer": "b"
+    }, // [cite: 73]
+
+    // Section 3: Processes & Threads (MCQs)
+    {
+        "text": "A ---------- is an independent program with its own address space and OS-managed resources.",
+        "options": ["Thread", "Process", "Fiber", "Task"],
+        "correctAnswer": "b"
+    }, // [cite: 77]
+    {
+        "text": "Threads within the same process share which of the following?",
+        "options": ["Stack", "Registers", "Memory and Code", "Program Counter"],
+        "correctAnswer": "c"
+    }, // [cite: 78]
+    {
+        "text": "Which is a characteristic of a 'heavy-weight' execution unit?",
+        "options": ["Fast context switch", "Shared stack", "Separate file descriptors", "Microsecond creation"],
+        "correctAnswer": "c"
+    }, // [cite: 77]
+    {
+        "text": "In Pthreads, which function is used to create a new thread?",
+        "options": ["pthread_join", "pthread_create", "pthread_mutex", "pthread_exit"],
+        "correctAnswer": "b"
+    }, // [cite: 79, 82]
+    {
+        "text": "Which state describes a thread that is ready to run but waiting for the OS to schedule it?",
+        "options": ["NEW", "RUNNING", "RUNNABLE", "BLOCKED"],
+        "correctAnswer": "c"
+    }, // [cite: 93]
+    {
+        "text": "A 'Spinlock' is most effective for protecting ----------.",
+        "options": ["Long I/O tasks", "Very short critical sections", "Distributed nodes", "Large databases"],
+        "correctAnswer": "b"
+    }, // [cite: 85]
+    {
+        "text": "Which MPI function is used to collect and combine results from all processes?",
+        "options": ["MPI_Init", "MPI_Send", "MPI_Reduce", "MPI_Finalize"],
+        "correctAnswer": "c"
+    }, // [cite: 90, 92]
+    {
+        "text": "The unique integer ID assigned to an MPI process is its ----------.",
+        "options": ["Rank", "ThreadID", "Pointer", "Handle"],
+        "correctAnswer": "a"
+    }, // [cite: 87, 89]
+    {
+        "text": "A race condition is caused by multiple threads accessing shared data without ----------.",
+        "options": ["Memory", "Coordination", "Input", "Registers"],
+        "correctAnswer": "b"
+    }, // [cite: 85, 96]
+    {
+        "text": "Deadlock can be prevented by always acquiring locks in ----------.",
+        "options": ["Random order", "The same order", "Reverse order", "A busy-wait loop"],
+        "correctAnswer": "b"
+    }, // [cite: 86, 97]
+    {
+        "text": "Which mechanism allows multiple readers but only one writer at a time?",
+        "options": ["Mutex", "Barrier", "Read-Write Lock", "Atomic operation"],
+        "correctAnswer": "c"
+    }, // [cite: 85]
+    {
+        "text": "When a high-priority thread is blocked by a low-priority thread holding a lock, it is called ----------.",
+        "options": ["Livelock", "Deadlock", "Priority Inversion", "Race condition"],
+        "correctAnswer": "c"
+    }, // [cite: 97]
+    {
+        "text": "Code that can be safely called from multiple threads simultaneously is called ----------.",
+        "options": ["Parallel code", "Sequential code", "Thread-safe code", "Isolated code"],
+        "correctAnswer": "c"
+    }, // [cite: 96]
+    {
+        "text": "The dominant standard for message-passing in distributed systems is ----------.",
+        "options": ["OpenMP", "Pthreads", "MPI", "DirectX"],
+        "correctAnswer": "c"
+    }, // [cite: 87]
+    {
+        "text": "Which of the following is a 'collective' operation in MPI?",
+        "options": ["Send", "Recv", "Broadcast", "Mutex_lock"],
+        "correctAnswer": "c"
+    }, // [cite: 87]
+
+    // Section 4: True/False Questions
+    {
+        "text": "T/F: Clock speeds have continued to increase significantly since 2005 as the primary way to improve performance.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 14, 15]
+    {
+        "text": "T/F: In a Shared Memory model, any core can directly access any memory location.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 41]
+    {
+        "text": "T/F: Distributed memory systems are limited in scalability because of the memory bus bottleneck.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 50, 67]
+    {
+        "text": "T/F: UMA stands for Uniform Memory Access, where all processors have the same latency to memory.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 41, 52]
+    {
+        "text": "T/F: NUMA systems are typically found in AMD EPYC and Intel Xeon multi-socket servers.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 61]
+    {
+        "text": "T/F: Distributed memory systems use implicit communication through shared variables.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 65]
+    {
+        "text": "T/F: MPI programming generally has a steeper learning curve than OpenMP.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 70, 72]
+    {
+        "text": "T/F: Cache coherency is a major concern in distributed memory systems across different nodes.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 69]
+    {
+        "text": "T/F: Hybrid programming uses MPI between nodes and OpenMP within a node.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 71]
+    {
+        "text": "T/F: In the MESI protocol, the 'I' stands for 'Internal'.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 73]
+    {
+        "text": "T/F: False sharing can degrade performance due to constant cache line invalidation.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 73, 74]
+    {
+        "text": "T/F: A process is typically lighter-weight than a thread.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 77, 78]
+    {
+        "text": "T/F: Every thread in a process has its own independent stack and registers.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 78]
+    {
+        "text": "T/F: If one thread in a process crashes, it can potentially take down the entire process.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 78]
+    {
+        "text": "T/F: MPI ranks are essentially independent processes.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 77, 87]
+    {
+        "text": "T/F: Pthreads is a high-level compiler directive for parallel programming.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 79]
+    {
+        "text": "T/F: Mutex stands for Mutual Exclusion.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 85]
+    {
+        "text": "T/F: A Semaphore is a generalized counter used to control access to limited resources.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 85]
+    {
+        "text": "T/F: Deadlock is a risk only in distributed memory systems.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 85, 97]
+    {
+        "text": "T/F: MPI_COMM_WORLD refers to the group of all processes that can communicate in an MPI session.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 87]
+    {
+        "text": "T/F: A thread in the 'BLOCKED' state is currently executing work on a CPU core.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 94]
+    {
+        "text": "T/F: Atomic operations are guaranteed by hardware to be indivisible.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 85]
+    {
+        "text": "T/F: Livelock is a situation where threads keep responding to each other but make no progress.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 97]
+    {
+        "text": "T/F: Scientific simulations and AI training are key drivers for parallel computing.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 14]
+    {
+        "text": "T/F: Energy efficiency is improved by running multiple cores at a lower frequency rather than one fast core.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 17]
+    {
+        "text": "T/F: In an MPI program, `MPI_Finalize()` must be called at the end to clean up.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 88, 91]
+    {
+        "text": "T/F: Distributed memory systems are not used in the world's fastest supercomputers.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 67, 69]
+    {
+        "text": "T/F: Shared memory communication is generally higher latency than message passing.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 72]
+    {
+        "text": "T/F: Data parallelism and task parallelism are the same concept.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 10]
+    {
+        "text": "T/F: Modern processors often have private L1/L2 caches for each core.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }
     
 ];
 

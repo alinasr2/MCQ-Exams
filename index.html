@@ -1162,7 +1162,110 @@ const questionsData = [
         "text": "T/F: Modern processors often have private L1/L2 caches for each core.",
         "options": ["True", "False"],
         "correctAnswer": "a"
-    }
+    },
+
+
+    {
+        "text": "Which fundamental decomposition strategy involves applying the same operation to different pieces of data simultaneously?",
+        "options": ["Task Parallelism", "Pipeline Parallelism", "Data Parallelism", "Sequential Processing"],
+        "correctAnswer": "c"
+    }, // [cite: 9]
+    {
+        "text": "Data parallelism is also referred to as SPMD, which stands for ----------.",
+        "options": ["Single Process, Multiple Devices", "Single Program, Multiple Data", "Shared Program, Multiple Data", "Synchronized Parallel Model Distribution"],
+        "correctAnswer": "b"
+    }, // [cite: 22]
+    {
+        "text": "Which hardware is described as being massively data-parallel with thousands of cores?",
+        "options": ["CPUs", "Hard Drives", "GPUs", "RAM"],
+        "correctAnswer": "c"
+    }, // [cite: 31]
+    {
+        "text": "In Task Parallelism, different tasks may perform different operations on ----------.",
+        "options": ["Only different data", "Only the same data", "Same or different data", "No data"],
+        "correctAnswer": "c"
+    }, // [cite: 50]
+    {
+        "text": "Which OpenMP construct is used to define explicit, independent units of work within a parallel region?",
+        "options": ["#pragma omp parallel for", "#pragma omp task", "#pragma omp critical", "#pragma omp master"],
+        "correctAnswer": "b"
+    }, // [cite: 61]
+    {
+        "text": "Intel TBB task_group is a C++ library that does not require ----------.",
+        "options": ["A processor", "Memory", "Special compiler support", "Thread pools"],
+        "correctAnswer": "c"
+    }, // [cite: 70]
+    {
+        "text": "A form of task parallelism where tasks form a linear chain and operate concurrently on different items is called ----------.",
+        "options": ["Vectorization", "Reduction", "Pipeline Parallelism", "Data Decomposition"],
+        "correctAnswer": "c"
+    }, // [cite: 83]
+    {
+        "text": "According to Amdahl's Law, the speedup of a parallel program is limited by its ---------- portion.",
+        "options": ["Parallel", "Sequential", "Data", "Hardware"],
+        "correctAnswer": "b"
+    }, // [cite: 19, 85]
+    {
+        "text": "The process of combining partial sums from different cores into a single final result is known as ----------.",
+        "options": ["Partitioning", "Reduction", "Scheduling", "Mapping"],
+        "correctAnswer": "b"
+    }, // [cite: 44]
+    {
+        "text": "Which model uses 'work-stealing' to balance tasks across available worker threads?",
+        "options": ["Standard C", "Intel TBB", "NumPy", "Cilk Plus"],
+        "correctAnswer": "b"
+    }, // [cite: 71]
+    {
+        "text": "True or False: Data parallelism and Task parallelism can coexist in a single parallel application.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 11]
+    {
+        "text": "True or False: In Data Parallelism, load balancing is automatic if the data is uniform.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 81]
+    {
+        "text": "True or False: Pipeline parallelism throughput is limited by the fastest stage.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 83]
+    {
+        "text": "True or False: OpenMP taskwait is used to pause the current task until child tasks are completed.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 65]
+    {
+        "text": "True or False: CUDA is a parallel computing platform created by NVIDIA for general-purpose computing on GPUs.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 75, 76]
+    {
+        "text": "True or False: Task parallelism requires dependency analysis, often represented as a DAG.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 51, 82]
+    {
+        "text": "True or False: Cilk Plus is currently the primary focused language extension recommended by Intel over OpenMP.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 73]
+    {
+        "text": "True or False: In Amdahl's Law, the variable 'N' represents the fraction of code that can be parallelized.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 85]
+    {
+        "text": "True or False: Scientific computing and ML batch processing are best suited for Data Parallelism.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 81]
+    {
+        "text": "True or False: Irregular algorithms, such as tree traversals, are well-suited for OpenMP tasks.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    } // [cite: 64]
+];
     
 ];
 

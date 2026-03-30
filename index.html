@@ -1165,107 +1165,308 @@ const questionsData = [
     },
 
 
+   {
+        "text": "What are the two fundamental decomposition strategies for parallel programs?",
+        "options": ["Shared and Distributed Memory", "Data and Task Parallelism", "Threads and Processes", "OpenMP and CUDA"],
+        "correctAnswer": "b"
+    }, // [cite: 8]
     {
-        "text": "Which fundamental decomposition strategy involves applying the same operation to different pieces of data simultaneously?",
+        "text": "Which type of parallelism applies the same operation to different pieces of data simultaneously?",
         "options": ["Task Parallelism", "Pipeline Parallelism", "Data Parallelism", "Sequential Processing"],
         "correctAnswer": "c"
     }, // [cite: 9]
     {
-        "text": "Data parallelism is also referred to as SPMD, which stands for ----------.",
-        "options": ["Single Process, Multiple Devices", "Single Program, Multiple Data", "Shared Program, Multiple Data", "Synchronized Parallel Model Distribution"],
+        "text": "Task parallelism is best defined as:",
+        "options": ["Partitioning rows and columns of a matrix.", "Applying a single program to multiple data points.", "Executing different operations simultaneously on the same or different data.", "Using thousands of CUDA cores for a single calculation."],
+        "correctAnswer": "c"
+    }, // [cite: 10]
+    {
+        "text": "According to Amdahl’s Law, what limits the speedup of a parallel application?",
+        "options": ["The number of processors only", "The parallel portion of the code", "The sequential fraction of the code", "The memory bandwidth"],
+        "correctAnswer": "c"
+    }, // [cite: 19, 85]
+    {
+        "text": "Which of the following is true regarding data and task parallelism?",
+        "options": ["They are mutually exclusive", "Both can coexist in a single parallel application", "Data parallelism is only for CPUs", "Task parallelism is always faster"],
+        "correctAnswer": "b"
+    }, // [cite: 11]
+    {
+        "text": "Data parallelism is also known as SPMD, which stands for ----------.",
+        "options": ["Shared Program, Multiple Data", "Single Program, Multiple Data", "Serial Processing, Multiple Devices", "Synchronized Parallel Model Distribution"],
         "correctAnswer": "b"
     }, // [cite: 22]
     {
-        "text": "Which hardware is described as being massively data-parallel with thousands of cores?",
-        "options": ["CPUs", "Hard Drives", "GPUs", "RAM"],
+        "text": "Data parallelism naturally maps to which of the following structures?",
+        "options": ["Recursive tree traversals", "Linked lists", "Arrays, matrices, and image pixels", "Event-driven web servers"],
+        "correctAnswer": "c"
+    }, // [cite: 23]
+    {
+        "text": "Which hardware is described as being 'massively data-parallel'?",
+        "options": ["Multi-core CPUs", "Hard disk drives", "GPUs (Graphics Processing Units)", "Network Interface Cards"],
         "correctAnswer": "c"
     }, // [cite: 31]
     {
-        "text": "In Task Parallelism, different tasks may perform different operations on ----------.",
-        "options": ["Only different data", "Only the same data", "Same or different data", "No data"],
-        "correctAnswer": "c"
-    }, // [cite: 50]
-    {
-        "text": "Which OpenMP construct is used to define explicit, independent units of work within a parallel region?",
-        "options": ["#pragma omp parallel for", "#pragma omp task", "#pragma omp critical", "#pragma omp master"],
-        "correctAnswer": "b"
-    }, // [cite: 61]
-    {
-        "text": "Intel TBB task_group is a C++ library that does not require ----------.",
-        "options": ["A processor", "Memory", "Special compiler support", "Thread pools"],
-        "correctAnswer": "c"
-    }, // [cite: 70]
-    {
-        "text": "A form of task parallelism where tasks form a linear chain and operate concurrently on different items is called ----------.",
-        "options": ["Vectorization", "Reduction", "Pipeline Parallelism", "Data Decomposition"],
-        "correctAnswer": "c"
-    }, // [cite: 83]
-    {
-        "text": "According to Amdahl's Law, the speedup of a parallel program is limited by its ---------- portion.",
-        "options": ["Parallel", "Sequential", "Data", "Hardware"],
-        "correctAnswer": "b"
-    }, // [cite: 19, 85]
-    {
-        "text": "The process of combining partial sums from different cores into a single final result is known as ----------.",
-        "options": ["Partitioning", "Reduction", "Scheduling", "Mapping"],
+        "text": "In the Array Sum example, the final step of adding partial sums together is called ----------.",
+        "options": ["Partitioning", "Reduction", "Vectorization", "Decomposition"],
         "correctAnswer": "b"
     }, // [cite: 44]
     {
-        "text": "Which model uses 'work-stealing' to balance tasks across available worker threads?",
-        "options": ["Standard C", "Intel TBB", "NumPy", "Cilk Plus"],
+        "text": "Which is an example of data parallelism in scientific computing?",
+        "options": ["A web server handling requests", "A game engine's audio task", "Dividing an atmospheric grid across nodes in weather simulation", "Compiling multiple source files"],
+        "correctAnswer": "c"
+    }, // [cite: 30]
+    {
+        "text": "In Task Parallelism, tasks may have dependencies that must be ordered using a ----------.",
+        "options": ["Linear array", "Task graph / DAG", "Reduction table", "Vectorized list"],
+        "correctAnswer": "b"
+    }, // [cite: 51]
+    {
+        "text": "Which of the following is a task parallelism example in a game engine?",
+        "options": ["Summing all values in a matrix", "Physics, AI, and audio as separate tasks", "Processing every pixel for a blur", "Dividing a grid across cores"],
+        "correctAnswer": "b"
+    }, // [cite: 57]
+    {
+        "text": "OpenMP task constructs were introduced in which version?",
+        "options": ["OpenMP 1.0", "OpenMP 2.0", "OpenMP 3.0", "OpenMP 4.5"],
+        "correctAnswer": "c"
+    }, // [cite: 61]
+    {
+        "text": "Which directive pauses the current task until child tasks are completed?",
+        "options": ["#pragma omp wait", "#pragma omp stop", "#pragma omp taskwait", "#pragma omp barrier"],
+        "correctAnswer": "c"
+    }, // [cite: 65]
+    {
+        "text": "What is a key advantage of Intel TBB over OpenMP?",
+        "options": ["It is faster for GPUs", "It is a C++ library not requiring special compiler support", "It only supports data parallelism", "It is an older deprecated tool"],
+        "correctAnswer": "b"
+    }, // [cite: 70]
+    {
+        "text": "Which framework uses 'work-stealing' to balance tasks across worker threads?",
+        "options": ["NumPy", "Intel TBB", "Standard C", "CUDA"],
         "correctAnswer": "b"
     }, // [cite: 71]
     {
-        "text": "True or False: Data parallelism and Task parallelism can coexist in a single parallel application.",
+        "text": "Who developed the CUDA parallel computing platform?",
+        "options": ["Intel", "AMD", "NVIDIA", "Google"],
+        "correctAnswer": "c"
+    }, // [cite: 76]
+    {
+        "text": "A special case of task parallelism where tasks form a linear chain is ----------.",
+        "options": ["Reduction Parallelism", "Pipeline Parallelism", "Vector Parallelism", "Grid Parallelism"],
+        "correctAnswer": "b"
+    }, // [cite: 83]
+    {
+        "text": "Pipeline throughput is limited by the ----------.",
+        "options": ["Fastest stage", "Slowest stage (bottleneck)", "First stage", "Last stage"],
+        "correctAnswer": "b"
+    }, // [cite: 83]
+    {
+        "text": "The time for the first item to complete an entire pipeline is known as ----------.",
+        "options": ["Throughput", "Startup latency", "Clock speed", "Bandwidth"],
+        "correctAnswer": "b"
+    }, // [cite: 83]
+    {
+        "text": "What is a real-world analogy for pipeline parallelism?",
+        "options": ["A library bookshelf", "An assembly line", "A group dinner", "A solo marathon"],
+        "correctAnswer": "b"
+    }, // [cite: 83]
+    {
+        "text": "Which type of parallelism handles irregular workloads better?",
+        "options": ["Data Parallelism", "Task Parallelism", "SIMD", "SPMD"],
+        "correctAnswer": "b"
+    }, // [cite: 82]
+    {
+        "text": "In Amdahl's Law, 'P' stands for ----------.",
+        "options": ["Number of processors", "Sequential fraction", "Fraction of code that can be parallelized", "Total execution time"],
+        "correctAnswer": "c"
+    }, // [cite: 85]
+    {
+        "text": "Which implementation is best for tree traversals or recursive algorithms?",
+        "options": ["OpenMP parallel for", "OpenMP tasks", "NumPy vectorization", "Sequential loops"],
+        "correctAnswer": "b"
+    }, // [cite: 64]
+    {
+        "text": "Which is an example of hardware acceleration for data parallelism?",
+        "options": ["Web server threads", "Task schedulers", "CUDA kernels", "File systems"],
+        "correctAnswer": "c"
+    }, // [cite: 31, 32]
+    {
+        "text": "Data parallelism load balance is automatic if ----------.",
+        "options": ["The tasks are complex", "The data is uniform", "There are few processors", "The code is sequential"],
+        "correctAnswer": "b"
+    }, // [cite: 81]
+    {
+        "text": "Task parallelism requires ---------- analysis.",
+        "options": ["Reduction", "Dependency", "Vector", "Memory"],
+        "correctAnswer": "b"
+    }, // [cite: 82]
+    {
+        "text": "A 'task graph' is also known as a ----------.",
+        "options": ["Linear List", "DAG", "Grid", "Matrix"],
+        "correctAnswer": "b"
+    }, // [cite: 51]
+    {
+        "text": "Intel TBB handles recursive algorithms via ----------.",
+        "options": ["Manual splitting", "Automatic work-stealing", "Reduction", "Pipelining"],
+        "correctAnswer": "b"
+    }, // [cite: 71]
+    {
+        "text": "Which language extension was deprecated in favor of OpenMP and TBB?",
+        "options": ["CUDA", "Cilk Plus", "Python", "Intel TBB"],
+        "correctAnswer": "b"
+    }, // [cite: 73]
+
+    // --- SECTION: TRUE/FALSE QUESTIONS (30) ---
+    {
+        "text": "True or False: Data parallelism applies the same operation to different data simultaneously.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 9]
+    {
+        "text": "True or False: Task parallelism requires all tasks to perform the same operation.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 10]
+    {
+        "text": "True or False: Both data and task parallelism can coexist in a single application.",
         "options": ["True", "False"],
         "correctAnswer": "a"
     }, // [cite: 11]
     {
-        "text": "True or False: In Data Parallelism, load balancing is automatic if the data is uniform.",
+        "text": "True or False: Amdahl’s Law states that only the parallel portion of code benefits from parallelism.",
         "options": ["True", "False"],
         "correctAnswer": "a"
-    }, // [cite: 81]
+    }, // [cite: 19]
     {
-        "text": "True or False: Pipeline parallelism throughput is limited by the fastest stage.",
+        "text": "True or False: SPMD stands for Single Program, Multiple Data.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 22]
+    {
+        "text": "True or False: Data parallelism is poorly suited for image processing.",
         "options": ["True", "False"],
         "correctAnswer": "b"
-    }, // [cite: 83]
+    }, // [cite: 28]
     {
-        "text": "True or False: OpenMP taskwait is used to pause the current task until child tasks are completed.",
+        "text": "True or False: In weather simulation, the atmospheric grid is divided across nodes for parallelism.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 30]
+    {
+        "text": "True or False: GPUs are massively data-parallel hardware.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 31]
+    {
+        "text": "True or False: NumPy vectorized operations are an example of task parallelism.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 32]
+    {
+        "text": "True or False: Reduction in array summation involves adding partial results into a final total.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 44]
+    {
+        "text": "True or False: Task parallelism involves dividing an application into independent tasks.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 49]
+    {
+        "text": "True or False: Tasks in task parallelism can never have dependencies.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 51]
+    {
+        "text": "True or False: A web server handling multiple requests is an example of task parallelism.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 54]
+    {
+        "text": "True or False: Game engines use task parallelism for audio, AI, and rendering.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 57]
+    {
+        "text": "True or False: OpenMP tasks are added to a queue for any thread in the team to execute.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 62, 63]
+    {
+        "text": "True or False: OpenMP tasks are a poor choice for processing linked lists.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 64]
+    {
+        "text": "True or False: #pragma omp taskwait pauses a task until its child tasks complete.",
         "options": ["True", "False"],
         "correctAnswer": "a"
     }, // [cite: 65]
     {
-        "text": "True or False: CUDA is a parallel computing platform created by NVIDIA for general-purpose computing on GPUs.",
-        "options": ["True", "False"],
-        "correctAnswer": "a"
-    }, // [cite: 75, 76]
-    {
-        "text": "True or False: Task parallelism requires dependency analysis, often represented as a DAG.",
-        "options": ["True", "False"],
-        "correctAnswer": "a"
-    }, // [cite: 51, 82]
-    {
-        "text": "True or False: Cilk Plus is currently the primary focused language extension recommended by Intel over OpenMP.",
+        "text": "True or False: Intel TBB requires special compiler support unlike OpenMP.",
         "options": ["True", "False"],
         "correctAnswer": "b"
-    }, // [cite: 73]
+    }, // [cite: 70]
     {
-        "text": "True or False: In Amdahl's Law, the variable 'N' represents the fraction of code that can be parallelized.",
+        "text": "True or False: Intel TBB's scheduler automatically balances tasks across available threads.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 68]
+    {
+        "text": "True or False: CUDA is strictly for graphics and cannot be used for scientific simulations.",
         "options": ["True", "False"],
         "correctAnswer": "b"
-    }, // [cite: 85]
+    }, // [cite: 76, 78]
     {
-        "text": "True or False: Scientific computing and ML batch processing are best suited for Data Parallelism.",
+        "text": "True or False: Task graphs (DAGs) define the order of operations in task parallelism.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 79]
+    {
+        "text": "True or False: Data parallelism is easier to implement for regular problems.",
         "options": ["True", "False"],
         "correctAnswer": "a"
     }, // [cite: 81]
     {
-        "text": "True or False: Irregular algorithms, such as tree traversals, are well-suited for OpenMP tasks.",
+        "text": "True or False: Task parallelism has zero scheduling overhead.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 82]
+    {
+        "text": "True or False: Load imbalance occurs in task parallelism if tasks vary in size.",
         "options": ["True", "False"],
         "correctAnswer": "a"
-    } // [cite: 64]
-    
+    }, // [cite: 82]
+    {
+        "text": "True or False: Pipeline parallelism stages operate concurrently on different items.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 83]
+    {
+        "text": "True or False: Instruction pipelines in CPUs are a form of data parallelism.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 83]
+    {
+        "text": "True or False: Pipeline balancing aims to equalize stage times to maximize throughput.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 84]
+    {
+        "text": "True or False: In Amdahl's Law, 'N' represents the number of processors.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 85]
+    {
+        "text": "True or False: Scientific computing usually prefers task parallelism over data parallelism.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 81]
+    {
+        "text": "True or False: Complex, event-driven workflows are best suited for task parallelism.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }
 ];
 
 

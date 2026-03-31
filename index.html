@@ -1466,6 +1466,310 @@ const questionsData = [
         "text": "True or False: Complex, event-driven workflows are best suited for task parallelism.",
         "options": ["True", "False"],
         "correctAnswer": "a"
+    },
+
+
+    {
+        "text": "What does the 'Fork-Join' model in OpenMP imply?",
+        "options": ["Threads are created at the start and never destroyed", "The master thread creates a team of threads for parallel regions and joins them afterward", "Programs are split into separate processes with unique memory spaces", "Threads are only used for I/O operations"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which component of OpenMP includes 'OMP_NUM_THREADS'?",
+        "options": ["Compiler Directives", "Runtime Library Routines", "Environment Variables", "Hardware Instructions"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "In OpenMP, which directive is specifically used to parallelize a loop?",
+        "options": ["#pragma omp parallel", "#pragma omp for", "#pragma omp task", "#pragma omp section"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "What is the primary purpose of the 'reduction' clause?",
+        "options": ["To decrease the number of threads used", "To avoid race conditions when aggregating values across threads", "To simplify the code for the compiler", "To reduce the memory footprint of the application"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "According to Amdahl's Law, if a program is 90% parallelizable, what is the maximum theoretical speedup?",
+        "options": ["5x", "9x", "10x", "Infinite"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "Which clause would you use to ensure each thread gets its own uninitialized copy of a variable?",
+        "options": ["shared", "private", "firstprivate", "lastprivate"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "What is 'False Sharing' in parallel programming?",
+        "options": ["Threads accessing different files simultaneously", "Threads updating different variables that reside on the same cache line", "Variables being shared without a 'shared' clause", "Multiple threads using the same variable name for different purposes"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "The function 'omp_get_thread_num()' returns:",
+        "options": ["The total count of threads in the team", "The unique ID (0 to N-1) of the calling thread", "The number of CPU cores available", "The time elapsed since the thread started"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which scheduling type is most appropriate for a loop where iterations have significantly different workloads?",
+        "options": ["static", "dynamic", "sequential", "ordered"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which directive ensures a block of code is executed by only the master thread?",
+        "options": ["#pragma omp single", "#pragma omp master", "#pragma omp critical", "#pragma omp barrier"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "A program takes 100 seconds to run. 20 seconds are strictly serial. Using 4 processors, what is the speedup based on Amdahl's Law?",
+        "options": ["1.5x", "2.5x", "4.0x", "5.0x"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Efficiency (E) in parallel computing is calculated as:",
+        "options": ["Speedup / Processors (S/N)", "Processors / Speedup (N/S)", "Time / Processors", "Speedup * Processors"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "Which OpenMP feature is used to handle irregular or recursive parallelism?",
+        "options": ["Sections", "Tasks", "Atomic", "Critical"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "High-performance computing typically targets a minimum efficiency of:",
+        "options": ["50%", "70%", "90%", "100%"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "What does the 'collapse(2)' clause do?",
+        "options": ["Stops two threads from running", "Combines two nested loops into a single iteration space", "Reduces two variables into one", "Deletes the inner loop entirely"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which clause initializes a private variable with the value from the master thread?",
+        "options": ["private", "firstprivate", "lastprivate", "copyin"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "The 'barrier' directive is used to:",
+        "options": ["Stop a thread permanently", "Synchronize all threads in a team at a specific point", "Protect a single line of code", "Prevent any thread from entering a region"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which of these is a 'Runtime Library Routine' in OpenMP?",
+        "options": ["#pragma omp parallel", "OMP_NUM_THREADS", "omp_get_wtime()", "gcc -fopenmp"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "If a system shows 'Strong Scaling', what remains constant as processors increase?",
+        "options": ["Execution time", "Total problem size", "Problem size per processor", "Power consumption"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which directive provides the fastest synchronization for simple updates like 'x++'?",
+        "options": ["critical", "atomic", "barrier", "ordered"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Gustafson's Law is often referred to as:",
+        "options": ["Fixed-time speedup", "Scaled speedup", "Serial limitation", "Linear bottleneck"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "In the command 'gcc -fopenmp program.c', the flag '-fopenmp' tells the compiler to:",
+        "options": ["Optimize the code for speed", "Link the OpenMP library and process directives", "Only run the program on one core", "Check for memory leaks"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which library header must be included to use OpenMP functions in C?",
+        "options": ["<stdio.h>", "<stdlib.h>", "<omp.h>", "<parallel.h>"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "What happens when a 'single' directive is used?",
+        "options": ["Only the master thread executes the block", "Only one thread (any) in the team executes the block", "All threads execute it one by one", "The code is skipped"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which is a major disadvantage of 'dynamic' scheduling compared to 'static'?",
+        "options": ["It causes load imbalance", "It has higher runtime overhead", "It cannot be used with 'for' loops", "It requires more memory"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Calculating the speedup for a program with 10% serial fraction on 16 processors results in a speedup of approximately:",
+        "options": ["6.4", "10.2", "15.1", "16.0"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "What is the result of using the 'lastprivate' clause?",
+        "options": ["The variable is deleted", "The value from the chronologically last iteration is copied back to the original variable", "The thread with the highest ID keeps the value", "The master thread ignores the value"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "A 'Race Condition' occurs when:",
+        "options": ["Multiple threads read the same variable", "The program runs too fast", "Multiple threads attempt to write to the same memory location simultaneously", "Threads finish at different times"],
+        "correctAnswer": "c"
+    },
+    {
+        "text": "The 'nowait' clause is used to:",
+        "options": ["Speed up the CPU clock", "Remove the implicit barrier at the end of a worksharing region", "Force threads to wait", "Exit the program immediately"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "Which advanced OpenMP 4.5+ feature is used for GPU offloading?",
+        "options": ["#pragma omp task", "#pragma omp target", "#pragma omp simd", "#pragma omp parallel"],
+        "correctAnswer": "b"
+    },
+
+    // SECTION: 30 TRUE/FALSE QUESTIONS (T/F)
+    {
+        "text": "T/F: OpenMP is designed for distributed-memory systems where processors do not share RAM.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: In OpenMP, the master thread has a thread ID of 0.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: The '#pragma omp parallel' directive automatically divides loop iterations among threads.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: Variables declared outside a parallel region are shared among all threads by default.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: A 'critical' section allows multiple threads to execute the same block of code simultaneously.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: Amdahl’s Law suggests that the serial part of a program is the ultimate bottleneck to speedup.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: Efficiency (E) can never exceed 1.0 (or 100%) in standard parallel models.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: 'Static' scheduling is the default scheduling for most OpenMP compilers.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: The 'omp_get_wtime()' function returns the current wall clock time in seconds.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: A 'barrier' synchronization is implicit at the end of a '#pragma omp for' directive unless 'nowait' is used.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: The 'private' clause preserves the value of a variable from the master thread.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: 'Weak Scaling' involves increasing both the problem size and the number of processors.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: OpenMP directives are ignored by compilers that do not support OpenMP.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: Parallelizing a loop with data dependencies between iterations (like a[i] = a[i-1]) will produce correct results automatically.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: 'Atomic' directives can only be used with specific simple expressions like increment/decrement.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: Every 'parallel' region in OpenMP results in a 'Join' operation at its conclusion.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: According to Gustafson’s Law, speedup scales linearly with the number of processors if the parallel part dominates.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: Use of 'reduction' is only possible for the addition (+) operator.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: The 'single' directive implies that only the master thread executes the code.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: Adding more threads to a parallel program always results in faster execution.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: Nested parallelism (parallel regions inside parallel regions) is disabled by default in OpenMP.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: 'OMP_SCHEDULE' is an environment variable that can control loop scheduling at runtime.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: An 'atomic' directive is generally more overhead-heavy than a 'critical' section.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: The 'collapse' clause can only be used on loops that are perfectly nested.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: OpenMP can be used with C, C++, and Fortran.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: Profiling sequential code is an unnecessary step if you already know where the loops are.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    },
+    {
+        "text": "T/F: In a 'firstprivate' clause, the private copy is initialized once per thread.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: The '#pragma omp task' directive allows for deferred execution of code blocks.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: 'Strong Scaling' is used to determine how much the execution time decreases as more processors are added for a fixed problem size.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    },
+    {
+        "text": "T/F: If efficiency is 0.4 on 16 processors, the speedup is 6.4.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
     }
 ];
 

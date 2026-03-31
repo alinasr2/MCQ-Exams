@@ -1770,6 +1770,309 @@ const questionsData = [
         "text": "T/F: If efficiency is 0.4 on 16 processors, the speedup is 6.4.",
         "options": ["True", "False"],
         "correctAnswer": "a"
+    },
+
+    {
+        "text": "What does the acronym MPI stand for in the context of distributed computing?",
+        "options": ["Memory Processing Interface", "Message Passing Interface", "Multiprocessor Interface", "Main Program Initialization"],
+        "correctAnswer": "b"
+    }, // [cite: 15]
+    {
+        "text": "Which of the following was the first standard version of MPI?",
+        "options": ["MPI-0.1", "MPI-1.0", "MPI-2.0", "MPI-1994"],
+        "correctAnswer": "b"
+    }, // [cite: 16]
+    {
+        "text": "MPI is primarily designed for which type of memory architecture?",
+        "options": ["Shared-memory", "Distributed-memory", "Unified-memory", "Cache-only memory"],
+        "correctAnswer": "b"
+    }, // [cite: 15]
+    {
+        "text": "In MPI, each process has its own ---------- address space.",
+        "options": ["Shared", "Separate", "Implicit", "Virtual"],
+        "correctAnswer": "b"
+    }, // [cite: 36, 37]
+    {
+        "text": "Which MPI function is used to initialize the MPI environment?",
+        "options": ["MPI_Start", "MPI_Begin", "MPI_Init", "MPI_Setup"],
+        "correctAnswer": "c"
+    }, // [cite: 48, 95]
+    {
+        "text": "The unique integer ID assigned to each process in a communicator is called the ----------.",
+        "options": ["Tag", "Size", "Rank", "Slot"],
+        "correctAnswer": "c"
+    }, // [cite: 53]
+    {
+        "text": "Which default communicator contains all processes launched in an MPI job?",
+        "options": ["MPI_GROUP_ALL", "MPI_COMM_WORLD", "MPI_COMM_DEFAULT", "MPI_ANY_SOURCE"],
+        "correctAnswer": "b"
+    }, // [cite: 55, 75]
+    {
+        "text": "What is the function used to find the total number of processes in a communicator?",
+        "options": ["MPI_Comm_rank", "MPI_Comm_count", "MPI_Comm_size", "MPI_Get_size"],
+        "correctAnswer": "c"
+    }, // [cite: 49, 101]
+    {
+        "text": "Which programming model does MPI follow, where all processes run the same binary on different data?",
+        "options": ["MPMD", "SPMD", "SIMD", "MISD"],
+        "correctAnswer": "b"
+    }, // [cite: 56]
+    {
+        "text": "Which of these is the correct compilation wrapper for an MPI program written in C?",
+        "options": ["gcc-mpi", "mpicc", "mpi-gcc", "mpic++"],
+        "correctAnswer": "b"
+    }, // [cite: 79]
+    {
+        "text": "Which command is typically used to execute an MPI program with 4 processes?",
+        "options": ["mpirun -p 4", "mpiexec -n 4", "mpi-start 4", "runmpi -4"],
+        "correctAnswer": "b"
+    }, // [cite: 74, 82]
+    {
+        "text": "What is the purpose of the 'tag' parameter in MPI_Send and MPI_Recv?",
+        "options": ["To identify the destination process", "To identify the process rank", "To distinguish between different types of messages", "To determine the message size"],
+        "correctAnswer": "c"
+    }, // [cite: 58, 106]
+    {
+        "text": "In MPI_Send, the 'dest' parameter refers to the ---------- of the destination process.",
+        "options": ["IP Address", "Hostname", "Rank", "Communicator ID"],
+        "correctAnswer": "c"
+    }, // [cite: 106]
+    {
+        "text": "Which wildcard can be used in MPI_Recv to accept a message from any process?",
+        "options": ["MPI_ANY_TAG", "MPI_ALL_SOURCES", "MPI_ANY_SOURCE", "MPI_SOURCE_IGNORE"],
+        "correctAnswer": "c"
+    }, // [cite: 107, 116]
+    {
+        "text": "Which MPI function retrieves the actual number of elements received in a message?",
+        "options": ["MPI_Get_size", "MPI_Get_count", "MPI_Status_size", "MPI_Check_buffer"],
+        "correctAnswer": "b"
+    }, // [cite: 107]
+    {
+        "text": "If a large message is sent using standard MPI_Send, it may block until ----------.",
+        "options": ["The buffer is empty", "A matching Recv is posted", "The timer expires", "MPI_Finalize is called"],
+        "correctAnswer": "b"
+    }, // [cite: 106]
+    {
+        "text": "Which MPI data type corresponds to the 'double' type in C?",
+        "options": ["MPI_FLOAT", "MPI_REAL", "MPI_DOUBLE", "MPI_LONG_FLOAT"],
+        "correctAnswer": "c"
+    }, // [cite: 108]
+    {
+        "text": "A 'circular wait' scenario where two processes wait to receive from each other before sending results in a ----------.",
+        "options": ["Race condition", "Segmentation fault", "Deadlock", "False sharing"],
+        "correctAnswer": "c"
+    }, // [cite: 118]
+    {
+        "text": "Which function provides an atomic way to both send and receive a message, helping to avoid deadlocks?",
+        "options": ["MPI_Send_then_Recv", "MPI_Sendrecv", "MPI_Dual_comm", "MPI_Isend"],
+        "correctAnswer": "b"
+    }, // [cite: 104, 119]
+    {
+        "text": "What is the recommended way to create custom MPI data types for C structs?",
+        "options": ["MPI_Type_struct", "MPI_Type_create_struct", "MPI_Define_struct", "MPI_Custom_type"],
+        "correctAnswer": "b"
+    }, // [cite: 109]
+    {
+        "text": "Which of the following is a non-blocking send function?",
+        "options": ["MPI_Send", "MPI_Bcast", "MPI_Isend", "MPI_Ssend"],
+        "correctAnswer": "c"
+    }, // [cite: 99, 106]
+    {
+        "text": "To ensure an MPI environment is properly shut down, which function must be called?",
+        "options": ["MPI_Stop", "MPI_Close", "MPI_Finalize", "MPI_Exit"],
+        "correctAnswer": "c"
+    }, // [cite: 51, 95]
+    {
+        "text": "What information is NOT typically found in the MPI_Status object after a receive?",
+        "options": ["Actual source rank", "Actual message tag", "Actual number of elements", "The original send buffer pointer"],
+        "correctAnswer": "d"
+    }, // [cite: 107, 116]
+    {
+        "text": "In MPI, collective communication operations are used for ----------.",
+        "options": ["One-to-one messaging", "Communication involving all processes in a communicator", "Error debugging only", "Initial process creation"],
+        "correctAnswer": "b"
+    }, // [cite: 8, 103]
+    {
+        "text": "MPI-5.0 was released in which year according to the lecture?",
+        "options": ["1994", "2010", "2020", "2025"],
+        "correctAnswer": "d"
+    }, // [cite: 16]
+    {
+        "text": "Which implementation of MPI is NOT listed as a common one?",
+        "options": ["MPICH", "Open MPI", "Google MPI", "Intel MPI"],
+        "correctAnswer": "c"
+    }, // [cite: 19]
+    {
+        "text": "MPI rank IDs for a communicator with P processes range from ----------.",
+        "options": ["1 to P", "0 to P", "0 to P-1", "1 to P-1"],
+        "correctAnswer": "c"
+    }, // [cite: 53]
+    {
+        "text": "Which approach is best for a hybrid parallel model (between and within nodes)?",
+        "options": ["MPI only", "OpenMP only", "MPI between nodes, OpenMP within nodes", "OpenMP between nodes, MPI within nodes"],
+        "correctAnswer": "c"
+    }, // [cite: 23]
+    {
+        "text": "What happens if the message tag in MPI_Send does not match the tag in the matching MPI_Recv?",
+        "options": ["The message is automatically converted", "The receiver will not accept that specific message", "The program crashes immediately", "The tag is ignored by default"],
+        "correctAnswer": "b"
+    }, // [cite: 107, 116]
+    {
+        "text": "In a hostfile, the term 'slots' usually refers to ----------.",
+        "options": ["The number of GPUs available", "The number of processes to run on that node", "The total RAM in GB", "The network speed"],
+        "correctAnswer": "b"
+    }, // [cite: 90, 91]
+
+    // MPI Programming - True/False Questions
+    {
+        "text": "MPI is only limited to a single node and cannot scale to multiple clusters.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 30, 41]
+    {
+        "text": "In MPI, communication between processes is explicit.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 29, 38]
+    {
+        "text": "MPI processes are generally more isolated and fault-tolerant compared to OpenMP threads.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 31, 42]
+    {
+        "text": "Race conditions are a major risk in MPI programs because of shared variables.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 33, 45]
+    {
+        "text": "The function MPI_Init setup the internal data and environment for MPI.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 48]
+    {
+        "text": "The output order of print statements from different MPI processes is always deterministic.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 76]
+    {
+        "text": "mpic++ is the compilation wrapper for C++ MPI programs.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 80, 84]
+    {
+        "text": "MPI_Send is a non-blocking operation that returns immediately regardless of the buffer state.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 106]
+    {
+        "text": "MPI_Recv is a blocking operation that waits until a matching message arrives.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 107]
+    {
+        "text": "MPI_ANY_TAG is a wildcard that can be used in the MPI_Send function.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 116]
+    {
+        "text": "Data types in Send and Receive must match exactly in MPI.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 109]
+    {
+        "text": "A process rank can be any negative integer.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 53]
+    {
+        "text": "MPI_BYTE is used when sending raw memory or untyped data.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 109]
+    {
+        "text": "Deadlock can occur if every process in a ring tries to receive before sending.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 118]
+    {
+        "text": "MPI_STATUS_IGNORE can be used if you don't need information about the received message's source or tag.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 115]
+    {
+        "text": "MPI_Comm_size returns the ID of the current process.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 49, 101]
+    {
+        "text": "MPI_Abort can be used to prematurely terminate an MPI communicator.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 96]
+    {
+        "text": "MPI_COMM_WORLD is the only communicator that can ever exist in an MPI program.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 8, 55]
+    {
+        "text": "One way to avoid deadlock is to have even ranks send first and odd ranks receive first.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 119]
+    {
+        "text": "The 'count' in MPI_Send refers to the number of bytes being sent.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 106]
+    {
+        "text": "MPI_Get_processor_name() is a function used to identify the hardware node where a process is running.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 101]
+    {
+        "text": "Standard MPI_Send will always buffer messages regardless of their size.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 106]
+    {
+        "text": "Message passing in MPI is considered implicit communication.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 29, 38]
+    {
+        "text": "MPI_Isend and MPI_Irecv are non-blocking versions of send and receive.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 99, 106]
+    {
+        "text": "MPI is portable across different platforms and architectures.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 17]
+    {
+        "text": "In MPI_Recv, the 'count' parameter specifies the exact number of elements that will be received.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 107]
+    {
+        "text": "MPI_Finalize must be the last MPI call in a program.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 51]
+    {
+        "text": "Wait-based operations (like MPI_Wait) are required when using non-blocking communication to ensure completion.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
+    }, // [cite: 119]
+    {
+        "text": "MPI programming is only available for C and C++.",
+        "options": ["True", "False"],
+        "correctAnswer": "b"
+    }, // [cite: 19]
+    {
+        "text": "The maximum value for an MPI tag is guaranteed to be at least 32767.",
+        "options": ["True", "False"],
+        "correctAnswer": "a"
     }
 ];
 

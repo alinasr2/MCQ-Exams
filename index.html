@@ -1070,6 +1070,110 @@ const questionsData = [
     "text": "In the code: `plt.plot(x, y, label='Sales')`, which additional function is needed to actually display the label 'Sales' on the chart?",
     "options": ["plt.show()", "plt.legend()", "plt.title()", "plt.grid()"],
     "correctAnswer": "b"
+  },
+    {
+    "text": "Which library is essential for reading datasets in formats like CSV, Excel, and JSON?",
+    "options": ["Matplotlib", "NumPy", "Pandas", "Scikit-Learn"],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "To read a dataset directly from a URL, we use ----------.",
+    "options": ["pd.read_url()", "pd.read_csv(url)", "pd.get_data()", "pd.load_web()"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the primary purpose of 'Data Preprocessing'?",
+    "options": ["To make the computer faster", "To clean and prepare raw data for ML models", "To design the model architecture", "To increase the size of the dataset"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which command is used to check the number of duplicated rows in a DataFrame?",
+    "options": ["df.check_duplicates()", "df.duplicated().sum()", "df.count_doubles()", "df.find_duplicates()"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "How do you remove duplicated rows from a DataFrame?",
+    "options": ["df.delete_duplicates()", "df.drop_duplicates()", "df.remove_rows()", "df.clear()"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Missing values in a dataset are often represented as ----------.",
+    "options": ["Null", "NaN", "Zero", "None"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "The command `df.isnull().sum()` is used to ----------.",
+    "options": ["Delete missing values", "Count missing values in each column", "Fill missing values with zero", "Find duplicated rows"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Categorical data values are usually stored as ----------.",
+    "options": ["Integers", "Floats", "String classes", "Booleans"],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "Which type of categorical feature has a natural order (e.g., Small, Medium, Large)?",
+    "options": ["Nominal", "Ordinal", "Numeric", "Binary"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which technique assigns a unique integer to each category, useful for ordinal data?",
+    "options": ["One-Hot Encoding", "Label Encoding", "Data Scaling", "Imputation"],
+    "correctAnswer": "b"
+  },
+
+  // --- Medium Questions (5) ---
+  {
+    "text": "In Data Cleaning, what does 'Mean Imputation' refer to?",
+    "options": ["Deleting rows with missing data", "Replacing missing values with the average of the column", "Replacing missing values with zero", "Replacing missing values with the most frequent value"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Look at this code: `df['Color'].fillna(df['Color'].mode()[0], inplace=True)`. This is an example of ----------.",
+    "options": ["Mean Imputation", "Mode Imputation", "Median Imputation", "One-Hot Encoding"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which feature type would 'T-shirt Color' (Red, Blue, Green) be classified as?",
+    "options": ["Ordinal feature", "Nominal feature", "Numerical feature", "Discrete feature"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What does 'One-Hot Encoding' create to represent categories?",
+    "options": ["A single column with integers", "Binary columns for each category", "A list of strings", "A plot"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "When handling missing values, `df.dropna()` will ----------.",
+    "options": ["Fill holes with the mean", "Remove rows or columns with missing values", "Identify duplicates", "Sort the data"],
+    "correctAnswer": "b"
+  },
+
+  // --- Hard Questions (5) ---
+  {
+    "text": "Consider the code: `df = pd.get_dummies(df, columns=['City'])`. What technique is this applying?",
+    "options": ["Label Encoding", "One-Hot Encoding", "Feature Scaling", "Data Cleaning"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Why is 'Label Encoding' preferred for Ordinal features like 'Education Level'?",
+    "options": ["Because it creates many columns", "Because it preserves the mathematical order (e.g., 1 < 2 < 3)", "Because it removes duplicates", "Because it only works with strings"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the risk of using 'Label Encoding' on 'Nominal' features like 'Country'?",
+    "options": ["The model might assume a mathematical order or rank between countries", "The model will delete the data", "The code will crash", "It takes too much memory"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "In the process of Data Preprocessing, which step usually follows Data Cleaning and Encoding?",
+    "options": ["Reading the CSV", "Feature Scaling", "Defining the Library", "Opening the file"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "If a dataset has 10 unique categories in a 'Country' column, how many new columns will One-Hot Encoding create?",
+    "options": ["1", "5", "10", "20"],
+    "correctAnswer": "c"
   }
 ];
 

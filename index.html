@@ -554,19 +554,112 @@
         
 
 
-// const questionsData = [
-//     // Parallel Computing Intro Lecture MCQs (Continued)
-//     {
-//         "text": "The simultaneous use of multiple compute resources to solve a single problem is known as ----------.",
-//         "options": ["Serial Computing", "Parallel Computing", "Cloud Storage", "Sequential Processing"],
-//         "correctAnswer": "b"
-//     }, // [cite: 34]
-//     {
-//         "text": "The three pillars of the parallel computing process are Decompose, Distribute, and ----------.",
-//         "options": ["Delete", "Design", "Coordinate", "Debug"],
-//         "correctAnswer": "c"
-//     }, // [cite: 189]
-//    
+const questionsData = [
+  // --- Easy Questions (10) ---
+  {
+    "text": "Artificial Intelligence (AI) means computer systems that can do tasks that normally need ----------.",
+    "options": ["Fast Internet", "Human thinking", "Manual labor", "Large batteries"],
+    "correctAnswer": "b"
+  }, // [cite: 41]
+  {
+    "text": "Which of the following is an example of AI mentioned in the lab?",
+    "options": ["Recognizing speech", "Printing paper", "Charging a phone", "Storing files"],
+    "correctAnswer": "a"
+  }, // [cite: 42]
+  {
+    "text": "AI is a general term that covers several fields, such as ----------.",
+    "options": ["Hardware Repair", "Machine Learning", "Network Cabling", "Web Hosting"],
+    "correctAnswer": "b"
+  }, // [cite: 45]
+  {
+    "text": "In Machine Learning (ML), systems learn patterns from ---------- instead of being fully programmed.",
+    "options": ["Books", "Data", "Cables", "Users"],
+    "correctAnswer": "b"
+  }, // [cite: 62]
+  {
+    "text": "Expert systems are ---------- systems that copy the decision-making of human experts.",
+    "options": ["Random-based", "Rule-based", "Emotion-based", "Hardware-based"],
+    "correctAnswer": "b"
+  }, // [cite: 68]
+  {
+    "text": "Programs that observe, decide, and act in an environment are known as ----------.",
+    "options": ["Intelligent Agents", "Data Tables", "Static Code", "Compilers"],
+    "correctAnswer": "a"
+  }, // [cite: 70]
+  {
+    "text": "The problem of assigning items to categories (like spam vs. not spam) is called ----------.",
+    "options": ["Regression", "Clustering", "Classification", "Optimization"],
+    "correctAnswer": "c"
+  }, // [cite: 89]
+  {
+    "text": "The subfield of ML that works well on large data and uses neural networks with many layers is ----------.",
+    "options": ["Linear AI", "Expert Systems", "Deep Learning", "Manual AI"],
+    "correctAnswer": "c"
+  }, // [cite: 63, 64, 65]
+  {
+    "text": "Predicting a numeric value, such as house prices, is known as a ---------- problem.",
+    "options": ["Regression", "Clustering", "Search", "Vision"],
+    "correctAnswer": "a"
+  }, // [cite: 90]
+  {
+    "text": "Face recognition and object detection are examples of ---------- problems.",
+    "options": ["Natural Language", "Computer Vision", "Optimization", "Regression"],
+    "correctAnswer": "b"
+  }, // [cite: 93]
+
+  // --- Medium Questions (5) ---
+  {
+    "text": "Expert systems use ---------- rules and knowledge bases to make decisions.",
+    "options": ["While-loop", "If-then", "Try-catch", "For-each"],
+    "correctAnswer": "b"
+  }, // [cite: 69]
+  {
+    "text": "Which of the following is a key feature of Intelligent Agents?",
+    "options": ["They only store data", "They sense environment and act", "They use no logic", "They are fully manual"],
+    "correctAnswer": "b"
+  }, // [cite: 84]
+  {
+    "text": "Understanding or generating human language (chatbots, translation) falls under ----------.",
+    "options": ["Computer Vision", "Natural Language Problems", "Clustering", "Optimization"],
+    "correctAnswer": "b"
+  }, // [cite: 92]
+  {
+    "text": "Grouping similar data without labels (e.g., grouping customers by behavior) is called ----------.",
+    "options": ["Classification", "Regression", "Clustering", "Optimization"],
+    "correctAnswer": "c"
+  }, // [cite: 90]
+  {
+    "text": "Finding the shortest path in maps or solving puzzles is an example of ----------.",
+    "options": ["Search Problems", "Regression", "Classification", "Prediction"],
+    "correctAnswer": "a"
+  }, // [cite: 88, 89]
+
+  // --- Hard Questions (5) ---
+  {
+    "text": "True AI (General AI) is different from today's systems because it would think and learn like humans ----------.",
+    "options": ["In one area", "In all areas", "Only in math", "Only in games"],
+    "correctAnswer": "b"
+  }, // [cite: 49]
+  {
+    "text": "Finding the best solution under certain limits (e.g., task scheduling) is an ---------- problem.",
+    "options": ["Optimization", "Clustering", "Vision", "Regression"],
+    "correctAnswer": "a"
+  }, // [cite: 91]
+  {
+    "text": "A classical AI approach where decisions are fixed logical rules rather than learning is based on ----------.",
+    "options": ["Neural Networks", "Fixed logical rules", "Large datasets", "Random choices"],
+    "correctAnswer": "b"
+  }, // [cite: 95]
+  {
+    "text": "Some experts argue today's AI tools like ChatGPT are not 'real' AI but rather advanced ----------.",
+    "options": ["Robotics", "Machine learning", "Expert systems", "Hardware"],
+    "correctAnswer": "b"
+  }, // [cite: 48]
+  {
+    "text": "According to the lab topics, which system focuses specifically on 'Rule-based expert systems'?",
+    "options": ["Lab 5", "Lab 2", "Lab 8", "Lab 10"],
+    "correctAnswer": "b"
+  } // [cite: 10, 11]
 ];
 
 let currentQuestionIndex = 0;

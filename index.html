@@ -562,7 +562,7 @@ const questionsData = [
     "correctAnswer": "b"
   }, // [cite: 41]
   {
-    "text": "Which of the following is an example of AI mentioned in the lab?",
+    "text": "Which of the following is an example of AI?",
     "options": ["Recognizing speech", "Printing paper", "Charging a phone", "Storing files"],
     "correctAnswer": "a"
   }, // [cite: 42]
@@ -656,10 +656,109 @@ const questionsData = [
     "correctAnswer": "b"
   }, // [cite: 48]
   {
-    "text": "According to the lab topics, which system focuses specifically on 'Rule-based expert systems'?",
-    "options": ["Lab 5", "Lab 2", "Lab 8", "Lab 10"],
+    "text": "An Expert System is a computer system that emulates the decision-making ability of a ----------.",
+    "options": ["Mechanical robot", "Human expert", "Operating system", "Database"],
     "correctAnswer": "b"
-  } // [cite: 10, 11]
+  },
+  {
+    "text": "Rule-based expert systems store knowledge in the form of ---------- rules.",
+    "options": ["WHILE-DO", "IF-THEN", "TRY-CATCH", "FOR-EACH"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "The component that stores all rules and domain-specific facts is the ----------.",
+    "options": ["User Interface", "Knowledge Base", "Working Memory", "Inference Engine"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "The 'Brain' of the expert system that applies rules to facts is called the ----------.",
+    "options": ["Inference Engine", "Working Memory", "User Interface", "Hard Drive"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Which component holds the current data being processed and updates during reasoning?",
+    "options": ["Knowledge Base", "Working Memory", "User Interface", "Inference Engine"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "The ---------- allows users to input information and receive results from the system.",
+    "options": ["Inference Engine", "Working Memory", "User Interface", "Knowledge Base"],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "Forward Chaining is also known as a ---------- approach.",
+    "options": ["Goal-Driven", "Data-Driven", "Logic-Driven", "User-Driven"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Backward Chaining is also known as a ---------- approach.",
+    "options": ["Data-Driven", "Goal-Driven", "Random-Driven", "Fact-Driven"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "A famous early expert system used to diagnose bacterial infections is ----------.",
+    "options": ["ChatGPT", "MYCIN", "DeepBlue", "AlphaGo"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Rule-based systems are used in medical diagnosis and ----------.",
+    "options": ["Industrial troubleshooting", "Social media", "Photo editing", "Video games"],
+    "correctAnswer": "a"
+  },
+
+  // --- Medium Questions (5) ---
+  {
+    "text": "In the 'How it works' process, ---------- occurs when the system checks facts against the knowledge base.",
+    "options": ["Conflict Resolution", "Pattern Matching", "Output Generation", "Action Execution"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What happens during 'Conflict Resolution' in a rule-based system?",
+    "options": ["The system deletes rules", "The system decides which rule to apply if multiple rules match", "The system asks the user for rules", "The system updates the hardware"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Forward Chaining starts from known ---------- and moves toward a conclusion.",
+    "options": ["Goals", "Facts", "Errors", "Interfaces"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "You should use Backward Chaining when you want to ---------- a specific conclusion.",
+    "options": ["Delete", "Verify", "Hide", "Ignore"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "MYCIN was developed at ---------- University in the 1970s.",
+    "options": ["Harvard", "Stanford", "Oxford", "MIT"],
+    "correctAnswer": "b"
+  },
+
+  // --- Hard Questions (5) ---
+  {
+    "text": "Which of the following describes the 'Action/Execution' phase of the inference process?",
+    "options": ["Checking for matching rules", "Performing the corresponding action when a rule matches", "Building the user interface", "Entering data into the knowledge base"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "A key reason MYCIN was not used in real hospitals despite its potential was ----------.",
+    "options": ["Technical bugs", "Ethical concerns", "High cost", "Slow speed"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In a forward chaining system, if the 'Data' changes, the 'Working Memory' is typically ----------.",
+    "options": ["Deleted", "Updated during reasoning", "Moved to Knowledge Base", "Kept static"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which chaining method is best when you have data and want to find what results can be derived?",
+    "options": ["Backward Chaining", "Forward Chaining", "Side Chaining", "Upward Chaining"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "The primary difference between the Knowledge Base and Working Memory is that the Knowledge Base contains ----------.",
+    "options": ["Temporary data", "Permanent rules and facts", "The user interface", "The reasoning logic"],
+    "correctAnswer": "b"
+  }
 ];
 
 let currentQuestionIndex = 0;

@@ -862,6 +862,110 @@ const questionsData = [
     "text": "If `disease.add_slot('category', 'Medical')` is set, and `flu` is a child of `disease`, what is the result of `flu.get_slot('category')` if `flu` does NOT have its own 'category' slot?",
     "options": ["None", "Medical", "Flu", "Error"],
     "correctAnswer": "b"
+  },
+    {
+    "text": "Search algorithms are used in AI to find a solution by exploring possible ----------.",
+    "options": ["Files", "States", "Images", "Users"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which of the following is the 'desired solution' in a state space representation?",
+    "options": ["Initial State", "Goal State", "Edge", "Root Node"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Uninformed Search is also known as ----------.",
+    "options": ["Heuristic Search", "Blind Search", "Smart Search", "Data-Driven Search"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which algorithm explores the graph level by level?",
+    "options": ["DFS", "BFS", "A*", "Greedy Search"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "BFS uses which data structure to store nodes?",
+    "options": ["Stack (LIFO)", "Queue (FIFO)", "Linked List", "Array"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "DFS uses which data structure for its implementation?",
+    "options": ["Queue (FIFO)", "Stack (LIFO)", "Dictionary", "Set"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In the graph code: `graph = { 'A': ['B', 'C'] }`, what do 'B' and 'C' represent for node 'A'?",
+    "options": ["Parents", "Neighbors/Children", "Weights", "Heuristics"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which type of search uses 'Heuristic' information to guide the search?",
+    "options": ["Uninformed Search", "Informed Search", "Blind Search", "Random Search"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the main goal of the A* search algorithm?",
+    "options": ["To find any path", "To find the shortest path", "To visit all nodes", "To delete the graph"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In A* search, what does 'g(n)' represent?",
+    "options": ["Heuristic cost", "Actual cost from start to node n", "Total estimated cost", "Goal state"],
+    "correctAnswer": "b"
+  },
+
+  // --- Medium Questions (5) ---
+  {
+    "text": "Consider this BFS code snippet: `node = queue.pop(0)`. What does `pop(0)` ensure?",
+    "options": ["Last-In First-Out behavior", "First-In First-Out behavior", "It removes a random node", "It adds a node to the start"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In DFS code, using `node = stack.pop()` without an index results in ----------.",
+    "options": ["Exploring the shallowest node", "Exploring the deepest node (LIFO)", "Error in Python", "Resetting the search"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which algorithm is more memory-efficient when the search tree is very deep but the solution is not?",
+    "options": ["BFS", "DFS", "A*", "BFS and DFS are equal"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In the evaluation function `f(n) = g(n) + h(n)`, what is `h(n)`?",
+    "options": ["The history of the node", "The heuristic estimated cost to goal", "The height of the tree", "The number of edges"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is a major disadvantage of Depth First Search (DFS)?",
+    "options": ["Uses too much memory", "May get stuck in deep branches or infinite loops", "It is very slow for small trees", "It always finds the shortest path"],
+    "correctAnswer": "b"
+  },
+
+  // --- Hard Questions (5) ---
+  {
+    "text": "Look at this Python dictionary:\n`graph = { 'A': ['B'], 'B': ['A'] }` \nIf we run a basic DFS without a 'visited' set, what happens?",
+    "options": ["The search completes successfully", "It results in an infinite loop", "It finds the goal immediately", "It crashes with a SyntaxError"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Why is A* generally preferred over BFS for GPS navigation?",
+    "options": ["A* uses less CPU", "A* uses heuristics to avoid exploring irrelevant paths", "BFS is not capable of finding paths", "A* is an uninformed search"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In a graph implementation: `if neighbor not in visited: visited.add(neighbor)`. Why is this line crucial?",
+    "options": ["To sort the neighbors alphabetically", "To prevent the algorithm from revisiting nodes", "To calculate the heuristic", "To change the goal state"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "If a heuristic `h(n)` is always 0, what does the A* algorithm behave like?",
+    "options": ["DFS", "Dijkstra's algorithm (or similar to BFS if weights are equal)", "Greedy Best First Search", "It stops working"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Given the code:\n`queue = ['A']` \n`visited = {'A'}` \nIf 'A' is connected to 'B' and 'C', what is the state of `queue` after the first iteration of BFS?",
+    "options": ["['B']", "['C']", "['B', 'C']", "[]"],
+    "correctAnswer": "c"
   }
 ];
 

@@ -758,6 +758,110 @@ const questionsData = [
     "text": "The primary difference between the Knowledge Base and Working Memory is that the Knowledge Base contains ----------.",
     "options": ["Temporary data", "Permanent rules and facts", "The user interface", "The reasoning logic"],
     "correctAnswer": "b"
+  },
+    {
+    "text": "What is the primary purpose of Knowledge Representation (KR)?",
+    "options": ["Structuring and organizing knowledge for AI", "Designing hardware components", "Creating internet protocols", "Increasing CPU speed"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Who introduced the concept of 'Frames' in 1974?",
+    "options": ["Alan Turing", "Marvin Minsky", "John McCarthy", "Elon Musk"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In frame-based systems, a 'Frame' is most similar to which programming concept?",
+    "options": ["A Loop", "A Class", "A Variable", "An Operator"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What do we call the attributes or properties within a frame?",
+    "options": ["Holes", "Slots", "Keys", "Links"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In the following code: `disease = Frame('Disease')`, what does 'Disease' represent?",
+    "options": ["A Slot name", "A Slot value", "The Frame name", "A Parent frame"],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "Which part of a frame allows for 'Knowledge Reuse'?",
+    "options": ["Inheritance", "Deletions", "Comments", "User Input"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "If a slot value is not found in the current frame, where does the system look next?",
+    "options": ["In the trash", "In the parent frame", "It stops immediately", "In a random frame"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In the code: `flu.add_slot('fever', True)`, what is 'True'?",
+    "options": ["The Frame name", "The Slot name", "The Slot value", "The Parent name"],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "Frame-based systems represent knowledge using structured ----------.",
+    "options": ["Lists", "Objects", "Strings", "Integers"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is returned if a slot is not found in the current frame or any of its parents?",
+    "options": ["Error", "None / Empty", "False", "0"],
+    "correctAnswer": "b"
+  },
+
+  // --- Medium Questions (5) ---
+  {
+    "text": "Look at this code: `flu = Frame('Flu', parent=disease)`. What does `parent=disease` enable?",
+    "options": ["Polymorphism", "Encapsulation", "Inheritance of slots from 'disease'", "Data encryption"],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "In the context of the provided Python code, what does the `get_slot` method do?",
+    "options": ["Deletes a slot", "Searches for a value in the current frame and its parents", "Creates a new frame", "Changes the parent of a frame"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which KR technique uses nodes and links to represent relationships between objects?",
+    "options": ["Semantic Networks", "First-Order Logic", "Rule-Based Systems", "Assembly Language"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "In a frame-based system for 'Vehicles', if 'Car' inherits from 'Vehicle', what happens to 'Car'?",
+    "options": ["It loses all its slots", "It automatically gets attributes like 'Engine' from 'Vehicle'", "It becomes the parent of 'Vehicle'", "It cannot have its own slots"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the function of `self.slots = {}` in the `__init__` constructor of the Frame class?",
+    "options": ["To store the name of the frame", "To initialize an empty dictionary for attributes", "To link to the parent", "To print the output"],
+    "correctAnswer": "b"
+  },
+
+  // --- Hard Questions (5) ---
+  {
+    "text": "Given the code:\n`parent = Frame('P')` \n`parent.add_slot('color', 'Red')` \n`child = Frame('C', parent=parent)` \nWhat will `child.get_slot('color')` return?",
+    "options": ["None", "Red", "color", "C"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which logic is used in the `get_slot` method to search the hierarchy?",
+    "options": ["Recursive searching up the parent chain", "Linear searching through all frames", "Random selection", "Binary search"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "What happens if you call `add_slot('treatment', 'Rest')` on a frame that already has a 'treatment' slot?",
+    "options": ["The system crashes", "The value is updated/overwritten in that frame", "A new parent is created", "The request is ignored"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In the provided lab code, why is `elif self.parent:` used in the `get_slot` function?",
+    "options": ["To stop the program", "To check if there is a parent to continue searching for the slot", "To add a new slot to the parent", "To rename the parent"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "If `disease.add_slot('category', 'Medical')` is set, and `flu` is a child of `disease`, what is the result of `flu.get_slot('category')` if `flu` does NOT have its own 'category' slot?",
+    "options": ["None", "Medical", "Flu", "Error"],
+    "correctAnswer": "b"
   }
 ];
 

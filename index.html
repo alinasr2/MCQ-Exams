@@ -1204,6 +1204,606 @@ const questionsData = [
     "text": "The operational cost under a 'pay per use' cloud architecture remains completely static and fixed even if resource consumption drops to zero.",
     "options": ["True", "False"],
     "correctAnswer": "b"
+  },
+    {
+    "text": "What does 'Virtualization' refer to in cloud computing?",
+    "options": [
+      "Buying more physical server racks for a local corporate office.",
+      "Partitioning the resources of a single physical system into multiple virtual resources.",
+      "Replacing all software code with physical hardware switches.",
+      "Increasing the physical speed of internet transmission cables."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which layer separates the physical hardware from the virtual machines in a virtualized system?",
+    "options": [
+      "The application layer",
+      "The user interface runtime layer",
+      "The Hypervisor or Virtualization layer",
+      "The physical storage controller panel"
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "What is a 'Guest OS' in a virtualized cloud architecture?",
+    "options": [
+      "An operating system installed within a virtual machine in addition to the host OS.",
+      "The main operating system running directly on the physical hardware.",
+      "A temporary network protocol used for anonymous web site visitors.",
+      "An offline backup system kept inside an external storage drive."
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Which virtualization approach involves compiling the guest OS kernel with specific hooks to communicate directly with the hypervisor?",
+    "options": [
+      "Full Virtualization",
+      "Hardware-Assisted Virtualization",
+      "Para-Virtualization",
+      "Operating System-Level Virtualization"
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "In Full Virtualization, how does the guest operating system interact with the underlying hardware?",
+    "options": [
+      "It knows it is virtualized and speaks directly to the hardware components.",
+      "It is completely unaware of being virtualized and its binary instructions are translated on-the-fly.",
+      "It bypasses the hypervisor completely without any software intervention.",
+      "It requires a special physical connection cable plugged into the server chassis."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which technology utilizes CPU extensions like Intel VT-x or AMD-V to optimize virtual machine execution?",
+    "options": [
+      "Para-Virtualization",
+      "Hardware-Assisted Virtualization",
+      "Software-Defined Storage Arrays",
+      "Static Load Distribution Links"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the primary characteristic of Operating System-Level Virtualization (Containers)?",
+    "options": [
+      "Each container includes its own separate, independent OS kernel.",
+      "Multiple isolated user-space instances share the single host OS kernel.",
+      "It requires a heavy Type-1 bare-metal hypervisor to boot up.",
+      "It runs entirely offline without access to physical host resources."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the primary function of a 'Load Balancer' in cloud infrastructure?",
+    "options": [
+      "To increase the physical power voltage entering the datacenter server rooms.",
+      "To distribute incoming network traffic across multiple servers to prevent overload.",
+      "To delete expired user session tokens from the database automatically.",
+      "To compress high-resolution image files stored on cloud object storage."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Where is a load balancer typically placed within an application architecture?",
+    "options": [
+      "Between the database server and the storage backup array.",
+      "Between the end clients and the backend server instances.",
+      "Inside the physical processor core of the primary master node.",
+      "On the client's local web browser storage configuration panel."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which load balancing algorithm selects servers sequentially from a list, wrapping around to the top when it reaches the end?",
+    "options": [
+      "Least Connections Algorithm",
+      "Weighted Round Robin Algorithm",
+      "Round Robin Algorithm",
+      "IP Hash Routing Method"
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "How does the 'Weighted Round Robin' algorithm distribute traffic?",
+    "options": [
+      "It assigns more traffic to servers with higher processing capacities based on assigned weight scores.",
+      "It randomly picks any server regardless of its current state or processing limit.",
+      "It sends all incoming requests to the oldest running instance in the cluster.",
+      "It shifts traffic based on the geographic distance between data nodes."
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "The 'Least Connections' load balancing algorithm is best suited for scenarios where:",
+    "options": [
+      "All requests have identical, short processing times.",
+      "There are wide variations in the request duration and server workloads.",
+      "Servers have zero network connectivity configurations.",
+      "The system is running on a single standalone machine frame."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is 'Scalability' in the context of cloud systems?",
+    "options": [
+      "The ability of a system to handle growing workloads by adding resources.",
+      "The ability to completely change the programming language of an app automatically.",
+      "The process of cleaning up database records every midnight.",
+      "The physical dimension scaling of server racks inside a data center room."
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Adding more power, such as upgrading CPU cores or memory, to an existing single server node is an example of:",
+    "options": [
+      "Horizontal Scaling (Scaling Out)",
+      "Vertical Scaling (Scaling Up)",
+      "Asymmetric Load Distribution",
+      "Database Replication Shifting"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is 'Horizontal Scaling' (Scaling Out)?",
+    "options": [
+      "Replacing a small server hard drive with a larger solid-state storage block.",
+      "Adding more server instances or nodes to an existing resource cluster.",
+      "Moving an on-premises application into a public cloud environment.",
+      "Changing the database structure from relational schemas to NoSQL files."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What defines 'Elasticity' as opposed to simple scalability?",
+    "options": [
+      "The requirement that all resources must be manually purchased upfront.",
+      "The ability to dynamically provision and de-provision resources automatically based on real-time demand.",
+      "The property of data center network cables to stretch without snapping.",
+      "Keeping user interface colors adaptive to the visitor's device screen."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the primary purpose of 'Replication' in cloud computing?",
+    "options": [
+      "To translate application text code into different natural spoken languages.",
+      "To maintain multiple copies of data across different nodes for high availability and reliability.",
+      "To double the monthly subscription cost of a cloud service automatically.",
+      "To convert dynamic relational databases into static spreadsheet sheets."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In a 'Master-Slave' replication architecture, which node handles write operations?",
+    "options": [
+      "Any slave node randomly chosen by the balancer network.",
+      "The master node exclusively.",
+      "All slave nodes simultaneously to ensure immediate validation.",
+      "An offline backup server system kept outside the cloud setup."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What characterizes 'Synchronous Replication'?",
+    "options": [
+      "Data is written to the primary node and copied to replicas later in the background.",
+      "Data is written to the primary node and all replicas before a transaction is confirmed as successful.",
+      "It does not require any active network connection to duplicate database files.",
+      "It copies data only when the entire data center experiences a power failure."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is a main trade-off of using 'Asynchronous Replication'?",
+    "options": [
+      "It significantly slows down write operations on the primary master node.",
+      "There is a potential risk of slight data loss if the master node fails before replicas are updated.",
+      "It requires expensive high-speed physical fiber connections for every single block change.",
+      "It prevents any user from executing read actions on the slave nodes."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the primary objective of cloud 'Monitoring' systems?",
+    "options": [
+      "To log employee work hours inside the corporate office building.",
+      "To track resource utilization, system performance, and health metrics in real-time.",
+      "To count the total number of physical visitors entering a retail space.",
+      "To enforce strict payment collection rules for client credit profiles."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which of the following metrics is typically tracked during server utilization monitoring?",
+    "options": [
+      "The weight of the server cooling fan units.",
+      "CPU utilization, memory usage, and disk I/O throughput.",
+      "The indoor temperature of the client's corporate headquarters.",
+      "The number of lines of comments written inside the application script."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What architecture pattern decouples the network routing control logic from the underlying physical hardware switches?",
+    "options": [
+      "MapReduce Data Clustering",
+      "Software-Defined Networking (SDN)",
+      "Multi-Tenant Database Virtualization",
+      "Asynchronous Data Replication"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In an SDN architecture, where does the centralized decision-making logic reside?",
+    "options": [
+      "Inside the physical hardware chips of each individual network router.",
+      "Within the centralized SDN Controller software program.",
+      "On the end user's localized operating system desktop terminal.",
+      "Inside an offline system diagram document kept by network engineers."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What software framework is designed for processing massive datasets in a parallel, distributed manner across a cluster?",
+    "options": [
+      "Salesforce Service Cloud Plug-ins",
+      "MapReduce",
+      "Google App Engine Sandboxes",
+      "Asymmetric Load balancer networks"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What are the two primary phases of a MapReduce data processing pipeline?",
+    "options": [
+      "The Compile phase and the Run phase.",
+      "The Map phase and the Reduce phase.",
+      "The Upload phase and the Delete phase.",
+      "The Balance phase and the Replicate phase."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is the purpose of 'Identity and Access Management' (IAM) in the cloud?",
+    "options": [
+      "To track the physical locations of company delivery vehicles.",
+      "To ensure the right individuals have appropriate access to specific cloud resources.",
+      "To generate automated user profile images based on generic templates.",
+      "To measure network bandwidth metrics across virtual routers."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "A formal contract between a cloud service provider and a customer defining expected service levels and performance metrics is a:",
+    "options": [
+      "Software Development Kit (SDK)",
+      "Service Level Agreement (SLA)",
+      "Identity Access Master profile (IAM)",
+      "Deployment Design Configuration (DDC)"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What metric represents the percentage of time a cloud service remains operational and accessible over a given period?",
+    "options": [
+      "Throughput Rate",
+      "Availability",
+      "Elasticity Metric",
+      "Replication Factor"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "If a cloud service provides 'Three Nines' of availability, what is its expected availability percentage?",
+    "options": [
+      "90.0%",
+      "99.0%",
+      "99.9%",
+      "99.999%"
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "How is 'Credit' used within the context of cloud Service Level Agreements (SLAs)?",
+    "options": [
+      "It is a loan given to startups to purchase local computer equipment.",
+      "It is a financial compensation given to customers if the provider breaches service availability targets.",
+      "It represents extra processing cores added during high web traffic peaks.",
+      "It is a score used to track developer coding speeds inside cloud modules."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What are the three core steps outlined in the cloud application deployment lifecycle?",
+    "options": [
+      "Coding, Compiling, and Running scripts.",
+      "Deployment Design, Performance Evaluation, and Deployment Refinement.",
+      "Uploading records, Backing up servers, and Deleting old files.",
+      "Shoring hardware, Configuring routers, and Cooling system blades."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which deployment lifecycle step involves defining the numbers of servers, memory tier capacities, and load balancing configurations?",
+    "options": [
+      "Performance Evaluation",
+      "Deployment Design",
+      "Deployment Refinement",
+      "Identity Management Setup"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What workload parameters are explicitly measured during the 'Performance Evaluation' step of deployment?",
+    "options": [
+      "The file directory size of user application repositories.",
+      "Response time, throughput, and system resource utilization (CPU, memory).",
+      "The physical distance between networked database server frames.",
+      "The number of manual configuration scripts written by the IT engineers."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Modifying an active deployment layout via horizontal scaling or alternative load balancing strategies based on performance review is part of:",
+    "options": [
+      "Deployment Design",
+      "Identity Mapping",
+      "Deployment Refinement",
+      "SLA Credit calculation"
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "The practice of serving multiple independent users or organizations using the same shared underlying physical hardware infrastructure is called:",
+    "options": [
+      "Single-Tenant Dedicated Provisioning",
+      "Multi-Tenancy",
+      "Asynchronous Data Ingestion",
+      "Vertical Scaling Architecture"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What cloud mechanism tracks actual resource usage metrics to generate monthly user subscription billing records?",
+    "options": [
+      "An IAM access policy frame",
+      "A metering and billing system",
+      "An automated map phase reducer",
+      "A static load distribution switch"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What type of hypervisor architecture runs directly on the bare-metal physical hardware of a host system?",
+    "options": [
+      "Type-2 Hosted Hypervisor",
+      "Type-1 Native/Bare-Metal Hypervisor",
+      "OS-Level Container Engine",
+      "Software Defined Network routing stack"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In a MapReduce architecture, what operation organizes intermediate data keys to group identical items together before computing final values?",
+    "options": [
+      "The Replicate operation",
+      "The Shuffle and Sort operation",
+      "The Scale Up adjustment",
+      "The Virtualization partitioning phase"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which component is considered part of the 'Data Plane' in a traditional network or SDN setup?",
+    "options": [
+      "The centralized network management software panel.",
+      "The physical network switches that forward data packets based on routing rules.",
+      "The formal legal text of a Service Level Agreement contract.",
+      "The user account configuration records stored inside IAM tables."
+    ],
+    "correctAnswer": "b"
+  },
+    {
+    "text": "Virtualization partitions physical system resources like compute, storage, and network into multiple virtual resources.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Multi-tenancy allows completely different cloud users to share the same underlying physical server hardware securely.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "A guest operating system in a virtualized cloud environment must always be identical to the host operating system.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In Full Virtualization, the guest operating system is modified with specific hooks so that it knows it is running on a hypervisor.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Para-virtualization requires modifications to the guest operating system kernel to enable direct communication with the hypervisor layer.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Hardware-Assisted Virtualization utilizes special hardware extensions from CPU manufacturers to support virtual machine isolation.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Operating System-Level Virtualization requires a separate full operating system kernel for every container running on the system.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "A Load Balancer is designed to distribute incoming network workloads evenly across a pool of backend servers.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "The Round Robin algorithm distributes incoming requests to servers based on the current number of active connections each server holds.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "The Weighted Round Robin algorithm allows systems to route more traffic to servers that possess higher processing capacities.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "The Least Connections algorithm is highly effective for environments where application requests have highly variable processing durations.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Scalability is the structural property of cloud networks that allows them to adapt to increased workloads by adjusting resource volume.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Vertical Scaling (Scaling Up) involves adding more individual server nodes or instances to an existing cluster setup.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Horizontal Scaling (Scaling Out) refers to upgrading a single server node's hardware, such as increasing its RAM or CPU cores.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Elasticity allows a cloud platform to automatically commission or decommission server instances in direct response to dynamic traffic spikes.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Data replication is performed primarily to ensure high data availability and reliability across a cloud infrastructure.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "In a Master-Slave replication setup, all database write operations can be executed on any available slave node freely.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Synchronous replication confirms a write transaction as successful only after the data has been saved to the primary node and all replicas.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Asynchronous replication introduces latency delays on primary write actions because it waits for all replica nodes to respond first.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Cloud monitoring tracking includes real-time evaluation of server metrics like CPU utilization, disk I/O, and network memory limits.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Software-Defined Networking (SDN) binds the network control logic directly inside the physical hardware firmware of individual routing switches.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In an SDN setup, the network control logic is centralized into a programmable software component known as the SDN Controller.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "MapReduce is an enterprise database system designed exclusively for running single-threaded data operations on a localized office terminal.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "The Map phase of a MapReduce framework breaks down a massive dataset to process segments in parallel across a cluster of nodes.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Identity and Access Management (IAM) systems handle the task of configuring user access rights and resource permissions inside a cloud cloud environment.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "A Service Level Agreement (SLA) is a technical tool used exclusively by developers to compile code lines inside cloud modules.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Availability refers to the operational metric tracking the percentage of time that a specific cloud service remains functional and accessible.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "A cloud service with 'Four Nines' of availability target delivers a lower operational uptime percentage than a system with 'Three Nines'.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "SLA Credits are given as financial or billing compensations to consumers if a provider fails to meet specified availability commitments.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "The three stages of the application deployment lifecycle in the cloud are Deployment Design, Performance Evaluation, and Deployment Refinement.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Defining server quantities, storage requirements, and load balancer rules is part of the 'Performance Evaluation' deployment stage.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Measuring application workload parameters like response times and network throughput occurs during the Performance Evaluation phase.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "Deployment Refinement can involve adjusting an infrastructure layout via horizontal scaling or alternative data replication tactics.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "A Type-2 Hosted Hypervisor runs directly on the bare physical server hardware without any underlying native operating system.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Cloud metering systems track running configurations to dynamically generate user bills based on actual metered asset use metrics.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "In MapReduce, the Reduce phase takes grouped intermediate data results to calculate condensed, final aggregated output values.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "The Shuffle and Sort stage of a MapReduce process organizes data keys to ensure identical data items are aggregated before reaching reducers.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
+  },
+  {
+    "text": "The Data Plane in a Software-Defined Network framework handles the core logical routing decisions and global path management logic.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "A Multi-Tenant infrastructure means that a single dedicated enterprise customer owns all physical hardware blocks exclusively.",
+    "options": ["True", "False"],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Cloud elasticity allows a cluster setup to shrink its resource foot-print automatically when web traffic dropped, saving consumer operating expenses.",
+    "options": ["True", "False"],
+    "correctAnswer": "a"
   }
 ];
 

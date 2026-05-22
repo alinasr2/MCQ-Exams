@@ -555,728 +555,404 @@
 
 
 const questionsData = [
-  // --- Easy Questions (10) ---
   {
-    "text": "Artificial Intelligence (AI) means computer systems that can do tasks that normally need ----------.",
-    "options": ["Fast Internet", "Human thinking", "Manual labor", "Large batteries"],
-    "correctAnswer": "b"
-  }, // [cite: 41]
-  {
-    "text": "Which of the following is an example of AI?",
-    "options": ["Recognizing speech", "Printing paper", "Charging a phone", "Storing files"],
-    "correctAnswer": "a"
-  }, // [cite: 42]
-  {
-    "text": "AI is a general term that covers several fields, such as ----------.",
-    "options": ["Hardware Repair", "Machine Learning", "Network Cabling", "Web Hosting"],
-    "correctAnswer": "b"
-  }, // [cite: 45]
-  {
-    "text": "In Machine Learning (ML), systems learn patterns from ---------- instead of being fully programmed.",
-    "options": ["Books", "Data", "Cables", "Users"],
-    "correctAnswer": "b"
-  }, // [cite: 62]
-  {
-    "text": "Expert systems are ---------- systems that copy the decision-making of human experts.",
-    "options": ["Random-based", "Rule-based", "Emotion-based", "Hardware-based"],
-    "correctAnswer": "b"
-  }, // [cite: 68]
-  {
-    "text": "Programs that observe, decide, and act in an environment are known as ----------.",
-    "options": ["Intelligent Agents", "Data Tables", "Static Code", "Compilers"],
-    "correctAnswer": "a"
-  }, // [cite: 70]
-  {
-    "text": "The problem of assigning items to categories (like spam vs. not spam) is called ----------.",
-    "options": ["Regression", "Clustering", "Classification", "Optimization"],
-    "correctAnswer": "c"
-  }, // [cite: 89]
-  {
-    "text": "The subfield of ML that works well on large data and uses neural networks with many layers is ----------.",
-    "options": ["Linear AI", "Expert Systems", "Deep Learning", "Manual AI"],
-    "correctAnswer": "c"
-  }, // [cite: 63, 64, 65]
-  {
-    "text": "Predicting a numeric value, such as house prices, is known as a ---------- problem.",
-    "options": ["Regression", "Clustering", "Search", "Vision"],
-    "correctAnswer": "a"
-  }, // [cite: 90]
-  {
-    "text": "Face recognition and object detection are examples of ---------- problems.",
-    "options": ["Natural Language", "Computer Vision", "Optimization", "Regression"],
-    "correctAnswer": "b"
-  }, // [cite: 93]
-
-  // --- Medium Questions (5) ---
-  {
-    "text": "Expert systems use ---------- rules and knowledge bases to make decisions.",
-    "options": ["While-loop", "If-then", "Try-catch", "For-each"],
-    "correctAnswer": "b"
-  }, // [cite: 69]
-  {
-    "text": "Which of the following is a key feature of Intelligent Agents?",
-    "options": ["They only store data", "They sense environment and act", "They use no logic", "They are fully manual"],
-    "correctAnswer": "b"
-  }, // [cite: 84]
-  {
-    "text": "Understanding or generating human language (chatbots, translation) falls under ----------.",
-    "options": ["Computer Vision", "Natural Language Problems", "Clustering", "Optimization"],
-    "correctAnswer": "b"
-  }, // [cite: 92]
-  {
-    "text": "Grouping similar data without labels (e.g., grouping customers by behavior) is called ----------.",
-    "options": ["Classification", "Regression", "Clustering", "Optimization"],
-    "correctAnswer": "c"
-  }, // [cite: 90]
-  {
-    "text": "Finding the shortest path in maps or solving puzzles is an example of ----------.",
-    "options": ["Search Problems", "Regression", "Classification", "Prediction"],
-    "correctAnswer": "a"
-  }, // [cite: 88, 89]
-
-  // --- Hard Questions (5) ---
-  {
-    "text": "True AI (General AI) is different from today's systems because it would think and learn like humans ----------.",
-    "options": ["In one area", "In all areas", "Only in math", "Only in games"],
-    "correctAnswer": "b"
-  }, // [cite: 49]
-  {
-    "text": "Finding the best solution under certain limits (e.g., task scheduling) is an ---------- problem.",
-    "options": ["Optimization", "Clustering", "Vision", "Regression"],
-    "correctAnswer": "a"
-  }, // [cite: 91]
-  {
-    "text": "A classical AI approach where decisions are fixed logical rules rather than learning is based on ----------.",
-    "options": ["Neural Networks", "Fixed logical rules", "Large datasets", "Random choices"],
-    "correctAnswer": "b"
-  }, // [cite: 95]
-  {
-    "text": "Some experts argue today's AI tools like ChatGPT are not 'real' AI but rather advanced ----------.",
-    "options": ["Robotics", "Machine learning", "Expert systems", "Hardware"],
-    "correctAnswer": "b"
-  }, // [cite: 48]
-  {
-    "text": "An Expert System is a computer system that emulates the decision-making ability of a ----------.",
-    "options": ["Mechanical robot", "Human expert", "Operating system", "Database"],
+    "text": "What is the primary definition of cloud computing as a service provisioning technique?",
+    "options": [
+      "A technique where users must buy physical hardware to host their applications remotely.",
+      "A method where computing resources like hardware, software, and platforms are provided as a service over the internet.",
+      "A local area network system designed to speed up file transfers between internal office computers.",
+      "A protocol specifically optimized for streaming multimedia files across localized smart televisions."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "Rule-based expert systems store knowledge in the form of ---------- rules.",
-    "options": ["WHILE-DO", "IF-THEN", "TRY-CATCH", "FOR-EACH"],
+    "text": "Which service model involves the provider owning hardware equipment like servers, storage, and networks, while charging clients on a per-use basis?",
+    "options": [
+      "Platform-as-a-Service (PaaS)",
+      "Software-as-a-Service (SaaS)",
+      "Infrastructure-as-a-Service (IaaS)",
+      "Database-as-a-Service (DBaaS)"
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "text": "What core benefit does the 'elastic' nature of cloud computing provide to enterprises?",
+    "options": [
+      "It guarantees that physical data centers will automatically expand their perimeter dimensions during high traffic.",
+      "It lets users scale computing resource capacities up or down dynamically based on ongoing demand requirements.",
+      "It provides data cables that physically stretch to survive accidental high-voltage network spikes.",
+      "It keeps user interfaces looking exactly identical across completely different device screens."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "The component that stores all rules and domain-specific facts is the ----------.",
-    "options": ["User Interface", "Knowledge Base", "Working Memory", "Inference Engine"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The 'Brain' of the expert system that applies rules to facts is called the ----------.",
-    "options": ["Inference Engine", "Working Memory", "User Interface", "Hard Drive"],
+    "text": "Amazon Elastic Compute Cloud (EC2) and Amazon Simple Storage Service (S3) are prominent examples of which cloud service model?",
+    "options": [
+      "Infrastructure-as-a-Service (IaaS)",
+      "Platform-as-a-Service (PaaS)",
+      "Software-as-a-Service (SaaS)",
+      "Network-as-a-Service (NaaS)"
+    ],
     "correctAnswer": "a"
   },
   {
-    "text": "Which component holds the current data being processed and updates during reasoning?",
-    "options": ["Knowledge Base", "Working Memory", "User Interface", "Inference Engine"],
+    "text": "Which architectural model is described as an extension of IaaS because it integrates operating systems, database systems, and development tools alongside hardware?",
+    "options": [
+      "Software-as-a-Service (SaaS)",
+      "Platform-as-a-Service (PaaS)",
+      "Hardware-as-a-Service (HaaS)",
+      "Community Cloud"
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "The ---------- allows users to input information and receive results from the system.",
-    "options": ["Inference Engine", "Working Memory", "User Interface", "Knowledge Base"],
+    "text": "Google App Engine (GAE) is a well-known example of which cloud layer?",
+    "options": [
+      "Infrastructure-as-a-Service (IaaS)",
+      "Platform-as-a-Service (PaaS)",
+      "Software-as-a-Service (SaaS)",
+      "Private Cloud Model"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "In a Software-as-a-Service (SaaS) architecture, where does the application logic execute?",
+    "options": [
+      "Entirely on the user's localized physical computer terminal",
+      "In the cloud infrastructure managed by the service provider",
+      "On an isolated, offline storage thumb drive device",
+      "Via localized peer-to-peer network connections without server hosting"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which option represents a primary benefit of SaaS applications for everyday consumers?",
+    "options": [
+      "It requires clients to master complex manual machine-level server patching scripts.",
+      "It completely removes the need to buy, install, upgrade, or license applications locally.",
+      "It forces companies to build their own custom physical router boards.",
+      "It grants direct low-level kernel configuration rights to the cloud server."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which of the following is listed as a classic example of Software-as-a-Service (SaaS)?",
+    "options": [
+      "Google Compute Engine virtual clusters",
+      "Amazon Web Services structural storage blocks",
+      "Google Docs",
+      "An empty physical server blade unit with no operating software"
+    ],
     "correctAnswer": "c"
   },
   {
-    "text": "Forward Chaining is also known as a ---------- approach.",
-    "options": ["Goal-Driven", "Data-Driven", "Logic-Driven", "User-Driven"],
+    "text": "How many primary cloud deployment models are traditionally recognized for organizing and creating clouds?",
+    "options": [
+      "Two: local and international networks",
+      "Four: Public, Private, Community, and Hybrid",
+      "Ten distinct open-source enterprise operating system frameworks",
+      "An infinite set of configurations depending entirely on router speeds"
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "Backward Chaining is also known as a ---------- approach.",
-    "options": ["Data-Driven", "Goal-Driven", "Random-Driven", "Fact-Driven"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A famous early expert system used to diagnose bacterial infections is ----------.",
-    "options": ["ChatGPT", "MYCIN", "DeepBlue", "AlphaGo"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Rule-based systems are used in medical diagnosis and ----------.",
-    "options": ["Industrial troubleshooting", "Social media", "Photo editing", "Video games"],
-    "correctAnswer": "a"
-  },
-
-  // --- Medium Questions (5) ---
-  {
-    "text": "In the 'How it works' process, ---------- occurs when the system checks facts against the knowledge base.",
-    "options": ["Conflict Resolution", "Pattern Matching", "Output Generation", "Action Execution"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What happens during 'Conflict Resolution' in a rule-based system?",
-    "options": ["The system deletes rules", "The system decides which rule to apply if multiple rules match", "The system asks the user for rules", "The system updates the hardware"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Forward Chaining starts from known ---------- and moves toward a conclusion.",
-    "options": ["Goals", "Facts", "Errors", "Interfaces"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "You should use Backward Chaining when you want to ---------- a specific conclusion.",
-    "options": ["Delete", "Verify", "Hide", "Ignore"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "MYCIN was developed at ---------- University in the 1970s.",
-    "options": ["Harvard", "Stanford", "Oxford", "MIT"],
-    "correctAnswer": "b"
-  },
-
-  // --- Hard Questions (5) ---
-  {
-    "text": "Which of the following describes the 'Action/Execution' phase of the inference process?",
-    "options": ["Checking for matching rules", "Performing the corresponding action when a rule matches", "Building the user interface", "Entering data into the knowledge base"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A key reason MYCIN was not used in real hospitals despite its potential was ----------.",
-    "options": ["Technical bugs", "Ethical concerns", "High cost", "Slow speed"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In a forward chaining system, if the 'Data' changes, the 'Working Memory' is typically ----------.",
-    "options": ["Deleted", "Updated during reasoning", "Moved to Knowledge Base", "Kept static"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which chaining method is best when you have data and want to find what results can be derived?",
-    "options": ["Backward Chaining", "Forward Chaining", "Side Chaining", "Upward Chaining"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The primary difference between the Knowledge Base and Working Memory is that the Knowledge Base contains ----------.",
-    "options": ["Temporary data", "Permanent rules and facts", "The user interface", "The reasoning logic"],
-    "correctAnswer": "b"
-  },
-    {
-    "text": "What is the primary purpose of Knowledge Representation (KR)?",
-    "options": ["Structuring and organizing knowledge for AI", "Designing hardware components", "Creating internet protocols", "Increasing CPU speed"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Who introduced the concept of 'Frames' in 1974?",
-    "options": ["Alan Turing", "Marvin Minsky", "John McCarthy", "Elon Musk"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In frame-based systems, a 'Frame' is most similar to which programming concept?",
-    "options": ["A Loop", "A Class", "A Variable", "An Operator"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What do we call the attributes or properties within a frame?",
-    "options": ["Holes", "Slots", "Keys", "Links"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In the following code: `disease = Frame('Disease')`, what does 'Disease' represent?",
-    "options": ["A Slot name", "A Slot value", "The Frame name", "A Parent frame"],
+    "text": "A cloud deployment model hosted off-site by a provider, owned by an organization selling services, and easily open to the general public via the internet is a:",
+    "options": [
+      "Private Cloud",
+      "Community Cloud",
+      "Public Cloud",
+      "Isolated Intranet Engine"
+    ],
     "correctAnswer": "c"
   },
   {
-    "text": "Which part of a frame allows for 'Knowledge Reuse'?",
-    "options": ["Inheritance", "Deletions", "Comments", "User Input"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "If a slot value is not found in the current frame, where does the system look next?",
-    "options": ["In the trash", "In the parent frame", "It stops immediately", "In a random frame"],
+    "text": "What is the defining characteristic of a Private Cloud deployment setup?",
+    "options": [
+      "It allows any anonymous user to modify global file storage blocks freely.",
+      "Services and infrastructure are operated exclusively for a single organization over a secure network.",
+      "It must always run completely without any encryption protections.",
+      "It relies entirely on public library computers to execute core data commands."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "In the code: `flu.add_slot('fever', True)`, what is 'True'?",
-    "options": ["The Frame name", "The Slot name", "The Slot value", "The Parent name"],
+    "text": "Which deployment model describes a cloud infrastructure shared exclusively by a specific group of organizations with joint requirements?",
+    "options": [
+      "Public Web Grid",
+      "Community Cloud",
+      "Single-tenant Local Mainframe",
+      "Asymmetric Public Loop"
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "How does a Hybrid Cloud distribute application workloads between its constituent systems?",
+    "options": [
+      "It leaves critical records on public forums while keeping casual testing tools isolated.",
+      "It processes all actions on offline backup disks without active network links.",
+      "It stores critical, sensitive apps and data in a private cloud, while running non-critical tasks in a public cloud.",
+      "It shifts all application operations to manual paperwork whenever network traffic spikes."
+    ],
     "correctAnswer": "c"
   },
   {
-    "text": "Frame-based systems represent knowledge using structured ----------.",
-    "options": ["Lists", "Objects", "Strings", "Integers"],
+    "text": "What is 'cloud bursting' in the context of hybrid cloud deployments?",
+    "options": [
+      "The physical destruction of data center hard drives due to overheating issues.",
+      "Leasing public cloud services dynamically when private cloud capacity becomes insufficient.",
+      "A critical system crash caused by uploading corrupted spreadsheet records.",
+      "An old networking term for deleting expired user profile profiles."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "What is returned if a slot is not found in the current frame or any of its parents?",
-    "options": ["Error", "None / Empty", "False", "0"],
+    "text": "Under the cloud computing 'Pay per use' principle, how are client expenses calculated?",
+    "options": [
+      "Clients pay a fixed, unchangeable lifetime asset purchase price upfront.",
+      "Usage is metered, meaning users are billed only for the specific resource amounts consumed.",
+      "Fees fluctuate based on the physical weight of the cloud provider's server racks.",
+      "Charges depend entirely on how many employees walk into the client's office."
+    ],
     "correctAnswer": "b"
   },
-
-  // --- Medium Questions (5) ---
   {
-    "text": "Look at this code: `flu = Frame('Flu', parent=disease)`. What does `parent=disease` enable?",
-    "options": ["Polymorphism", "Encapsulation", "Inheritance of slots from 'disease'", "Data encryption"],
+    "text": "How does cloud adoption reduce capital costs (CapEx) for starting businesses?",
+    "options": [
+      "It forces businesses to purchase expensive physical property to protect local server frames.",
+      "It eliminates the need to spend money upfront buying physical hardware, managing licenses, and maintaining datacenters.",
+      "It provides completely free, unlimited energy to the company's main office building.",
+      "It replaces automated computer systems with manual filing setups."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is required for a user to leverage the feature of 'remote accessibility' in cloud computing?",
+    "options": [
+      "A direct, physical copper connection line hooked into the provider's server room hub.",
+      "An internet-connected device to access applications and data from anywhere globally.",
+      "A special satellite dish setup calibrated exclusively to a single coordinate point.",
+      "They must remain within 50 meters of their company's main headquarters building."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "How does cloud adoption change the daily responsibilities of an enterprise IT staff?",
+    "options": [
+      "They must spend more hours unboxing physical hard drives and tracking software license stickers.",
+      "They are freed from managing physical hardware and server maintenance, allowing them to focus on core business development.",
+      "They must manually write out binary code streams on punch cards for safety.",
+      "They assume full responsibility for cooling the provider's remote server rooms."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Amazon Elastic Compute Cloud (EC2) provides computing capacity primarily in what form?",
+    "options": [
+      "Physical mainframes shipped directly to customer offices via cargo truck.",
+      "Virtual machines launched on demand through a web interface.",
+      "Pre-printed manuals containing architectural system layout diagrams.",
+      "Localized network cables used to link nearby desktop computers."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What is an AMI in the context of Amazon Web Services (AWS) EC2 instances?",
+    "options": [
+      "An Automated Management Interface used to monitor office desk electronics.",
+      "An Amazon Machine Image, which serves as a pre-configured template for launching instances.",
+      "A customized database engine optimized for storing high-resolution image files.",
+      "An audio compression format used for real-time employee voice communications."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Can users build custom Amazon Machine Images (AMIs) on the AWS platform?",
+    "options": [
+      "No, they must use rigid, pre-configured factory defaults provided by Amazon.",
+      "Yes, users can create their own AMIs complete with custom applications, libraries, and specific data.",
+      "No, creating custom cloud configurations is restricted by global web privacy laws.",
+      "Yes, but they must draw the code outlines by hand on physical graph paper first."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "According to the lecture text, what specific hardware capacities define an EC2 'Small Instance'?",
+    "options": [
+      "100 Virtual cores, 1 TB memory, and 50,000 GB storage capacity blocks.",
+      "1 Virtual core, 1.7 GB memory, and 160 GB of instance storage capacity.",
+      "Zero RAM and zero storage, relying entirely on nearby external memory cards.",
+      "5 Virtual cores, 50 GB memory, and a physical optical disc burner tray."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What billing metric determines the foundational cost for standard AWS EC2 on-demand instances?",
+    "options": [
+      "The number of total mouse clicks a user makes inside their application interface.",
+      "The number of instance hours used by the running virtual machines.",
+      "The room temperature of the building where the client's office is located.",
+      "The total physical distance between the developer and their computer monitor."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What are AWS 'Spot Instances'?",
+    "options": [
+      "Servers reserved exclusively for printing graphical logos onto physical products.",
+      "Instances that let users bid on unused compute capacity for as long as their bid exceeds the spot price.",
+      "Virtual machines that can only be launched during sudden rainy weather conditions.",
+      "A broken server instance flagged for deletion due to hardware damage."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Google Compute Engine (GCE) belongs to which cloud service category?",
+    "options": [
+      "Software-as-a-Service (SaaS)",
+      "Platform-as-a-Service (PaaS)",
+      "Infrastructure-as-a-Service (IaaS)",
+      "Data-Warehouse-as-a-Service (DWaaS)"
+    ],
     "correctAnswer": "c"
   },
   {
-    "text": "In the context of the provided Python code, what does the `get_slot` method do?",
-    "options": ["Deletes a slot", "Searches for a value in the current frame and its parents", "Creates a new frame", "Changes the parent of a frame"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which KR technique uses nodes and links to represent relationships between objects?",
-    "options": ["Semantic Networks", "First-Order Logic", "Rule-Based Systems", "Assembly Language"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In a frame-based system for 'Vehicles', if 'Car' inherits from 'Vehicle', what happens to 'Car'?",
-    "options": ["It loses all its slots", "It automatically gets attributes like 'Engine' from 'Vehicle'", "It becomes the parent of 'Vehicle'", "It cannot have its own slots"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the function of `self.slots = {}` in the `__init__` constructor of the Frame class?",
-    "options": ["To store the name of the frame", "To initialize an empty dictionary for attributes", "To link to the parent", "To print the output"],
-    "correctAnswer": "b"
-  },
-
-  // --- Hard Questions (5) ---
-  {
-    "text": "Given the code:\n`parent = Frame('P')` \n`parent.add_slot('color', 'Red')` \n`child = Frame('C', parent=parent)` \nWhat will `child.get_slot('color')` return?",
-    "options": ["None", "Red", "color", "C"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which logic is used in the `get_slot` method to search the hierarchy?",
-    "options": ["Recursive searching up the parent chain", "Linear searching through all frames", "Random selection", "Binary search"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "What happens if you call `add_slot('treatment', 'Rest')` on a frame that already has a 'treatment' slot?",
-    "options": ["The system crashes", "The value is updated/overwritten in that frame", "A new parent is created", "The request is ignored"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In the provided lab code, why is `elif self.parent:` used in the `get_slot` function?",
-    "options": ["To stop the program", "To check if there is a parent to continue searching for the slot", "To add a new slot to the parent", "To rename the parent"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "If `disease.add_slot('category', 'Medical')` is set, and `flu` is a child of `disease`, what is the result of `flu.get_slot('category')` if `flu` does NOT have its own 'category' slot?",
-    "options": ["None", "Medical", "Flu", "Error"],
-    "correctAnswer": "b"
-  },
-    {
-    "text": "Search algorithms are used in AI to find a solution by exploring possible ----------.",
-    "options": ["Files", "States", "Images", "Users"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which of the following is the 'desired solution' in a state space representation?",
-    "options": ["Initial State", "Goal State", "Edge", "Root Node"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Uninformed Search is also known as ----------.",
-    "options": ["Heuristic Search", "Blind Search", "Smart Search", "Data-Driven Search"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which algorithm explores the graph level by level?",
-    "options": ["DFS", "BFS", "A*", "Greedy Search"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "BFS uses which data structure to store nodes?",
-    "options": ["Stack (LIFO)", "Queue (FIFO)", "Linked List", "Array"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "DFS uses which data structure for its implementation?",
-    "options": ["Queue (FIFO)", "Stack (LIFO)", "Dictionary", "Set"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In the graph code: `graph = { 'A': ['B', 'C'] }`, what do 'B' and 'C' represent for node 'A'?",
-    "options": ["Parents", "Neighbors/Children", "Weights", "Heuristics"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which type of search uses 'Heuristic' information to guide the search?",
-    "options": ["Uninformed Search", "Informed Search", "Blind Search", "Random Search"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the main goal of the A* search algorithm?",
-    "options": ["To find any path", "To find the shortest path", "To visit all nodes", "To delete the graph"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In A* search, what does 'g(n)' represent?",
-    "options": ["Heuristic cost", "Actual cost from start to node n", "Total estimated cost", "Goal state"],
-    "correctAnswer": "b"
-  },
-
-  // --- Medium Questions (5) ---
-  {
-    "text": "Consider this BFS code snippet: `node = queue.pop(0)`. What does `pop(0)` ensure?",
-    "options": ["Last-In First-Out behavior", "First-In First-Out behavior", "It removes a random node", "It adds a node to the start"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In DFS code, using `node = stack.pop()` without an index results in ----------.",
-    "options": ["Exploring the shallowest node", "Exploring the deepest node (LIFO)", "Error in Python", "Resetting the search"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which algorithm is more memory-efficient when the search tree is very deep but the solution is not?",
-    "options": ["BFS", "DFS", "A*", "BFS and DFS are equal"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In the evaluation function `f(n) = g(n) + h(n)`, what is `h(n)`?",
-    "options": ["The history of the node", "The heuristic estimated cost to goal", "The height of the tree", "The number of edges"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is a major disadvantage of Depth First Search (DFS)?",
-    "options": ["Uses too much memory", "May get stuck in deep branches or infinite loops", "It is very slow for small trees", "It always finds the shortest path"],
-    "correctAnswer": "b"
-  },
-
-  // --- Hard Questions (5) ---
-  {
-    "text": "Look at this Python dictionary:\n`graph = { 'A': ['B'], 'B': ['A'] }` \nIf we run a basic DFS without a 'visited' set, what happens?",
-    "options": ["The search completes successfully", "It results in an infinite loop", "It finds the goal immediately", "It crashes with a SyntaxError"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Why is A* generally preferred over BFS for GPS navigation?",
-    "options": ["A* uses less CPU", "A* uses heuristics to avoid exploring irrelevant paths", "BFS is not capable of finding paths", "A* is an uninformed search"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In a graph implementation: `if neighbor not in visited: visited.add(neighbor)`. Why is this line crucial?",
-    "options": ["To sort the neighbors alphabetically", "To prevent the algorithm from revisiting nodes", "To calculate the heuristic", "To change the goal state"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "If a heuristic `h(n)` is always 0, what does the A* algorithm behave like?",
-    "options": ["DFS", "Dijkstra's algorithm (or similar to BFS if weights are equal)", "Greedy Best First Search", "It stops working"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Given the code:\n`queue = ['A']` \n`visited = {'A'}` \nIf 'A' is connected to 'B' and 'C', what is the state of `queue` after the first iteration of BFS?",
-    "options": ["['B']", "['C']", "['B', 'C']", "[]"],
-    "correctAnswer": "c"
-  },
-    {
-    "text": "What does the NumPy library stand for?",
-    "options": ["Number Python", "Numerical Python", "Network Python", "Null Python"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which library is used for handling structured data like tables and CSV files?",
-    "options": ["NumPy", "Pandas", "Matplotlib", "Math"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In Pandas, a 2D table (similar to Excel) is called a ----------.",
-    "options": ["Series", "DataFrame", "Matrix", "Panel"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which library is primarily used for static data visualization and charts?",
-    "options": ["NumPy", "Pandas", "Matplotlib", "Requests"],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "Look at this code: `import numpy as np`. What is the purpose of `as np`?",
-    "options": ["It is a mandatory command", "It is an alias for easier reference", "It creates a new library", "It compiles the code"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which NumPy function is used to create an array?",
-    "options": ["np.list()", "np.array()", "np.table()", "np.matrix()"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "To read a CSV file using Pandas, we use the function ----------.",
-    "options": ["pd.open_csv()", "pd.read_csv()", "pd.get_data()", "pd.load_csv()"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In the code `plt.plot(x, y)`, which library does `plt` usually refer to?",
-    "options": ["NumPy", "Pandas", "Matplotlib.pyplot", "Seaborn"],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "Which Pandas structure is used for 1D data?",
-    "options": ["Series", "DataFrame", "Array", "Vector"],
+    "text": "What is the small instance capability specification outlined for Google Compute Engine?",
+    "options": [
+      "1.38 GCE units with 1.7 GB of memory.",
+      "500 GCE units with 200 GB of memory.",
+      "Zero compute units designed only to store text data.",
+      "A system running entirely on solar power cells built into a smartphone."
+    ],
     "correctAnswer": "a"
   },
   {
-    "text": "In Matplotlib, what does `plt.show()` do?",
-    "options": ["Saves the chart", "Displays the plot/chart", "Deletes the chart", "Prints the data"],
-    "correctAnswer": "b"
-  },
-
-  // --- Medium Questions (5) ---
-  {
-    "text": "Given the code:\n`a = np.array([10, 20])` \n`b = np.array([1, 2])` \nWhat is the result of `print(a * b)`?",
-    "options": ["[11, 22]", "[10, 40]", "[11, 20]", "[10, 20]"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the output of the following Pandas code if 'Age' column has [21, 22, 23]?\n`print(df['Age'].max())`?",
-    "options": ["21", "22", "23", "66"],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "Which function in NumPy is used to calculate the 'Standard Deviation'?",
-    "options": ["np.mean()", "np.max()", "np.std()", "np.var()"],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "In Matplotlib, which function is used to create a bar chart?",
-    "options": ["plt.plot()", "plt.bar()", "plt.hist()", "plt.pie()"],
+    "text": "Which of the following is Microsoft’s primary Infrastructure-as-a-Service (IaaS) virtual machine offering?",
+    "options": [
+      "Google App Engine Engine",
+      "Windows Azure Virtual Machine (Azure VMs)",
+      "Salesforce Marketing Cloud Platform",
+      "Amazon Simple Storage Array Hub"
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "Look at this code: `df = pd.DataFrame(data)`. What does 'data' typically represent here?",
-    "options": ["A single string", "A dictionary or list of data", "The name of a file", "A mathematical formula"],
+    "text": "What development tool does Google App Engine provide so programmers can test applications locally before deployment?",
+    "options": [
+      "A physical server console rack bundle.",
+      "A Software Development Kit (SDK).",
+      "A relational database storage diskette.",
+      "An automated compiler built inside a phone modem device."
+    ],
     "correctAnswer": "b"
   },
-
-  // --- Hard Questions (5) ---
   {
-    "text": "Consider this code:\n`data = np.array([5, 10, 15])` \nWhat is `np.mean(data)`?",
-    "options": ["10.0", "15.0", "5.0", "30.0"],
+    "text": "When application web traffic increases, what automatic capability does Google App Engine use to handle the load?",
+    "options": [
+      "It alerts engineers to manually buy more hardware components.",
+      "Automatic scaling and load balancing capabilities.",
+      "It temporarily powers down the app for 24 hours to clear traffic.",
+      "It converts text elements into static pictures to save bandwidth space."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "Which programming language environments are explicitly mentioned as supported runtimes inside Google App Engine?",
+    "options": [
+      "Binary machine language codes exclusively.",
+      "Java (using Java Servlets) and Python environments.",
+      "Legacy spreadsheet macro formats only.",
+      "An old computing system format from the early 1960s."
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "text": "What security mechanism protects Google App Engine applications by restricting direct access to the underlying OS and hardware?",
+    "options": [
+      "A secure sandbox execution environment.",
+      "A mechanical padlock installed on the data rack door frames.",
+      "A mandate that developers must change passwords every 30 minutes.",
+      "Running the code only when disconnected from the internet."
+    ],
     "correctAnswer": "a"
   },
   {
-    "text": "How do you select only the 'Score' column from a Pandas DataFrame named `df` and calculate its average?",
-    "options": ["df.mean('Score')", "df['Score'].mean()", "mean(df.Score)", "df.get('Score').average()"],
+    "text": "Beyond the initial free tier, how does Google App Engine bill users for resources?",
+    "options": [
+      "By charging based on the total number of code files in an application directory.",
+      "By metering consumed bandwidth, resource instance hours, and total data stored.",
+      "By measuring the physical speed of the wind outside the server farm facility.",
+      "By flat rates based on the square footage of the customer's office."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "In Matplotlib, what is the purpose of `plt.xlabel('Time')`?",
-    "options": ["To change the font of the chart", "To set the label for the horizontal (x) axis", "To set the title of the chart", "To add a legend"],
+    "text": "What type of software offering is Salesforce Sales Cloud?",
+    "options": [
+      "Infrastructure-as-a-Service (IaaS)",
+      "Customer Relationship Management (CRM) SaaS product.",
+      "An operating system deployment kit for local networks.",
+      "A raw network file transfer system tool."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "If you have `arr = np.array([[1, 2], [3, 4]])`, what kind of array is this?",
-    "options": ["1D Array", "Multi-dimensional (2D) Array", "Series", "A plot"],
+    "text": "How do sales representatives access the Salesforce application workspace?",
+    "options": [
+      "They must install heavy database servers on their laptops.",
+      "From anywhere using web-enabled devices like laptops, tablets, or smartphones.",
+      "By connecting to old offline text consoles via dial-up lines.",
+      "They must remain inside a specific physical workspace facility."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "In the code: `plt.plot(x, y, label='Sales')`, which additional function is needed to actually display the label 'Sales' on the chart?",
-    "options": ["plt.show()", "plt.legend()", "plt.title()", "plt.grid()"],
-    "correctAnswer": "b"
-  },
-    {
-    "text": "Which library is essential for reading datasets in formats like CSV, Excel, and JSON?",
-    "options": ["Matplotlib", "NumPy", "Pandas", "Scikit-Learn"],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "To read a dataset directly from a URL, we use ----------.",
-    "options": ["pd.read_url()", "pd.read_csv(url)", "pd.get_data()", "pd.load_web()"],
+    "text": "What is a 'lead' defined as within customer management tools like Salesforce?",
+    "options": [
+      "A physical weight element used to construct server computer chassis cases.",
+      "Company or individual who has expressed interest in a product or service.",
+      "The main electrical cable that delivers power to a router machine box.",
+      "An automated script that deletes corrupt user accounts."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "What is the primary purpose of 'Data Preprocessing'?",
-    "options": ["To make the computer faster", "To clean and prepare raw data for ML models", "To design the model architecture", "To increase the size of the dataset"],
+    "text": "Which Salesforce service cloud environment provides companies with a centralized call center interface to manage and escalate customer support tickets?",
+    "options": [
+      "Salesforce Sales Cloud Hub",
+      "Salesforce Service Cloud",
+      "Salesforce Hardware Manager",
+      "Amazon Compute Connection Grid"
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "Which command is used to check the number of duplicated rows in a DataFrame?",
-    "options": ["df.check_duplicates()", "df.duplicated().sum()", "df.count_doubles()", "df.find_duplicates()"],
+    "text": "How does Salesforce Service Cloud leverage social media channels for customer support teams?",
+    "options": [
+      "It automatically deletes any negative customer comments from the web.",
+      "It uses a social plug-in to turn social media comments into trackable customer service cases.",
+      "It requires agents to publish their personal passwords on public profiles.",
+      "It blocks support teams from accessing external networks entirely."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "How do you remove duplicated rows from a DataFrame?",
-    "options": ["df.delete_duplicates()", "df.drop_duplicates()", "df.remove_rows()", "df.clear()"],
+    "text": "What is the primary operational objective of Salesforce Marketing Cloud?",
+    "options": [
+      "To manually assemble server hardware parts inside data center facilities.",
+      "To discover sales leads on social media, find brand advocates, and track ad campaign performance.",
+      "To provide underlying operating systems for custom app developers.",
+      "To measure electricity usage across corporate data centers."
+    ],
     "correctAnswer": "b"
   },
   {
-    "text": "Missing values in a dataset are often represented as ----------.",
-    "options": ["Null", "NaN", "Zero", "None"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The command `df.isnull().sum()` is used to ----------.",
-    "options": ["Delete missing values", "Count missing values in each column", "Fill missing values with zero", "Find duplicated rows"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Categorical data values are usually stored as ----------.",
-    "options": ["Integers", "Floats", "String classes", "Booleans"],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "Which type of categorical feature has a natural order (e.g., Small, Medium, Large)?",
-    "options": ["Nominal", "Ordinal", "Numeric", "Binary"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which technique assigns a unique integer to each category, useful for ordinal data?",
-    "options": ["One-Hot Encoding", "Label Encoding", "Data Scaling", "Imputation"],
-    "correctAnswer": "b"
-  },
-
-  // --- Medium Questions (5) ---
-  {
-    "text": "In Data Cleaning, what does 'Mean Imputation' refer to?",
-    "options": ["Deleting rows with missing data", "Replacing missing values with the average of the column", "Replacing missing values with zero", "Replacing missing values with the most frequent value"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Look at this code: `df['Color'].fillna(df['Color'].mode()[0], inplace=True)`. This is an example of ----------.",
-    "options": ["Mean Imputation", "Mode Imputation", "Median Imputation", "One-Hot Encoding"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which feature type would 'T-shirt Color' (Red, Blue, Green) be classified as?",
-    "options": ["Ordinal feature", "Nominal feature", "Numerical feature", "Discrete feature"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What does 'One-Hot Encoding' create to represent categories?",
-    "options": ["A single column with integers", "Binary columns for each category", "A list of strings", "A plot"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "When handling missing values, `df.dropna()` will ----------.",
-    "options": ["Fill holes with the mean", "Remove rows or columns with missing values", "Identify duplicates", "Sort the data"],
-    "correctAnswer": "b"
-  },
-
-  // --- Hard Questions (5) ---
-  {
-    "text": "Consider the code: `df = pd.get_dummies(df, columns=['City'])`. What technique is this applying?",
-    "options": ["Label Encoding", "One-Hot Encoding", "Feature Scaling", "Data Cleaning"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Why is 'Label Encoding' preferred for Ordinal features like 'Education Level'?",
-    "options": ["Because it creates many columns", "Because it preserves the mathematical order (e.g., 1 < 2 < 3)", "Because it removes duplicates", "Because it only works with strings"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the risk of using 'Label Encoding' on 'Nominal' features like 'Country'?",
-    "options": ["The model might assume a mathematical order or rank between countries", "The model will delete the data", "The code will crash", "It takes too much memory"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In the process of Data Preprocessing, which step usually follows Data Cleaning and Encoding?",
-    "options": ["Reading the CSV", "Feature Scaling", "Defining the Library", "Opening the file"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "If a dataset has 10 unique categories in a 'Country' column, how many new columns will One-Hot Encoding create?",
-    "options": ["1", "5", "10", "20"],
-    "correctAnswer": "c"
-  },
-    {
-    "text": "What is an Artificial Neural Network (ANN) inspired by?",
-    "options": ["Computer hardware", "The human brain", "Internet protocols", "Electrical circuits"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In a Neural Network, which layer is responsible for receiving the initial data?",
-    "options": ["Hidden Layer", "Output Layer", "Input Layer", "Feature Layer"],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "Which layer in an ANN processes and transforms data to extract features?",
-    "options": ["Input Layer", "Hidden Layer", "Output Layer", "External Layer"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Deep Learning is a specialized type of ----------.",
-    "options": ["Data Mining", "Machine Learning", "Hardware Engineering", "Web Development"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the main structural difference between ANN and Deep Learning?",
-    "options": ["Deep Learning has no input layer", "Deep Learning has many hidden layers", "ANN uses more data", "ANN requires GPUs"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which of these is a subset of the other?",
-    "options": ["AI is a subset of ML", "DL is a subset of ML", "ML is a subset of DL", "ANN is a subset of Deep Learning"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which technology is better for complex tasks like image and speech recognition?",
-    "options": ["Simple ML", "Deep Learning", "Expert Systems", "Linear Regression"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the 'Output Layer' responsible for in a Neural Network?",
-    "options": ["Storing data", "Producing the final prediction", "Reading CSV files", "Manual feature extraction"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "True or False: Deep Learning requires a very small amount of data to work well.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The units that make up a neural network are called ----------.",
-    "options": ["Slots", "Neurons (Nodes)", "Blocks", "Cores"],
-    "correctAnswer": "b"
-  },
-
-  // --- Medium Questions (5) ---
-  {
-    "text": "Unlike standard Machine Learning, Deep Learning learns features ----------.",
-    "options": ["Manually", "Automatically", "Using if-then rules", "Through data cleaning only"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which hardware component is essential for training Deep Learning models efficiently?",
-    "options": ["Standard CPU", "GPU (Graphics Processing Unit)", "Large Hard Drive", "Fast Printer"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which of the following describes the 'Learning Process' of Deep Learning?",
-    "options": ["Step-by-step manual process", "End-to-end learning", "Rule-based logic", "Decision tree mapping"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Deep Learning is often called a 'Black Box' because it is ----------.",
-    "options": ["Cheap to use", "Hard to interpret and explain how it reached a decision", "Made of black plastic", "Only for dark images"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which of these is a typical use case for Machine Learning rather than Deep Learning?",
-    "options": ["Complex Speech Recognition", "Spam Detection", "Self-driving cars", "Advanced NLP"],
-    "correctAnswer": "b"
-  },
-
-  // --- Hard Questions (5) ---
-  {
-    "text": "Comparing training time: Deep Learning typically takes ---------- time to train compared to Machine Learning.",
-    "options": ["Less", "More", "The same", "Zero"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In the context of 'Feature Extraction', Machine Learning relies on ----------.",
-    "options": ["End-to-end learning", "Manual selection and extraction of features", "Automatic layers", "GPU processing"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which system would be more appropriate for a 'simple and low-label task' with a small dataset?",
-    "options": ["Deep Learning", "Machine Learning", "Neural Networks", "Generative AI"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What happens during the 'Hidden Layer' phase in a Deep Neural Network?",
-    "options": ["Data is deleted", "The system extracts important features step by step", "The user inputs new rules", "The final result is displayed"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Why does Deep Learning require 'High-Performance Systems'?",
-    "options": ["Because the code is long", "To handle the massive calculations needed for many neural layers", "To store the CSV files", "Because it uses Python"],
+    "text": "Which of the following suites of tools is shared across the Salesforce Sales, Service, and Marketing Clouds?",
+    "options": [
+      "Physical server cooling fans, power cables, and network routers.",
+      "Accounts, Contacts, Leads, Opportunities, Campaigns, and Chatter.",
+      "Low-level Linux kernel patches and assembly compilers.",
+      "Hard drive disk formatters and localized network splitters."
+    ],
     "correctAnswer": "b"
   }
 ];

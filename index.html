@@ -555,43 +555,53 @@
 
 
 const questionsData = [
- {
-    text: "What is the main idea of parallel computing?",
+  {
+    text: "What is parallel computing?",
     options: [
-      "Executing a single instruction faster",
+      "Executing a single task on one processor",
       "Executing multiple tasks simultaneously",
-      "Increasing memory size",
-      "Reducing disk usage"
+      "Storing large amounts of data",
+      "Designing operating systems"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Which best defines a process?",
+    text: "A process is best defined as:",
     options: [
-      "A lightweight execution unit",
-      "An independent program with its own memory space",
-      "A CPU register",
+      "A lightweight unit of execution",
+      "An independent program in execution with its own memory space",
+      "A CPU core",
       "A network packet"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Threads in the same process:",
+    text: "Threads within the same process typically:",
     options: [
       "Do not share memory",
       "Share memory space",
-      "Run on different OS",
+      "Run on different machines",
       "Require network communication"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Latency refers to:",
+    text: "A core refers to:",
     options: [
-      "CPU speed",
-      "Time delay of an operation",
-      "Number of threads",
-      "Memory capacity"
+      "A logical thread scheduler",
+      "A physical processing unit in a CPU",
+      "A memory module",
+      "A distributed node"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Latency means:",
+    options: [
+      "Processing power",
+      "Time delay for an operation",
+      "Number of CPU cores",
+      "Cache size"
     ],
     correctAnswer: "b"
   },
@@ -600,127 +610,208 @@ const questionsData = [
     options: [
       "T_parallel / T_serial",
       "T_serial / T_parallel",
-      "N / time",
-      "time / N"
+      "T_serial + T_parallel",
+      "N / time"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Amdahl’s Law mainly shows:",
+    text: "A node in distributed systems is:",
     options: [
-      "Unlimited scaling with cores",
-      "Serial portion limits speedup",
-      "Memory increases speed",
-      "GPU is always faster"
+      "A CPU register",
+      "A single computer in a cluster",
+      "A GPU thread",
+      "A cache line"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Granularity refers to:",
+    text: "Overhead in parallel computing refers to:",
     options: [
-      "CPU architecture",
-      "Task size vs communication cost",
-      "Disk size",
-      "Network speed"
+      "Performance gain from parallelism",
+      "Extra cost of communication and synchronization",
+      "CPU clock speed increase",
+      "Memory expansion"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Distributed computing differs from parallel computing because:",
+    text: "Granularity describes:",
     options: [
-      "It uses shared memory",
-      "It uses independent machines connected via network",
-      "It runs on single CPU",
-      "It has no communication"
+      "CPU architecture type",
+      "Task size relative to communication cost",
+      "Number of threads in a core",
+      "Cache memory speed"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Parallel computing focuses mainly on:",
+    options: [
+      "Security",
+      "Speed and throughput",
+      "File storage",
+      "User interfaces"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Threads are different from processes because:",
+    options: [
+      "They have separate memory",
+      "They share memory within a process",
+      "They run only on GPUs",
+      "They cannot run concurrently"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Distributed computing involves:",
+    options: [
+      "Single CPU execution",
+      "Multiple machines connected via network",
+      "Only GPU processing",
+      "Single-thread programs"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Parallel algorithms are:",
+    options: [
+      "Hardware-specific implementations",
+      "Theoretical models independent of hardware",
+      "Operating systems",
+      "Network protocols"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is NOT a reason for parallel computing?",
+    options: [
+      "Hardware limitations",
+      "Data explosion",
+      "Faster sequential algorithms",
+      "Complex real-world problems"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Amdahl’s Law shows that:",
+    options: [
+      "Speedup is unlimited",
+      "Serial part limits performance",
+      "GPUs remove all bottlenecks",
+      "Memory has no effect"
     ],
     correctAnswer: "b"
   },
   {
     text: "Data parallelism means:",
     options: [
-      "Different tasks on different CPUs",
-      "Same operation on multiple data items",
-      "Sequential execution",
-      "Random execution"
+      "Different tasks on different machines",
+      "Same operation on multiple data elements",
+      "Only sequential execution",
+      "Random execution of tasks"
     ],
     correctAnswer: "b"
   },
   {
     text: "Task parallelism refers to:",
     options: [
-      "Same task repeated",
+      "Same task repeated on all cores",
       "Different tasks executed concurrently",
-      "Only GPU usage",
-      "Only memory operations"
+      "Only GPU execution",
+      "Memory duplication"
     ],
     correctAnswer: "b"
   },
-
   {
     text: "Pipeline parallelism is similar to:",
     options: [
       "Random processing",
       "Assembly line processing",
-      "Single thread execution",
+      "Single-thread execution",
       "Disk scheduling"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Race condition happens when:",
+    text: "Instruction-level parallelism is handled by:",
     options: [
-      "Threads safely access data",
+      "User programs",
+      "CPU hardware and compiler",
+      "Network systems",
+      "Disk storage"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A race condition occurs when:",
+    options: [
+      "CPU overheats",
       "Multiple threads access shared data unpredictably",
-      "CPU is slow",
-      "Memory is large"
+      "Network disconnects",
+      "Memory is full"
     ],
     correctAnswer: "b"
   },
+
   {
-    text: "Deadlock occurs when:",
+    text: "Deadlock happens when:",
     options: [
-      "System runs faster",
-      "Threads wait forever for each other",
+      "CPU crashes",
+      "Threads wait on each other indefinitely",
       "Cache is cleared",
-      "CPU overheats"
+      "Disk is full"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Communication overhead is caused by:",
+    text: "Load imbalance means:",
+    options: [
+      "Equal workload distribution",
+      "Some processors are idle while others are busy",
+      "Faster network speed",
+      "More memory usage"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Communication overhead is mainly caused by:",
     options: [
       "Fast computation",
-      "Data transfer between processors",
-      "Cache hits",
-      "High CPU frequency"
+      "Data movement between processors",
+      "CPU clock increase",
+      "Cache hits"
     ],
     correctAnswer: "b"
   },
   {
     text: "Which is NOT an advantage of parallel computing?",
     options: [
-      "Speed improvement",
+      "Faster execution",
       "Scalability",
       "Simpler programming",
-      "Handling large problems"
+      "Real-time processing"
     ],
     correctAnswer: "c"
   },
-
   {
     text: "SIMD stands for:",
     options: [
       "Single Instruction Multiple Data",
-      "Single Input Multiple Devices",
+      "Single Input Multi Device",
       "System Integrated Memory Design",
-      "Sequential Instruction Model"
+      "Sequential Instruction Model Design"
     ],
     correctAnswer: "a"
   },
+
   {
     text: "GPUs are best suited for:",
     options: [
-      "Sequential tasks",
+      "Serial workloads",
       "Data-parallel workloads",
       "File systems",
       "Operating systems"
@@ -731,16 +822,16 @@ const questionsData = [
     text: "Heterogeneous computing combines:",
     options: [
       "Only CPUs",
-      "CPU + GPU + accelerators",
-      "Only RAM types",
-      "Only storage devices"
+      "CPU, GPU, and other accelerators",
+      "Only storage devices",
+      "Only networks"
     ],
     correctAnswer: "b"
   },
   {
-    text: "The main bottleneck in modern CPUs is:",
+    text: "The main bottleneck in modern CPUs is often:",
     options: [
-      "Keyboard speed",
+      "Keyboard input",
       "Power and memory wall",
       "Screen rendering",
       "Printer delay"
@@ -748,12 +839,22 @@ const questionsData = [
     correctAnswer: "b"
   },
   {
+    text: "Amdahl’s Law is limited by:",
+    options: [
+      "Parallel fraction only",
+      "Serial portion of program",
+      "GPU speed",
+      "Network bandwidth only"
+    ],
+    correctAnswer: "b"
+  },
+  {
     text: "Cache coherence ensures:",
     options: [
       "Faster internet",
-      "Consistency across CPU caches",
+      "Consistent memory values across cores",
       "More storage",
-      "GPU speed"
+      "Better GPU rendering"
     ],
     correctAnswer: "b"
   },
@@ -763,13 +864,13 @@ const questionsData = [
     options: [
       "Deadlock",
       "Load imbalance",
-      "Memory leak",
-      "Disk failure"
+      "Memory leaks",
+      "Latency only"
     ],
     correctAnswer: "b"
   },
   {
-    text: "MPI is used mainly for:",
+    text: "MPI is mainly used in:",
     options: [
       "Shared memory systems",
       "Distributed systems",
@@ -781,27 +882,27 @@ const questionsData = [
   {
     text: "OpenMP is used for:",
     options: [
-      "Distributed memory",
+      "Distributed memory programming",
       "Shared-memory parallelism",
-      "Networking",
-      "Databases"
+      "Database systems",
+      "Networking"
     ],
     correctAnswer: "b"
   },
   {
-    text: "CUDA is used for:",
+    text: "CUDA is designed for:",
     options: [
       "CPU programming",
-      "GPU programming",
-      "File systems",
-      "OS kernels"
+      "GPU computing",
+      "File storage",
+      "Operating systems"
     ],
     correctAnswer: "b"
   },
   {
     text: "Near-memory computing aims to reduce:",
     options: [
-      "CPU usage",
+      "CPU cores",
       "Memory wall problem",
       "GPU usage",
       "Thread count"
@@ -809,86 +910,157 @@ const questionsData = [
     correctAnswer: "b"
   },
 
-  // ===================== TRUE / FALSE =====================
-
   {
-    text: "Parallel computing always guarantees infinite speedup.",
-    options: ["True", "False"],
+    text: "Quantum parallelism is based on:",
+    options: [
+      "Binary execution",
+      "Superposition of states",
+      "Sequential logic",
+      "Cache optimization"
+    ],
     correctAnswer: "b"
   },
   {
-    text: "A process has its own memory space.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Threads share the same memory within a process.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Distributed systems use network communication.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Speedup = T_parallel / T_serial.",
-    options: ["True", "False"],
+    text: "Green HPC focuses on:",
+    options: [
+      "Faster CPUs",
+      "Energy-efficient computing",
+      "More memory",
+      "More disks"
+    ],
     correctAnswer: "b"
   },
   {
-    text: "Amdahl’s Law limits maximum performance gain.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Data parallelism means different tasks on different CPUs.",
-    options: ["True", "False"],
+    text: "Serverless HPC provides:",
+    options: [
+      "Fixed hardware systems",
+      "On-demand compute resources",
+      "Offline computing",
+      "Single machine execution"
+    ],
     correctAnswer: "b"
   },
   {
-    text: "Race conditions produce deterministic results.",
-    options: ["True", "False"],
+    text: "Coarse-grained tasks usually mean:",
+    options: [
+      "Small tasks with high communication",
+      "Large tasks with low communication",
+      "No parallelism",
+      "Only GPU tasks"
+    ],
     correctAnswer: "b"
   },
   {
-    text: "Deadlock can stop a system completely.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Communication overhead improves performance.",
-    options: ["True", "False"],
+    text: "The correct parallel workflow is:",
+    options: [
+      "Distribute → Decompose → Coordinate",
+      "Decompose → Distribute → Coordinate",
+      "Coordinate → Execute → Store",
+      "Compile → Run → Stop"
+    ],
     correctAnswer: "b"
   },
-
-  {
-    text: "GPUs are efficient for data-parallel tasks.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Distributed systems are faster than shared-memory systems in communication.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Cache coherence ensures data consistency.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Parallel algorithms depend on specific hardware only.",
-    options: ["True", "False"],
+      {
+    text: "Cache coherence protocols are used to:",
+    options: [
+      "Increase disk speed",
+      "Ensure consistent data across CPU caches",
+      "Improve internet speed",
+      "Reduce GPU memory"
+    ],
     correctAnswer: "b"
   },
   {
-    text: "Granularity refers to task size vs communication cost.",
-    options: ["True", "False"],
+    text: "Fine-grained parallelism usually leads to:",
+    options: [
+      "Lower communication overhead",
+      "Higher communication overhead",
+      "No synchronization needed",
+      "Faster serial execution only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is a key challenge in parallel computing?",
+    options: [
+      "Simple debugging",
+      "Race conditions and synchronization issues",
+      "Unlimited speedup",
+      "No memory usage"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Distributed computing systems communicate mainly through:",
+    options: [
+      "Shared memory",
+      "Network communication",
+      "CPU registers",
+      "Cache lines"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which trend uses specialized hardware for AI workloads?",
+    options: [
+      "Green HPC",
+      "AI-specialized chips (TPUs, GPUs)",
+      "Serial computing",
+      "Disk-based computing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which problem limits scalability in parallel systems?",
+    options: [
+      "Amdahl’s Law",
+      "Moore’s Law",
+      "Cache hits",
+      "Pipeline speed"
+    ],
     correctAnswer: "a"
+  },
+  {
+    text: "The main goal of parallel computing is to:",
+    options: [
+      "Reduce memory usage only",
+      "Increase execution speed and solve larger problems",
+      "Eliminate CPUs",
+      "Avoid using threads"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which system is an example of distributed computing?",
+    options: [
+      "Multi-core CPU",
+      "GPU",
+      "Apache Spark cluster",
+      "Single-thread program"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which type of parallelism uses assembly-line style execution?",
+    options: [
+      "Task parallelism",
+      "Pipeline parallelism",
+      "Data parallelism",
+      "Bit-level parallelism"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Why is parallel computing necessary today?",
+    options: [
+      "Because CPUs are getting slower",
+      "Because single-core performance has plateaued and data is growing rapidly",
+      "Because memory is unlimited",
+      "Because networks are faster than CPUs"
+    ],
+    correctAnswer: "b"
   }
 ];
-
 
 
 let currentQuestionIndex = 0;

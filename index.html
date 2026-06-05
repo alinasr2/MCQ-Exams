@@ -3467,6 +3467,771 @@ const questionsData = [
     text: "Best practice is to parallelize after identifying hotspots.",
     options: ["True", "False"],
     correctAnswer: "a"
+  },
+    {
+    text: "What is the main purpose of MPI_Bcast?",
+    options: [
+      "Send different data to each process",
+      "Send same data from root to all processes",
+      "Collect data from all processes",
+      "Perform reduction operation"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which MPI operation distributes different chunks of data from root to processes?",
+    options: [
+      "MPI_Gather",
+      "MPI_Scatter",
+      "MPI_Reduce",
+      "MPI_Barrier"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does MPI_Gather do?",
+    options: [
+      "Distributes data to all processes",
+      "Combines data from all processes to root",
+      "Broadcasts data",
+      "Synchronizes processes"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which operation combines values using an operator like SUM or MAX?",
+    options: [
+      "MPI_Scatter",
+      "MPI_Reduce",
+      "MPI_Bcast",
+      "MPI_Barrier"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is MPI_Allreduce?",
+    options: [
+      "Only root gets result",
+      "All processes get reduced result",
+      "Only scatter operation",
+      "One-to-one communication"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Barrier is used for:",
+    options: [
+      "Data distribution",
+      "Synchronization of all processes",
+      "Data reduction",
+      "Memory allocation"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which process usually provides input data in MPI_Bcast example?",
+    options: [
+      "All processes",
+      "Only root process",
+      "Random process",
+      "Last process"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In MPI_Scatter, each process receives:",
+    options: [
+      "Same data",
+      "Different chunks of data",
+      "No data",
+      "Only metadata"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Gather is the reverse of:",
+    options: [
+      "MPI_Reduce",
+      "MPI_Scatter",
+      "MPI_Bcast",
+      "MPI_Barrier"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which MPI operation ensures all processes wait at a synchronization point?",
+    options: [
+      "MPI_Bcast",
+      "MPI_Barrier",
+      "MPI_Scatter",
+      "MPI_Reduce"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Which operation returns result only to root process?",
+    options: [
+      "MPI_Allreduce",
+      "MPI_Reduce",
+      "MPI_Bcast",
+      "MPI_Barrier"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which operation returns result to all processes?",
+    options: [
+      "MPI_Reduce",
+      "MPI_Allreduce",
+      "MPI_Gather",
+      "MPI_Scatter"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is required for MPI_Bcast correctness?",
+    options: [
+      "Only root calls it",
+      "All processes call it with same parameters",
+      "Only receivers call it",
+      "Random participation"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the communication complexity of tree-based MPI_Bcast?",
+    options: [
+      "O(P)",
+      "O(log P)",
+      "O(P^2)",
+      "O(1)"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Scatter is mainly used for:",
+    options: [
+      "Collecting results",
+      "Distributing data",
+      "Synchronization",
+      "Memory allocation"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "MPI_Gatherv is used when:",
+    options: [
+      "All chunks are equal size",
+      "Chunks have variable size",
+      "No data exists",
+      "Only broadcasting"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which operation is NOT a collective operation?",
+    options: [
+      "MPI_Bcast",
+      "MPI_Send",
+      "MPI_Reduce",
+      "MPI_Scatter"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Reduce_scatter combines:",
+    options: [
+      "Scatter + Gather",
+      "Reduce + Scatter",
+      "Broadcast + Reduce",
+      "Barrier + Gather"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which MPI operation is most expensive in large systems?",
+    options: [
+      "MPI_Barrier",
+      "MPI_Send",
+      "MPI_Scatter",
+      "MPI_Reduce"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "Barrier overhead generally:",
+    options: [
+      "Decreases with more processes",
+      "Increases with more processes",
+      "Is constant",
+      "Becomes zero"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "In MPI_Scatter, only root has:",
+    options: [
+      "Valid receive buffer",
+      "Valid send buffer",
+      "No buffer",
+      "Random buffer"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Domain decomposition is used for:",
+    options: [
+      "Parallelizing data over processes",
+      "Sequential execution",
+      "Memory compression",
+      "Compilation"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "1D cyclic distribution is best for:",
+    options: [
+      "Uniform workloads only",
+      "Irregular workloads",
+      "No workloads",
+      "GPU memory"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "1D block distribution gives:",
+    options: [
+      "Random assignment",
+      "Contiguous chunks",
+      "No partitioning",
+      "Only root execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI cyclic distribution assigns data:",
+    options: [
+      "Contiguously",
+      "Round-robin fashion",
+      "Only to root",
+      "Randomly"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "In MPI π computation, each process uses:",
+    options: [
+      "Same indices",
+      "Stride equal to number of processes",
+      "Only root data",
+      "Random indexing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Reduce in π example uses:",
+    options: [
+      "MPI_MAX",
+      "MPI_SUM",
+      "MPI_MIN",
+      "MPI_LAND"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Bcast is used in π computation to:",
+    options: [
+      "Broadcast N to all processes",
+      "Gather results",
+      "Reduce values",
+      "Synchronize only"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "π computation with MPI is best described as:",
+    options: [
+      "Serial problem",
+      "Embarrassingly parallel problem",
+      "I/O bound problem",
+      "Sequential recursion"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Non-blocking communication allows:",
+    options: [
+      "Only sequential execution",
+      "Overlap of computation and communication",
+      "No communication",
+      "Only root execution"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "MPI_Isend returns:",
+    options: [
+      "After completion",
+      "Immediately with request handle",
+      "Only after barrier",
+      "Error always"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Wait is used to:",
+    options: [
+      "Start communication",
+      "Ensure completion of non-blocking operation",
+      "Send data",
+      "Split processes"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Buffer must NOT be modified until:",
+    options: [
+      "MPI_Init",
+      "MPI_Wait completes",
+      "MPI_Bcast",
+      "MPI_Finalize"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Test differs from MPI_Wait because:",
+    options: [
+      "It blocks always",
+      "It is non-blocking check",
+      "It destroys data",
+      "It sends messages"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Deadlock is caused by:",
+    options: [
+      "Correct ordering",
+      "Circular Send/Recv dependency",
+      "Broadcast",
+      "Reduction"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "MPI_COMM_WORLD contains:",
+    options: [
+      "One process",
+      "All processes",
+      "No processes",
+      "Only root"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Comm_split is used to:",
+    options: [
+      "Kill processes",
+      "Create subgroups of processes",
+      "Reduce memory",
+      "Synchronize only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In MPI_Comm_split, 'color' defines:",
+    options: [
+      "Process speed",
+      "Group membership",
+      "Memory size",
+      "Communication speed"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Cartesian topology is mainly used for:",
+    options: [
+      "Graphical rendering",
+      "Grid/mesh computations",
+      "Sorting algorithms",
+      "File systems"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Cart_shift is used to:",
+    options: [
+      "Create processes",
+      "Find neighbors in grid",
+      "Reduce values",
+      "Broadcast data"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Strong scaling means:",
+    options: [
+      "Increase problem size",
+      "Fixed problem size, more processors",
+      "Only single processor",
+      "Random scaling"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Weak scaling means:",
+    options: [
+      "Fixed problem size",
+      "Problem grows with processors",
+      "No scaling",
+      "Serial execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Best performance metric in MPI timing is:",
+    options: [
+      "Minimum time",
+      "Maximum time across processes",
+      "Average only",
+      "Random process time"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Load imbalance occurs when:",
+    options: [
+      "All processes finish together",
+      "Some processes take longer than others",
+      "No communication exists",
+      "Memory is shared"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Best MPI programming practice is:",
+    options: [
+      "Fine-grained communication",
+      "Minimize communication and use collectives",
+      "Avoid reduction",
+      "Avoid broadcasting"
+    ],
+    correctAnswer: "b"
+  },
+    {
+    text: "MPI_Comm_free is used to:",
+    options: [
+      "Create new processes",
+      "Release communicator resources",
+      "Send messages",
+      "Synchronize processes"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Finalize should be called:",
+    options: [
+      "Before MPI_Init",
+      "At the end of MPI program",
+      "Inside loops",
+      "Before communication"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which operation is best for computing global maximum?",
+    options: [
+      "MPI_Bcast",
+      "MPI_Reduce with MPI_MAX",
+      "MPI_Scatter",
+      "MPI_Send"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Allgather results in:",
+    options: [
+      "Only root gets data",
+      "All processes receive full gathered data",
+      "Data loss",
+      "Only scatter effect"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Non-blocking communication mainly helps to:",
+    options: [
+      "Increase deadlocks",
+      "Overlap computation with communication",
+      "Remove MPI usage",
+      "Reduce processes"
+    ],
+    correctAnswer: "b"
+  },
+      {
+    text: "MPI_Bcast sends the same data from root to all processes.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Scatter sends identical data to all processes.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Gather collects data from all processes to the root.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Reduce performs a collective computation like SUM or MAX.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Allreduce returns the result only to the root process.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Barrier allows all processes to continue immediately without waiting.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "All processes must call MPI_Bcast with the same parameters.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "In MPI_Scatter, each process receives a different chunk of data.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Gather is the inverse operation of MPI_Scatter.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Reduce_scatter performs both reduction and scattering.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "MPI_Barrier is always required after every collective operation.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Collective operations like MPI_Bcast already include synchronization.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Gatherv is used when all processes send equal-sized data.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Scatter distributes data from root to all processes.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Allgather gives each process the full combined dataset.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "Domain decomposition is used to split computation across processes.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "1D block distribution assigns contiguous chunks of data.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "1D cyclic distribution assigns data in a round-robin fashion.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "1D cyclic distribution is poor for load balancing irregular workloads.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI cyclic distribution improves load balance for irregular tasks.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "MPI π computation is an embarrassingly parallel problem.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Each MPI process computes the same indices in π computation.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Reduce with MPI_SUM is used to combine partial results in π computation.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Broadcast is used in π computation to distribute final result.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI communication overhead is minimal in π computation example.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "MPI_Isend is a blocking communication function.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Irecv allows overlapping computation and communication.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Wait ensures completion of non-blocking operations.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Buffers can be safely modified before MPI_Wait completes.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI_Test blocks until communication completes.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Deadlock can occur due to circular send/receive dependencies.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Sendrecv helps avoid deadlock situations.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_COMM_WORLD contains all processes in a program.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Comm_split is used to merge all processes into one group.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Color parameter in MPI_Comm_split defines group membership.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "Cartesian topology is useful for grid-based computations.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Cart_shift is used to find neighboring processes.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Strong scaling increases problem size with number of processors.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Weak scaling increases problem size as processors increase.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Speedup is defined as T(1) / T(p).",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "Efficiency is speedup divided by number of processors.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Wtime is used for high-resolution timing.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI_Barrier is recommended inside every loop for performance.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Load imbalance means all processes finish at the same time.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Master-worker model assigns tasks dynamically in some MPI designs.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "MPI communication should be maximized for best performance.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Collective operations are usually optimized internally.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "MPI programs always require manual synchronization everywhere.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Profiling MPI applications helps identify bottlenecks.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Using MPI_Comm_free helps avoid resource leaks.",
+    options: ["True", "False"],
+    correctAnswer: "a"
   }
 ];
 

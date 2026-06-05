@@ -2069,6 +2069,1404 @@ const questionsData = [
     "text": "Parallel programming reduces energy efficiency compared to single fast core execution.",
     "options": ["True", "False"],
     "correctAnswer": "b"
+  },
+    {
+    text: "Which best describes data parallelism?",
+    options: [
+      "Different operations executed on same data",
+      "Same operation applied to different data partitions",
+      "Sequential execution of tasks",
+      "Random task scheduling across cores"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task parallelism is characterized by:",
+    options: [
+      "Same operation over split data",
+      "Independent tasks executing concurrently",
+      "Single-thread execution",
+      "GPU-only execution model"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is a typical example of data parallelism?",
+    options: [
+      "Web server request handling",
+      "Matrix multiplication across rows",
+      "Compiler building multiple files",
+      "Operating system scheduling"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "SPMD stands for:",
+    options: [
+      "Single Program Multiple Data",
+      "Single Process Multi Device",
+      "Synchronized Parallel Multi Data",
+      "Single Parallel Multi Domain"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "Which architecture is most suitable for GPUs?",
+    options: [
+      "Task parallelism",
+      "Data parallelism",
+      "Serial execution",
+      "Pipeline only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Amdahl’s Law mainly describes:",
+    options: [
+      "GPU memory hierarchy",
+      "Limit of speedup due to sequential fraction",
+      "Thread creation cost",
+      "Cache coherence problems"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "If P = 1 in Amdahl’s Law, speedup equals:",
+    options: [
+      "0",
+      "1",
+      "N",
+      "Infinity"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which is NOT a data-parallel workload?",
+    options: [
+      "Image processing",
+      "Neural network batch inference",
+      "Web server requests",
+      "Matrix operations"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Pipeline parallelism is best described as:",
+    options: [
+      "Random task execution",
+      "Sequential stages working concurrently on different items",
+      "Same operation on all data",
+      "Single-thread execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Pipeline throughput is limited by:",
+    options: [
+      "Fastest stage",
+      "Slowest stage",
+      "Number of cores only",
+      "Memory size"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA is primarily used for:",
+    options: [
+      "Database indexing",
+      "GPU general-purpose parallel computing",
+      "File compression",
+      "Network routing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "OpenMP parallel for is an example of:",
+    options: [
+      "Task parallelism",
+      "Data parallelism",
+      "Pipeline parallelism",
+      "Distributed databases"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which best describes task parallelism?",
+    options: [
+      "Same operation on data chunks",
+      "Different independent tasks executed in parallel",
+      "Single instruction execution",
+      "GPU vector operations only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A task graph is also known as:",
+    options: [
+      "Cycle graph",
+      "Directed Acyclic Graph (DAG)",
+      "Binary tree only",
+      "Hash table"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Reduction operation refers to:",
+    options: [
+      "Splitting data",
+      "Combining partial results",
+      "Creating threads",
+      "Allocating memory"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is a disadvantage of task parallelism?",
+    options: [
+      "Easy scalability",
+      "Load imbalance",
+      "Uniform execution",
+      "SIMD execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is true about data parallelism?",
+    options: [
+      "Requires DAG scheduling",
+      "Same operation on different data partitions",
+      "Always irregular",
+      "Depends on task dependencies"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA execution model is closest to:",
+    options: [
+      "SISD",
+      "SIMT/SIMD-like",
+      "Sequential model",
+      "Task graph model"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "OpenMP taskwait is used to:",
+    options: [
+      "Create threads",
+      "Wait for child tasks completion",
+      "Split arrays",
+      "Increase GPU cores"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is true about Cilk Plus?",
+    options: [
+      "GPU-only framework",
+      "C/C++ task parallel extension",
+      "Database engine",
+      "Python library"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task parallelism is best when:",
+    options: [
+      "All operations are identical",
+      "Tasks are independent and irregular",
+      "Only arrays are used",
+      "No concurrency exists"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which reduces performance in task parallelism?",
+    options: [
+      "Load imbalance",
+      "Uniform workload",
+      "SIMD execution",
+      "Data partitioning"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "Pipeline parallelism is limited by:",
+    options: [
+      "Fastest stage",
+      "Slowest stage",
+      "Memory bandwidth only",
+      "Thread count"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is NOT a benefit of data parallelism?",
+    options: [
+      "Easy scalability",
+      "GPU suitability",
+      "Handles irregular workloads well",
+      "Automatic load balancing (uniform data)"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "SIMD stands for:",
+    options: [
+      "Single Instruction Multiple Data",
+      "Single Input Multi Device",
+      "System Integrated Multi Data",
+      "Sequential Instruction Multi Data"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "OpenMP tasks are:",
+    options: [
+      "Executed only by creator thread",
+      "Queued and executed by any thread",
+      "Always sequential",
+      "GPU kernels only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task parallelism is advantageous because:",
+    options: [
+      "It removes all synchronization",
+      "It handles irregular workloads",
+      "It avoids threads",
+      "It requires no CPU"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Example of pipeline parallelism:",
+    options: [
+      "Matrix addition",
+      "Fetch-Decode-Execute pipeline",
+      "Vector scaling",
+      "Pixel-wise filter"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Data parallelism requires:",
+    options: [
+      "Task dependencies",
+      "Same operation across partitions",
+      "Different operations per thread",
+      "Graph execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "(1 − P) in Amdahl’s Law represents:",
+    options: [
+      "Parallel fraction",
+      "Sequential fraction",
+      "Memory fraction",
+      "GPU fraction"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "If P is small, speedup is:",
+    options: [
+      "Very high",
+      "Limited",
+      "Infinite",
+      "Constant regardless of N"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is NOT task parallel framework?",
+    options: [
+      "OpenMP tasks",
+      "Intel TBB",
+      "CUDA kernels",
+      "Cilk Plus"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Data parallelism works best when:",
+    options: [
+      "Tasks depend heavily",
+      "Computation is uniform",
+      "Tasks are unpredictable",
+      "Graph scheduling is needed"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "GPUs are optimized for:",
+    options: [
+      "Task parallelism",
+      "Data parallelism",
+      "Serial execution",
+      "Database queries"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task parallelism requires:",
+    options: [
+      "No dependencies",
+      "Dependency analysis",
+      "Only arrays",
+      "No scheduling"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Load imbalance occurs when:",
+    options: [
+      "All tasks equal size",
+      "Tasks vary in execution time",
+      "GPU is used",
+      "Data is uniform"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is NOT property of data parallelism?",
+    options: [
+      "Same operation",
+      "Independent data partitions",
+      "Different operations per task",
+      "Scalability with data size"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Work-stealing is mainly used in:",
+    options: [
+      "Data parallelism",
+      "Task parallelism",
+      "Sequential execution",
+      "Pipeline only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "OpenMP task construct was introduced in:",
+    options: [
+      "OpenMP 1.0",
+      "OpenMP 2.0",
+      "OpenMP 3.0",
+      "OpenMP 5.0"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Pipeline parallelism increases:",
+    options: [
+      "Latency only",
+      "Throughput",
+      "Memory fragmentation",
+      "Sequential delay"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Pipeline stages must be:",
+    options: [
+      "Identical in code",
+      "Able to run concurrently",
+      "Always independent only",
+      "Sequential only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task parallelism is closest to:",
+    options: [
+      "SIMD",
+      "MIMD",
+      "SISD",
+      "Vector only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Best example of data parallelism:",
+    options: [
+      "Web server",
+      "Batch ML processing",
+      "Event-driven system",
+      "Compiler pipeline"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Pipeline parallelism reduces:",
+    options: [
+      "Throughput",
+      "Idle time between stages",
+      "Parallelism",
+      "Data size"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA is designed for:",
+    options: [
+      "CPU-only execution",
+      "GPU parallel execution",
+      "Disk scheduling",
+      "Network routing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task graph execution is:",
+    options: [
+      "Always linear",
+      "Based on dependencies",
+      "Random",
+      "Independent of structure"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Best fit for data parallelism:",
+    options: [
+      "Web servers",
+      "Scientific computing",
+      "Operating systems",
+      "Message queues"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Amdahl’s Law implies:",
+    options: [
+      "Unlimited speedup possible",
+      "Sequential portion limits scalability",
+      "GPUs remove bottlenecks",
+      "Tasks are always independent"
+    ],
+    correctAnswer: "b"
+  },
+    {
+    text: "Data parallelism applies the same operation on different data partitions simultaneously.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Task parallelism means executing identical operations on split data.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "SPMD stands for Single Program Multiple Data.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "GPUs are mainly optimized for task parallelism.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Data parallelism is suitable for matrix and image processing.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Task parallelism requires no dependency analysis.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Amdahl’s Law describes the limit of speedup due to sequential portions.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "If P = 1 in Amdahl’s Law, speedup is infinite.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Pipeline parallelism executes stages sequentially without overlap.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Pipeline throughput is limited by the slowest stage.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "CUDA is a platform for GPU general-purpose computing.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OpenMP parallel for is an example of task parallelism.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Data parallelism works best for irregular workloads.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task parallelism is suitable for independent tasks like web server requests.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "A task graph is also called a DAG (Directed Acyclic Graph).",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Reduction combines partial results into a final output.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Load imbalance is a major issue in task parallelism.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Data parallelism requires different operations per data element.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "SIMD means Single Instruction Multiple Data.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OpenMP taskwait waits for all tasks in the system globally.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Cilk Plus is a programming extension for C and C++.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Task parallelism always guarantees perfect load balancing.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Data parallelism scales well with large datasets.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Pipeline parallelism increases system throughput.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Pipeline parallelism eliminates all latency.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA kernels run on CPU cores.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task parallelism is based on independent tasks.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Data parallelism is also called SPMD.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Task parallelism is always faster than data parallelism.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Amdahl’s Law shows diminishing returns when adding more processors.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Pipeline stages must execute strictly one after another without overlap.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "GPU programming benefits strongly from data parallelism.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Task parallelism requires all tasks to be identical in execution time.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "OpenMP tasks can be executed by any thread in the team.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Data parallelism is ideal for web servers and event-driven systems.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Pipeline parallelism is similar to an assembly line.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Task parallelism always requires GPU usage.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Work-stealing is used to balance tasks dynamically.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Sequential fraction in Amdahl’s Law is (1 − P).",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Data parallelism is best for irregular workloads.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Task parallelism often uses DAG-based scheduling.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "CUDA is mainly used for image processing and AI acceleration.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Pipeline throughput depends on the fastest stage.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Data parallelism divides data across processors.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Task parallelism is more flexible than data parallelism.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OpenMP was designed only for GPU programming.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Pipeline parallelism increases concurrency by overlapping stages.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Task graphs must always contain cycles.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Data parallelism is widely used in machine learning batch processing.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Amdahl’s Law assumes unlimited parallel scalability.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+     {
+    text: "What is the primary programming model used by OpenMP?",
+    options: [
+      "Message passing model",
+      "Shared-memory parallel model",
+      "Distributed-memory model",
+      "Functional programming model"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which directive is used to create a parallel region in OpenMP?",
+    options: [
+      "#pragma omp for",
+      "#pragma omp parallel",
+      "#pragma omp task",
+      "#pragma omp sections"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What happens at the end of an OpenMP parallel region?",
+    options: [
+      "Threads terminate immediately",
+      "Threads continue independently",
+      "Implicit barrier synchronization occurs",
+      "Threads are destroyed permanently"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which function returns the number of threads in a team?",
+    options: [
+      "omp_get_thread_num()",
+      "omp_get_num_threads()",
+      "omp_set_num_threads()",
+      "omp_get_wtime()"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the default behavior of variables in OpenMP parallel regions?",
+    options: [
+      "Always private",
+      "Always shared",
+      "Always firstprivate",
+      "Always thread-local static"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does private(var) mean in OpenMP?",
+    options: [
+      "Shared variable among threads",
+      "Each thread gets uninitialized private copy",
+      "Each thread gets initialized copy",
+      "Variable is global"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does firstprivate(var) do?",
+    options: [
+      "Uninitialized private copy",
+      "Initialized with master thread value",
+      "Shared among threads",
+      "Deleted after region"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does reduction(+:sum) ensure?",
+    options: [
+      "Race conditions occur",
+      "Sequential execution",
+      "Thread-local copies merged safely at end",
+      "Only master updates variable"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which clause is best for independent loop iterations?",
+    options: [
+      "critical",
+      "parallel for",
+      "single",
+      "master"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the main disadvantage of critical section?",
+    options: [
+      "Memory leak",
+      "Compiler error",
+      "Serializes execution",
+      "Increases thread count"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which is faster in general?",
+    options: [
+      "critical",
+      "atomic",
+      "barrier",
+      "single"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does #pragma omp atomic guarantee?",
+    options: [
+      "Full loop synchronization",
+      "Hardware-level atomic update",
+      "Thread creation",
+      "Task parallelism"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the purpose of barrier?",
+    options: [
+      "Reduce memory usage",
+      "Synchronize all threads",
+      "Create threads",
+      "Kill threads"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which schedule type is best for irregular workloads?",
+    options: [
+      "static",
+      "dynamic",
+      "sequential",
+      "single"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does schedule(static, 2) mean?",
+    options: [
+      "Random distribution",
+      "Fixed chunk distribution upfront",
+      "Dynamic assignment",
+      "Recursive splitting"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which scheduling method has highest overhead?",
+    options: [
+      "static",
+      "dynamic",
+      "none",
+      "single"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does guided scheduling do?",
+    options: [
+      "Maximum randomness",
+      "Decreasing chunk sizes over time",
+      "Only GPU execution",
+      "Single-thread execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does collapse(2) do?",
+    options: [
+      "Removes loops",
+      "Merges nested loops into one iteration space",
+      "Serial execution",
+      "Splits memory"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which directive executes only one thread?",
+    options: [
+      "master",
+      "single",
+      "atomic",
+      "barrier"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is true about master directive?",
+    options: [
+      "Any thread executes it",
+      "Only thread 0 executes it",
+      "All threads execute it",
+      "It creates tasks"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "What is a key feature of OpenMP tasks?",
+    options: [
+      "Only sequential execution",
+      "Useful for irregular parallelism",
+      "Only loop parallelism",
+      "GPU-only execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does taskwait do?",
+    options: [
+      "Terminates threads",
+      "Waits for all tasks to complete",
+      "Creates new threads",
+      "Skips execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What model is OpenMP based on?",
+    options: [
+      "Fork-Join model",
+      "Pipeline model",
+      "Actor model",
+      "Client-server model"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "At fork point, what happens?",
+    options: [
+      "Threads merge",
+      "Master creates additional threads",
+      "Threads are destroyed",
+      "Execution stops"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "OpenMP compilation flag in GCC?",
+    options: [
+      "-pthread",
+      "-fopenmp",
+      "-openmp-enable",
+      "-mp"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which variable sets thread count?",
+    options: [
+      "OMP_THREADS",
+      "OMP_NUM_THREADS",
+      "OMP_COUNT",
+      "OMP_SIZE"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does OMP_SCHEDULE control?",
+    options: [
+      "Compiler optimization",
+      "Loop scheduling strategy",
+      "Memory allocation",
+      "Thread binding"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is omp_get_wtime() used for?",
+    options: [
+      "Thread ID",
+      "Wall clock timing",
+      "Memory check",
+      "Thread creation"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which clause prevents race conditions in sum?",
+    options: [
+      "atomic",
+      "reduction",
+      "single",
+      "master"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is false sharing?",
+    options: [
+      "Sharing code",
+      "Threads sharing same cache line causing slowdown",
+      "Correct sharing",
+      "Compiler optimization"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "OpenMP is best for:",
+    options: [
+      "Multi-node clusters",
+      "Shared-memory systems",
+      "GPU only",
+      "Networking"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI is best for:",
+    options: [
+      "Single CPU",
+      "Distributed systems",
+      "GPU only",
+      "Small loops"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA runs on:",
+    options: [
+      "CPU cache",
+      "GPU",
+      "RAM only",
+      "Disk"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Speedup formula is:",
+    options: [
+      "T(p)/T(1)",
+      "T(1)/T(p)",
+      "p/T(1)",
+      "T(p)*T(1)"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Efficiency is defined as:",
+    options: [
+      "S × p",
+      "S / p",
+      "p / S",
+      "S + p"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Amdahl's Law describes:",
+    options: [
+      "Infinite speedup possible",
+      "Serial portion limits speedup",
+      "GPU performance only",
+      "Memory allocation"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "If serial fraction is 5%, max speedup is:",
+    options: [
+      "5",
+      "10",
+      "20",
+      "100"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Gustafson's Law assumes:",
+    options: [
+      "Fixed problem size",
+      "Increasing problem size with processors",
+      "No parallelism",
+      "Only serial execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What happens if threads are imbalanced?",
+    options: [
+      "Faster execution",
+      "Last thread dominates execution time",
+      "No effect",
+      "Compiler error"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Best practice before parallelizing:",
+    options: [
+      "Random optimization",
+      "Profile sequential code",
+      "Increase threads",
+      "Use GPU immediately"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does collapse(n) help with?",
+    options: [
+      "No loops exist",
+      "Nested loops load balancing",
+      "Single loop only",
+      "No computation"
+    ],
+    correctAnswer: "b"
+  },
+    {
+    text: "OpenMP is a shared-memory parallel programming model.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OpenMP is mainly used for distributed-memory systems.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "#pragma omp parallel creates multiple threads.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OpenMP programs always execute sequentially.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "There is an implicit barrier at the end of a parallel region.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "omp_get_thread_num() returns total number of threads.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "omp_get_num_threads() returns total number of threads.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Variables in OpenMP are shared by default in most cases.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "private variables are shared between threads.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "firstprivate initializes each thread with master value.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "reduction avoids race conditions.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "critical section allows multiple threads at once.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "atomic is usually faster than critical.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "barrier allows threads to continue immediately.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "single executes only one thread.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "master allows any thread to execute the block.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "schedule(static) gives predictable iteration distribution.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "schedule(dynamic) is best for balanced workloads.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "schedule(dynamic) has more overhead than static.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "guided scheduling decreases chunk size over time.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "collapse(2) merges nested loops into one iteration space.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "collapse only works on single loops.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "OpenMP tasks are useful for recursive problems.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "taskwait waits for all spawned tasks to finish.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OpenMP follows a fork-join model.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "OpenMP is suitable for multi-node clusters.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "MPI is used for distributed systems.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "CUDA runs on CPU only.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "OpenMP is good for loop-level parallelism.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Speedup is defined as T(p) / T(1).",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Speedup is T(1) / T(p).",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Efficiency is Speedup divided by number of processors.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Amdahl’s Law ignores serial portions of code.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Amdahl’s Law limits maximum speedup.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Gustafson’s Law assumes fixed problem size.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Gustafson’s Law allows scaling problem size.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "False sharing improves performance.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "False sharing can reduce performance due to cache conflicts.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OMP_NUM_THREADS sets number of threads.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OMP_SCHEDULE controls memory allocation.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "omp_get_wtime() is used for performance timing.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Profiling before optimization is recommended.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Parallelizing everything always improves performance.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Load imbalance can slow down parallel programs.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "NUMA awareness improves memory performance.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "SIMD directive enables vectorization.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Nested parallelism means parallel regions inside parallel regions.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "OpenMP works best on distributed-memory clusters.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Thread overhead includes creation and synchronization costs.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Best practice is to parallelize after identifying hotspots.",
+    options: ["True", "False"],
+    correctAnswer: "a"
   }
 ];
 

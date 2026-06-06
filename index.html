@@ -4232,6 +4232,613 @@ const questionsData = [
     text: "Using MPI_Comm_free helps avoid resource leaks.",
     options: ["True", "False"],
     correctAnswer: "a"
+  },
+     {
+    text: "What is the main advantage of GPUs over CPUs?",
+    options: [
+      "Lower memory usage",
+      "High-throughput parallel processing",
+      "Better sequential execution",
+      "Lower clock speed"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA stands for:",
+    options: [
+      "Compute Unified Data Architecture",
+      "Compute Unified Device Architecture",
+      "Central Unified Device Allocation",
+      "Core Unified Data Access"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A GPU is primarily optimized for:",
+    options: [
+      "Low-latency tasks",
+      "Serial execution",
+      "Massive parallel computation",
+      "Operating systems"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is a warp in CUDA?",
+    options: [
+      "A single thread",
+      "A group of 32 threads executing in SIMT",
+      "A CPU core",
+      "A memory unit"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "SIMT in CUDA stands for:",
+    options: [
+      "Single Instruction Multiple Threads",
+      "Single Input Multiple Tasks",
+      "Shared Instruction Multi Threading",
+      "System Integrated Multi Threading"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "How many CUDA cores are executed in parallel within a warp?",
+    options: [
+      "16",
+      "32",
+      "64",
+      "128"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Warp divergence occurs when:",
+    options: [
+      "All threads execute same path",
+      "Threads take different branches",
+      "Memory is full",
+      "GPU is idle"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Warp divergence leads to:",
+    options: [
+      "Better performance",
+      "Parallel execution improvement",
+      "Serialized execution of branches",
+      "No effect"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Each SM (Streaming Multiprocessor) contains:",
+    options: [
+      "Only CPU cores",
+      "CUDA cores, registers, shared memory",
+      "Only cache memory",
+      "Only threads"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Shared memory in CUDA is:",
+    options: [
+      "Global memory",
+      "Slow memory",
+      "Fast memory shared within a block",
+      "CPU memory"
+    ],
+    correctAnswer: "c"
+  },
+
+  {
+    text: "Global memory in GPU is:",
+    options: [
+      "Fastest memory",
+      "Shared within block only",
+      "Slow but large capacity memory",
+      "Register memory"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Registers in GPU are:",
+    options: [
+      "Slow memory",
+      "Per-thread fastest memory",
+      "Shared memory",
+      "Disk storage"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A CUDA kernel runs on:",
+    options: [
+      "CPU only",
+      "GPU device",
+      "Disk",
+      "Network"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Host refers to:",
+    options: [
+      "GPU",
+      "CPU system",
+      "Memory controller",
+      "Kernel"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Device refers to:",
+    options: [
+      "CPU",
+      "GPU",
+      "RAM",
+      "Cache only"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "CUDA programming model is based on:",
+    options: [
+      "SPMD",
+      "MIMD only",
+      "SIMD only",
+      "Sequential execution"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "SPMD means:",
+    options: [
+      "Single Program Multiple Data",
+      "Single Process Multi Device",
+      "Shared Program Memory Data",
+      "System Parallel Multi Data"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "Threads in CUDA are identified using:",
+    options: [
+      "Process ID only",
+      "blockIdx and threadIdx",
+      "CPU ID",
+      "Memory address"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A thread block is executed on:",
+    options: [
+      "Multiple SMs",
+      "Single SM",
+      "CPU core",
+      "Disk"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Maximum threads per block is typically:",
+    options: [
+      "128",
+      "256",
+      "1024",
+      "2048"
+    ],
+    correctAnswer: "c"
+  },
+
+  {
+    text: "Grid in CUDA represents:",
+    options: [
+      "Single thread",
+      "Collection of thread blocks",
+      "CPU threads",
+      "Memory unit"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Threads inside a block can synchronize using:",
+    options: [
+      "__sync()",
+      "__syncthreads()",
+      "barrier()",
+      "wait()"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Global memory access is:",
+    options: [
+      "Fastest",
+      "Slowest compared to shared memory",
+      "Same as registers",
+      "Free"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Occupancy refers to:",
+    options: [
+      "GPU temperature",
+      "Ratio of active warps to max warps",
+      "Memory size",
+      "Thread ID"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Higher occupancy generally means:",
+    options: [
+      "Lower performance",
+      "Better latency hiding",
+      "More divergence",
+      "Less computation"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "CUDA cores are responsible for:",
+    options: [
+      "File handling",
+      "Arithmetic operations",
+      "Disk access",
+      "Networking"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Warp size in CUDA is:",
+    options: [
+      "16 threads",
+      "32 threads",
+      "64 threads",
+      "128 threads"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Warp scheduler is responsible for:",
+    options: [
+      "Disk scheduling",
+      "Issuing instructions to warps",
+      "CPU scheduling",
+      "Memory allocation"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "SIMT execution means:",
+    options: [
+      "Each thread executes different instructions",
+      "All threads execute same instruction",
+      "No parallelism",
+      "CPU-only execution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Latency hiding in GPU is achieved by:",
+    options: [
+      "Increasing CPU speed",
+      "Switching between warps",
+      "Reducing memory",
+      "Disabling threads"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Which memory is fastest in GPU?",
+    options: [
+      "Global memory",
+      "Shared memory",
+      "Registers",
+      "Disk memory"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Shared memory is:",
+    options: [
+      "Shared between GPUs",
+      "Shared within a thread block",
+      "Global across device",
+      "CPU memory"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Each thread has its own:",
+    options: [
+      "Shared memory",
+      "Registers",
+      "Global memory",
+      "SM"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Kernel launch is done from:",
+    options: [
+      "GPU",
+      "Host (CPU)",
+      "RAM",
+      "Cache"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA execution model is:",
+    options: [
+      "Sequential",
+      "Heterogeneous CPU-GPU",
+      "Single core only",
+      "Disk based"
+    ],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Thread block size should be multiple of:",
+    options: [
+      "16",
+      "32",
+      "64",
+      "128"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Why 32 threads per warp is important?",
+    options: [
+      "CPU limitation",
+      "Hardware SIMT execution unit",
+      "Memory alignment only",
+      "Disk optimization"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What happens when threads diverge?",
+    options: [
+      "Faster execution",
+      "Serialized execution of branches",
+      "Memory increases",
+      "GPU resets"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Best way to avoid warp divergence is:",
+    options: [
+      "Random branching",
+      "Group similar threads together",
+      "Increase CPU usage",
+      "Reduce memory"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Each SM contains:",
+    options: [
+      "Only CPU cores",
+      "CUDA cores and scheduling units",
+      "Only memory",
+      "Only cache"
+    ],
+    correctAnswer: "b"
+  },
+      {
+    text: "What is the role of the SM (Streaming Multiprocessor)?",
+    options: [
+      "CPU scheduling unit",
+      "Basic execution unit that runs warps",
+      "Disk controller",
+      "Memory allocator only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is Tensor Core mainly used for?",
+    options: [
+      "Integer sorting",
+      "Matrix multiply operations in deep learning",
+      "File processing",
+      "CPU-GPU communication"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which memory type has highest capacity but highest latency?",
+    options: [
+      "Registers",
+      "Shared memory",
+      "Global memory",
+      "L1 cache"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "CUDA streams are used for:",
+    options: [
+      "CPU scheduling",
+      "Overlapping computation and memory transfer",
+      "Disk IO",
+      "Thread creation"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which unit schedules warps inside an SM?",
+    options: [
+      "CPU scheduler",
+      "Warp scheduler",
+      "Memory controller",
+      "Thread dispatcher"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Each warp executes:",
+    options: [
+      "Different instructions per thread",
+      "Same instruction in SIMT fashion",
+      "Only memory operations",
+      "Only arithmetic operations sequentially"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What limits GPU performance most often?",
+    options: [
+      "CPU speed",
+      "Memory bandwidth and latency",
+      "Disk speed",
+      "Compiler type"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which of the following is NOT part of GPU hierarchy?",
+    options: [
+      "Thread",
+      "Warp",
+      "SM",
+      "Process scheduler (CPU level)"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "Thread index in CUDA is accessed using:",
+    options: [
+      "threadID",
+      "threadIdx",
+      "cpuIdx",
+      "warpIdx"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Block index in CUDA is accessed using:",
+    options: [
+      "blockIdx",
+      "gridIdx",
+      "warpIdx",
+      "smIdx"
+    ],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "Grid size defines:",
+    options: [
+      "Number of threads per block",
+      "Number of blocks per kernel launch",
+      "Memory size",
+      "CPU threads"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A thread block can execute on:",
+    options: [
+      "Multiple SMs",
+      "Only one SM",
+      "Only CPU",
+      "Disk"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which memory is shared within a thread block?",
+    options: [
+      "Global memory",
+      "Shared memory",
+      "Registers",
+      "CPU cache"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Registers are:",
+    options: [
+      "Slow memory",
+      "Private per thread fastest memory",
+      "Shared across GPU",
+      "Disk storage"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What happens if block size is not multiple of 32?",
+    options: [
+      "Better performance",
+      "Partial warp underutilization",
+      "GPU crash",
+      "Memory leak"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Occupancy improves:",
+    options: [
+      "Latency hiding",
+      "Disk speed",
+      "CPU usage",
+      "Serial execution"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "What is the smallest execution unit in CUDA?",
+    options: [
+      "Warp",
+      "Thread",
+      "Block",
+      "SM"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "GPU architecture is mainly optimized for:",
+    options: [
+      "Branch-heavy logic",
+      "Massively parallel arithmetic",
+      "File systems",
+      "Sequential logic"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "SIMT differs from SIMD because:",
+    options: [
+      "SIMT uses threads",
+      "SIMD uses threads",
+      "SIMT uses different instructions per thread",
+      "SIMT is serial"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "Which component connects GPU to CPU?",
+    options: [
+      "PCIe",
+      "L1 cache",
+      "SM",
+      "Warp scheduler"
+    ],
+    correctAnswer: "a"
   }
 ];
 

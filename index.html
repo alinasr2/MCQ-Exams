@@ -4839,6 +4839,263 @@ const questionsData = [
       "Warp scheduler"
     ],
     correctAnswer: "a"
+  },
+      {
+    text: "GPUs are optimized for high-throughput parallel computing.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "CPUs typically have thousands of cores like GPUs.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA stands for Compute Unified Device Architecture.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "GPU memory bandwidth is usually higher than CPU memory bandwidth.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "A warp consists of 64 threads executing together.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "A warp in CUDA contains 32 threads.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "SIMT means Single Instruction Multiple Threads.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Each thread in a warp can execute a different instruction at the same time.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Warp divergence improves GPU performance.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Warp divergence causes serialization of execution paths.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "An SM is a Streaming Multiprocessor.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Each SM contains only one CUDA core.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Shared memory is faster than global memory.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Global memory is the fastest memory in GPU.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Registers are private to each thread.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Shared memory is shared across all GPU threads globally.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "A kernel is executed on the CPU.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "A CUDA kernel runs on the GPU device.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Host refers to GPU memory.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Device refers to the GPU.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "CUDA follows a SPMD programming model.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "SPMD means Single Program Multiple Data.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Threads in CUDA are identified using threadIdx and blockIdx.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "A thread block can span multiple SMs.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Each thread block executes on a single SM.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "Maximum threads per block is typically 1024.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Grid represents a single thread.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Grid contains multiple thread blocks.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Threads inside a block can synchronize using __syncthreads().",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Threads from different blocks can synchronize using __syncthreads().",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+
+  {
+    text: "Occupancy is the ratio of active warps to maximum warps.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Higher occupancy always guarantees better performance.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Latency hiding is achieved by switching between warps.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "GPU cores are designed for serial execution.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "CUDA cores execute floating point and integer operations.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "Tensor cores are used mainly for matrix operations.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Tensor cores are optimized for deep learning workloads.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "GPU global memory has lower latency than registers.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Register memory is the fastest memory in GPU.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Each thread has its own private registers.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "CUDA streams are used for overlapping computation and data transfer.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "GPU execution is purely sequential.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Kernel launch is done from the host (CPU).",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "Device refers to CPU memory.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Warp scheduler selects which warp executes next instruction.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+
+  {
+    text: "Block size must be multiple of warp size (32).",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "CUDA is mainly designed for low-latency single-thread tasks.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "Memory coalescing improves GPU performance.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "All threads in a warp can execute different instructions without penalty.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "GPU performance depends heavily on memory bandwidth.",
+    options: ["True", "False"],
+    correctAnswer: "a"
   }
 ];
 

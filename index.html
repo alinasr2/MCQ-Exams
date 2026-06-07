@@ -551,4552 +551,2425 @@
     </div>
 
     <script>
-        
 
-
-const questionsData = [
+        const questionsData = [
+  // Multiple Choice Questions (1-20)
   {
-    text: "What is parallel computing?",
+    text: "What is the primary purpose of mobile computing?",
     options: [
-      "Executing a single task on one processor",
-      "Executing multiple tasks simultaneously",
-      "Storing large amounts of data",
-      "Designing operating systems"
+      "To increase CPU speed",
+      "To transmit data between devices without physical cables",
+      "To replace wired internet completely",
+      "To store large amounts of data"
     ],
     correctAnswer: "b"
   },
   {
-    text: "A process is best defined as:",
+    text: "Which of the following is NOT one of the three main concepts of mobile computing?",
     options: [
-      "A lightweight unit of execution",
-      "An independent program in execution with its own memory space",
-      "A CPU core",
-      "A network packet"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Threads within the same process typically:",
-    options: [
-      "Do not share memory",
-      "Share memory space",
-      "Run on different machines",
-      "Require network communication"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "A core refers to:",
-    options: [
-      "A logical thread scheduler",
-      "A physical processing unit in a CPU",
-      "A memory module",
-      "A distributed node"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Latency means:",
-    options: [
-      "Processing power",
-      "Time delay for an operation",
-      "Number of CPU cores",
-      "Cache size"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Speedup is defined as:",
-    options: [
-      "T_parallel / T_serial",
-      "T_serial / T_parallel",
-      "T_serial + T_parallel",
-      "N / time"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "A node in distributed systems is:",
-    options: [
-      "A CPU register",
-      "A single computer in a cluster",
-      "A GPU thread",
-      "A cache line"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Overhead in parallel computing refers to:",
-    options: [
-      "Performance gain from parallelism",
-      "Extra cost of communication and synchronization",
-      "CPU clock speed increase",
-      "Memory expansion"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Granularity describes:",
-    options: [
-      "CPU architecture type",
-      "Task size relative to communication cost",
-      "Number of threads in a core",
-      "Cache memory speed"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Parallel computing focuses mainly on:",
-    options: [
-      "Security",
-      "Speed and throughput",
-      "File storage",
-      "User interfaces"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Threads are different from processes because:",
-    options: [
-      "They have separate memory",
-      "They share memory within a process",
-      "They run only on GPUs",
-      "They cannot run concurrently"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Distributed computing involves:",
-    options: [
-      "Single CPU execution",
-      "Multiple machines connected via network",
-      "Only GPU processing",
-      "Single-thread programs"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Parallel algorithms are:",
-    options: [
-      "Hardware-specific implementations",
-      "Theoretical models independent of hardware",
-      "Operating systems",
-      "Network protocols"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is NOT a reason for parallel computing?",
-    options: [
-      "Hardware limitations",
-      "Data explosion",
-      "Faster sequential algorithms",
-      "Complex real-world problems"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Amdahl’s Law shows that:",
-    options: [
-      "Speedup is unlimited",
-      "Serial part limits performance",
-      "GPUs remove all bottlenecks",
-      "Memory has no effect"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Data parallelism means:",
-    options: [
-      "Different tasks on different machines",
-      "Same operation on multiple data elements",
-      "Only sequential execution",
-      "Random execution of tasks"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism refers to:",
-    options: [
-      "Same task repeated on all cores",
-      "Different tasks executed concurrently",
-      "Only GPU execution",
-      "Memory duplication"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Pipeline parallelism is similar to:",
-    options: [
-      "Random processing",
-      "Assembly line processing",
-      "Single-thread execution",
-      "Disk scheduling"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Instruction-level parallelism is handled by:",
-    options: [
-      "User programs",
-      "CPU hardware and compiler",
-      "Network systems",
-      "Disk storage"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "A race condition occurs when:",
-    options: [
-      "CPU overheats",
-      "Multiple threads access shared data unpredictably",
-      "Network disconnects",
-      "Memory is full"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Deadlock happens when:",
-    options: [
-      "CPU crashes",
-      "Threads wait on each other indefinitely",
-      "Cache is cleared",
-      "Disk is full"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Load imbalance means:",
-    options: [
-      "Equal workload distribution",
-      "Some processors are idle while others are busy",
-      "Faster network speed",
-      "More memory usage"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Communication overhead is mainly caused by:",
-    options: [
-      "Fast computation",
-      "Data movement between processors",
-      "CPU clock increase",
-      "Cache hits"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is NOT an advantage of parallel computing?",
-    options: [
-      "Faster execution",
-      "Scalability",
-      "Simpler programming",
-      "Real-time processing"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "SIMD stands for:",
-    options: [
-      "Single Instruction Multiple Data",
-      "Single Input Multi Device",
-      "System Integrated Memory Design",
-      "Sequential Instruction Model Design"
-    ],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "GPUs are best suited for:",
-    options: [
-      "Serial workloads",
-      "Data-parallel workloads",
-      "File systems",
-      "Operating systems"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Heterogeneous computing combines:",
-    options: [
-      "Only CPUs",
-      "CPU, GPU, and other accelerators",
-      "Only storage devices",
-      "Only networks"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "The main bottleneck in modern CPUs is often:",
-    options: [
-      "Keyboard input",
-      "Power and memory wall",
-      "Screen rendering",
-      "Printer delay"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Amdahl’s Law is limited by:",
-    options: [
-      "Parallel fraction only",
-      "Serial portion of program",
-      "GPU speed",
-      "Network bandwidth only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Cache coherence ensures:",
-    options: [
-      "Faster internet",
-      "Consistent memory values across cores",
-      "More storage",
-      "Better GPU rendering"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Work-stealing helps solve:",
-    options: [
-      "Deadlock",
-      "Load imbalance",
-      "Memory leaks",
-      "Latency only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI is mainly used in:",
-    options: [
-      "Shared memory systems",
-      "Distributed systems",
-      "Mobile apps",
-      "UI design"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP is used for:",
-    options: [
-      "Distributed memory programming",
-      "Shared-memory parallelism",
-      "Database systems",
-      "Networking"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "CUDA is designed for:",
-    options: [
-      "CPU programming",
-      "GPU computing",
-      "File storage",
-      "Operating systems"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Near-memory computing aims to reduce:",
-    options: [
-      "CPU cores",
-      "Memory wall problem",
-      "GPU usage",
-      "Thread count"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Quantum parallelism is based on:",
-    options: [
-      "Binary execution",
-      "Superposition of states",
-      "Sequential logic",
-      "Cache optimization"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Green HPC focuses on:",
-    options: [
-      "Faster CPUs",
-      "Energy-efficient computing",
-      "More memory",
-      "More disks"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Serverless HPC provides:",
-    options: [
-      "Fixed hardware systems",
-      "On-demand compute resources",
-      "Offline computing",
-      "Single machine execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Coarse-grained tasks usually mean:",
-    options: [
-      "Small tasks with high communication",
-      "Large tasks with low communication",
-      "No parallelism",
-      "Only GPU tasks"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "The correct parallel workflow is:",
-    options: [
-      "Distribute → Decompose → Coordinate",
-      "Decompose → Distribute → Coordinate",
-      "Coordinate → Execute → Store",
-      "Compile → Run → Stop"
-    ],
-    correctAnswer: "b"
-  },
-      {
-    text: "Cache coherence protocols are used to:",
-    options: [
-      "Increase disk speed",
-      "Ensure consistent data across CPU caches",
-      "Improve internet speed",
-      "Reduce GPU memory"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Fine-grained parallelism usually leads to:",
-    options: [
-      "Lower communication overhead",
-      "Higher communication overhead",
-      "No synchronization needed",
-      "Faster serial execution only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is a key challenge in parallel computing?",
-    options: [
-      "Simple debugging",
-      "Race conditions and synchronization issues",
-      "Unlimited speedup",
-      "No memory usage"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Distributed computing systems communicate mainly through:",
-    options: [
-      "Shared memory",
-      "Network communication",
-      "CPU registers",
-      "Cache lines"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which trend uses specialized hardware for AI workloads?",
-    options: [
-      "Green HPC",
-      "AI-specialized chips (TPUs, GPUs)",
-      "Serial computing",
-      "Disk-based computing"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which problem limits scalability in parallel systems?",
-    options: [
-      "Amdahl’s Law",
-      "Moore’s Law",
-      "Cache hits",
-      "Pipeline speed"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "The main goal of parallel computing is to:",
-    options: [
-      "Reduce memory usage only",
-      "Increase execution speed and solve larger problems",
-      "Eliminate CPUs",
-      "Avoid using threads"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which system is an example of distributed computing?",
-    options: [
-      "Multi-core CPU",
-      "GPU",
-      "Apache Spark cluster",
-      "Single-thread program"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Which type of parallelism uses assembly-line style execution?",
-    options: [
-      "Task parallelism",
-      "Pipeline parallelism",
-      "Data parallelism",
-      "Bit-level parallelism"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Why is parallel computing necessary today?",
-    options: [
-      "Because CPUs are getting slower",
-      "Because single-core performance has plateaued and data is growing rapidly",
-      "Because memory is unlimited",
-      "Because networks are faster than CPUs"
-    ],
-    correctAnswer: "b"
-  },
-    {
-    "text": "According to the lecture text, how can intelligence be broadly defined?",
-    "options": [
-      "The ability to respond instantly to environmental stimuli via instinct.",
-      "The capacity to execute complex pre-programmed mathematical algorithms rapidly.",
-      "The ability to learn and understand, to solve problems, and to make decisions.",
-      "The structural mimicking of human biological neural networks."
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "What is the stated scientific goal of Artificial Intelligence (AI)?",
-    "options": [
-      "To strictly replicate the biological operations of the human brain organ.",
-      "To make machines do things that would require intelligence if done by humans.",
-      "To prove that non-human entities possess a spiritual conscious mind.",
-      "To replace human decision-making in all fields of science and engineering."
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Parallel computing means carrying out many calculations simultaneously.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "A process shares its memory space with all other processes by default.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A core is a physical processing unit on a CPU chip.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Amdahl's Law describes the theoretical speedup of a parallel system.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Latency refers to the throughput of data per second.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Bit-level parallelism is unrelated to word size.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "OpenMP is typically used for distributed computing across a network.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Task parallelism means running the same operation on different data elements.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A node in a cluster is a single computer with its own CPU, RAM, and OS.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Parallel computing is only useful for scientific simulations, not everyday applications.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In parallel computing, granularity refers to the physical size of the CPU cache.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The ideal speedup on N cores is always exactly N times the serial time.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Distributed computing systems always share physical memory across all nodes.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A race condition occurs when two threads read the same variable without any issues.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Deadlock can be prevented by careful lock ordering.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Amdahl's Law suggests that with infinite cores, speedup is limited by the serial fraction of the code.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Fine-grained parallelism involves large tasks with minimal communication overhead.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The MESI protocol is used for cache coherence in multi-core processors.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Fault tolerance is easier to achieve in distributed parallel systems than in single-node parallel systems.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Pipeline parallelism works like an assembly line where stages operate concurrently on different items.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "According to the lecture, clock speeds have continued to double every 18 months since 2005.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Load imbalance wastes computational resources because some cores sit idle.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Gustafson's Law offers a more pessimistic view of scalability than Amdahl's Law.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "SIMD (Single Instruction, Multiple Data) is a form of data parallelism.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In parallel computing, overhead includes synchronization and communication costs but not scheduling.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A parallel algorithm is a theoretical blueprint that is independent of hardware.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Processing-in-Memory (PIM) is a recent trend that moves compute closer to data to attack the memory wall.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "CERN's LHC generates 1 PB of data per second, requiring sequential processing for accuracy.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Heterogeneous computing combines CPUs, GPUs, FPGAs, and NPUs on the same system.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "The Power Wall refers to the limitation in network bandwidth in data centers.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Folding@home used distributed volunteer computing to model viral proteins during COVID-19.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Work-stealing schedulers can partially mitigate load imbalance.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In parallel merge sort, the decomposition step is trivial because merging is inherently parallelizable without overhead.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Quantum parallelism uses superposition to explore multiple states simultaneously.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Green HPC focuses exclusively on increasing clock speeds without regard for energy.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "If 95% of a program is parallelizable (p = 0.95), Amdahl's Law predicts a maximum speedup of exactly 20× on 1000 cores.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "A parallel system with T_serial = 100s and T_parallel = 30s on 4 cores has a speedup greater than 4.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In distributed computing, communication latency between nodes is typically in microseconds (μs) like CPU cache access.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Memory consistency problems can cause different cores to see different values for the same variable even without explicit writes.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "According to the lecture, NVIDIA H100 GPUs deliver approximately 4 PFLOPS of peak performance.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "If a program has 10% serial code, even with 1 million cores, the maximum possible speedup cannot exceed 10×.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Task parallelism is generally more efficient than data parallelism for processing large uniform arrays (e.g., image filters).",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The Frontier supercomputer at ORNL delivers 1 EFLOP at 21 MW, representing one of the best energy efficiencies ever recorded.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In parallel computing, reducing communication overhead always increases load imbalance proportionally.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "GPT-4 was reportedly trained using approximately 25,000 NVIDIA A100 GPUs in parallel.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "The main difference between parallel and distributed computing is that parallel uses fast interconnects while distributed uses slow networks, but both always share memory.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Coarse-grained parallelism means small tasks that require frequent communication between processors.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "If a parallel program shows a race condition, adding more locks will always solve the problem without affecting performance.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The Cerebras WSE (Wafer-Scale Engine) is an example of AI-specialized hardware designed for matrix parallel workloads.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "According to the lecture's three pillars, the correct order for solving a problem in parallel is: Coordinate → Distribute → Decompose.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-    {
-    "text": "What is the primary reason parallel programming became essential around 2005?",
-    "options": [
-      "Memory prices dropped significantly.",
-      "Clock speed plateaued and parallelism became the new frontier.",
-      "The internet became widely available.",
-      "Operating systems added support for multiple users."
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which of the following is NOT an application domain requiring parallel computing according to the lecture?",
-    "options": [
-      "Scientific simulations",
-      "AI/ML training",
-      "Word processing",
-      "Weather forecasting"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "According to Flynn's Taxonomy, traditional sequential computers fall under which category?",
-    "options": [
-      "SIMD",
-      "MIMD",
-      "MISD",
-      "SISD"
-    ],
-    "correctAnswer": "d"
-  },
-  {
-    "text": "GPUs and vector processors are classic examples of which Flynn's Taxonomy category?",
-    "options": [
-      "SISD",
-      "SIMD",
-      "MISD",
-      "MIMD"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which Flynn category is described as 'rare in practice' with examples like fault-tolerant systems?",
-    "options": [
-      "SISD",
-      "SIMD",
-      "MISD",
-      "MIMD"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "Multi-core CPUs and clusters are examples of which parallel architecture?",
-    "options": [
-      "SISD",
-      "SIMD",
-      "MISD",
-      "MIMD"
-    ],
-    "correctAnswer": "d"
-  },
-  {
-    "text": "In a Shared Memory system, how do processors communicate?",
-    "options": [
-      "Only through message passing over a network",
-      "Implicitly through shared variables in a global address space",
-      "Via dedicated mailboxes",
-      "Through a centralized file system"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What does UMA stand for in memory architecture?",
-    "options": [
-      "Unified Memory Allocation",
-      "Uniform Memory Access",
-      "Universal Memory Architecture",
-      "Unprocessed Memory Array"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In NUMA architecture, which statement is true?",
-    "options": [
-      "All memory access has the same latency.",
-      "Local memory access is faster than remote memory access.",
-      "Remote memory access is always faster than local.",
-      "NUMA systems cannot run shared memory programs."
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which of the following is a disadvantage of Shared Memory systems?",
-    "options": [
-      "Implicit communication is impossible",
-      "Memory bus becomes a bottleneck limiting scalability",
-      "Data must be manually partitioned",
-      "No synchronization mechanisms exist"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is 'false sharing' in shared memory systems?",
-    "options": [
-      "Two threads sharing a file descriptor that should be private",
-      "Two threads modifying different variables on the same cache line causing constant invalidation overhead",
-      "Processes pretending to share memory when they do not",
-      "When the compiler incorrectly optimizes shared variables"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which cache coherence protocol uses Modified, Exclusive, Shared, and Invalid states?",
-    "options": [
-      "HTTP",
-      "TCP/IP",
-      "MESI",
-      "PCIe"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "In Distributed Memory systems, how do processors access remote memory?",
-    "options": [
-      "Directly through load/store instructions",
-      "They cannot directly access remote memory; explicit message passing is required",
-      "Through shared L3 cache",
-      "Via a global memory controller"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the dominant programming standard for Distributed Memory systems?",
-    "options": [
-      "OpenMP",
-      "Pthreads",
-      "MPI (Message Passing Interface)",
-      "CUDA"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "Which of the following is an advantage of Distributed Memory over Shared Memory?",
-    "options": [
-      "Lower programming complexity",
-      "Implicit communication",
-      "Very high scalability (millions of cores+)",
-      "No need for data partitioning"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "In a Hybrid Memory Model, which programming combination is most common?",
-    "options": [
-      "CUDA between nodes + MPI within a node",
-      "MPI between nodes + OpenMP within a node",
-      "Pthreads between nodes + MPI within a node",
-      "OpenMP between nodes + Pthreads within a node"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A process is best described as:",
-    "options": [
-      "A lightweight unit of execution sharing memory with siblings",
-      "An independent program with its own address space and resources",
-      "A single CPU instruction",
-      "A type of cache coherence protocol"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which characteristic applies to threads but NOT to processes?",
-    "options": [
-      "Independent address space",
-      "OS-managed resources",
-      "Shares memory with other threads in the same process",
-      "Communication requires IPC"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "What happens when a thread crashes in a multithreaded process?",
-    "options": [
-      "Only that thread terminates; others continue unaffected",
-      "The entire process (all threads) typically terminates",
-      "The operating system automatically restarts the thread",
-      "A new process is forked automatically"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which of the following is a low-level C API for creating and managing threads?",
-    "options": [
-      "OpenMP",
-      "MPI",
-      "Pthreads (POSIX Threads)",
-      "Hadoop"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "What is a mutex used for in thread programming?",
-    "options": [
-      "To speed up memory allocation",
-      "To provide mutual exclusion so only one thread holds the lock at a time",
-      "To create new threads",
-      "To communicate between processes"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A condition variable allows a thread to:",
-    "options": [
-      "Terminate another thread",
-      "Sleep until a specific condition is signaled",
-      "Bypass the mutex lock",
-      "Convert itself into a process"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is a deadlock?",
-    "options": [
-      "Thread A waits for Thread B which waits for Thread A, both freeze forever",
-      "A thread executes faster than expected",
-      "The system runs out of memory",
-      "Multiple threads read the same variable simultaneously"
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In MPI, what does MPI_Comm_rank return?",
-    "options": [
-      "The total number of processes",
-      "The unique ID of the calling process (0 to N-1)",
-      "The name of the current node",
-      "The amount of free memory"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What does the MPI_Reduce operation do?",
-    "options": [
-      "Reduces the number of processes in the communicator",
-      "Collects results from all processes and combines them (e.g., sum, max)",
-      "Slows down the program for debugging",
-      "Increases communication latency"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which synchronization mechanism uses a busy-wait loop and is good for very short critical sections?",
-    "options": [
-      "Mutex",
-      "Semaphore",
-      "Condition variable",
-      "Spinlock"
-    ],
-    "correctAnswer": "d"
-  },
-  {
-    "text": "What does 'thread safety' mean?",
-    "options": [
-      "Threads cannot crash the program",
-      "Code can be safely called from multiple threads simultaneously",
-      "Threads have priority over processes",
-      "Threads automatically share all data"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is a critical section?",
-    "options": [
-      "The section of code that creates threads",
-      "The part of the program that is never executed in parallel",
-      "A code segment accessing shared mutable data that must be protected",
-      "The main function of a parallel program"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "What is priority inversion?",
-    "options": [
-      "A high-priority thread is blocked by a low-priority thread holding a lock",
-      "All threads have equal priority",
-      "The scheduler reverses the order of thread creation",
-      "Threads execute in reverse order"
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "What is a thread pool?",
-    "options": [
-      "A shared memory region for threads",
-      "Pre-created threads reused to avoid creation overhead",
-      "A debugging tool for threads",
-      "A type of mutex"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which is typically faster: thread creation or process creation?",
-    "options": [
-      "Thread creation (~μs) is faster than process creation (~ms)",
-      "Process creation is faster",
-      "They have identical speed",
-      "Depends only on the operating system"
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "What is livelock?",
-    "options": [
-      "Threads are permanently blocked waiting for locks",
-      "Threads keep responding to each other but make no progress",
-      "A thread executes an infinite loop",
-      "The system powers off due to overheating"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What does a Read-Write Lock allow?",
-    "options": [
-      "Only one thread regardless of read/write intent",
-      "Multiple readers OR one writer at a time",
-      "Multiple writers and multiple readers simultaneously",
-      "No threads to access the resource"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In the thread lifecycle, what is the RUNNABLE state?",
-    "options": [
-      "Thread is executing on a CPU core",
-      "Thread is waiting on a lock or I/O",
-      "Thread is ready to run and will be scheduled by the OS",
-      "Thread has terminated"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "What is a barrier in thread synchronization?",
-    "options": [
-      "A lock that prevents all thread creation",
-      "All threads wait until everyone reaches the barrier point",
-      "A memory protection mechanism",
-      "A type of semaphore"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which of the following is a high-level compiler directive-based model for shared-memory parallelism?",
-    "options": [
-      "Pthreads",
-      "MPI",
-      "OpenMP",
-      "POSIX signals"
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "text": "What is an atomic operation?",
-    "options": [
-      "An operation that takes a very long time",
-      "A hardware-guaranteed indivisible read-modify-write operation",
-      "An operation that cannot be parallelized",
-      "An operation that only runs on one core"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What does MPI_Comm_size return?",
-    "options": [
-      "The total number of processes in the communicator",
-      "The size of the largest message",
-      "The memory size of each node",
-      "The rank of the calling process"
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Which MPI implementation is mentioned in the lecture?",
-    "options": [
-      "OpenMPI, MPICH, Intel MPI",
-      "HadoopMPI, SparkMPI, CUDA-MPI",
-      "FastMPI, QuickMPI, UltraMPI",
-      "Pthread-MPI, Java-MPI"
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "What does SISD stand for in Flynn's Taxonomy?",
-    "options": [
-      "Single Input, Single Data",
-      "Single Instruction, Single Data",
-      "Synchronous Instruction, Synchronous Data",
-      "Sequential Instruction, Sequential Data"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "MIMD stands for:",
-    "options": [
-      "Multiple Instruction, Multiple Data",
-      "Memory Instruction, Memory Data",
-      "Mainframe Instruction, Mainframe Data",
-      "Multi-core Instruction, Multi-core Data"
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "According to the lecture, what is a key benefit of using threads over processes?",
-    "options": [
-      "Threads have isolated memory spaces for better fault tolerance",
-      "Threads have lower creation overhead and faster context switching",
-      "Threads cannot race or deadlock",
-      "Threads are always deterministic"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the typical memory latency for local memory access in NUMA systems?",
-    "options": [
-      "~10 ns",
-      "~80 ns",
-      "~500 ns",
-      "~5 μs"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is a semaphore?",
-    "options": [
-      "A specialized flag that signals end of program",
-      "A generalized counter that controls access to limited resources",
-      "A type of processor",
-      "A memory allocation function"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What does the 'S' in MESI protocol stand for?",
-    "options": [
-      "Shared",
-      "Single",
-      "Synchronized",
-      "Stopped"
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Which of the following is a disadvantage of Distributed Memory systems?",
-    "options": [
-      "Poor scalability",
-      "Explicit message passing increases programming complexity",
-      "Cache coherency overhead",
-      "Impossible to debug"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is the purpose of MPI_Finalize()?",
-    "options": [
-      "To terminate all threads",
-      "To clean up MPI environment and end communication",
-      "To finalize the reduction operation",
-      "To compute the final sum"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Which statement about shared mutable state is correct?",
-    "options": [
-      "It requires no protection",
-      "It should be protected with synchronization mechanisms",
-      "It cannot exist in parallel programs",
-      "It automatically prevents race conditions"
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "What is Intel TBB?",
-    "options": [
-      "Thread Building Blocks, a task-based threading abstraction library",
-      "Tera Byte Bandwidth, a memory specification",
-      "Total Bus Barrier, a synchronization primitive",
-      "Tensor Binary Buffer, a GPU memory format"
-    ],
-    "correctAnswer": "a"
-  },
-    {
-    "text": "Moore's Law has shifted: clock speeds continue to double every 18 months as they did before 2005.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "MISD (Multiple Instruction, Single Data) is the most common parallel architecture today.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In Shared Memory systems, communication happens implicitly through shared variables.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "UMA (Uniform Memory Access) means all processors have the same latency to all memory.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In NUMA architecture, remote memory access is faster than local memory access.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "False sharing occurs when two threads modify different variables on the same cache line.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Distributed Memory systems allow any processor to directly access any other processor's memory.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "MPI is the dominant programming standard for Distributed Memory systems.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Shared Memory systems typically scale better to millions of cores than Distributed Memory systems.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A process is lightweight and shares memory with other processes.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "If one thread crashes, it does not affect other threads in the same process.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Pthreads is a low-level C API for thread management.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "A mutex allows multiple threads to enter a critical section simultaneously.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A deadlock occurs when Thread A waits for Thread B and Thread B waits for Thread A.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "MPI_Comm_rank returns the total number of processes in the communicator.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "MPI_Reduce performs a collective operation that combines results from all processes.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "A spinlock is generally better than a mutex for very long critical sections.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Thread creation is typically faster than process creation.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In a livelock, threads make continuous progress but cannot finish.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "A Read-Write Lock allows multiple writers simultaneously.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "OpenMP uses compiler directives for shared-memory parallelism.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Atomic operations are software-guaranteed but may be interrupted by the OS.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "SISD stands for Single Instruction, Single Data — traditional sequential computers.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "SIMD is commonly used in GPUs and vector processors.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "MIMD architectures include multi-core CPUs and clusters.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Cache coherence is only a problem in Distributed Memory systems.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The MESI protocol uses Modified, Exclusive, Shared, and Invalid states.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In Hybrid Memory models, MPI is typically used within a node and OpenMP between nodes.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "A condition variable allows a thread to sleep until a specific condition is signaled.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Priority inversion occurs when a low-priority thread blocks a high-priority thread.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Thread pools reuse pre-created threads to avoid creation overhead.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "A barrier makes all threads wait until everyone reaches the barrier point.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "MPI programs are typically less portable than OpenMP programs.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "In UMA architecture, memory latency varies significantly depending on which processor accesses memory.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The NUMA effect means local memory is faster than remote memory.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Parallel computing is only useful for large supercomputers, not for everyday applications.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Big Data frameworks like Hadoop and Spark inherently rely on parallel processing.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "A semaphore is a binary lock that only allows one thread at a time.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Intel TBB provides task-based threading abstraction for C++.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "MPI_Send is a collective communication operation.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Java threads use a synchronized keyword for mutual exclusion.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "In Distributed Memory systems, data partitioning is handled automatically by the hardware.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "Load balancing is the programmer's responsibility in Distributed Memory systems.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Debugging distributed MPI programs is generally easier than debugging shared memory OpenMP programs.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "The RUNNING state means a thread is ready to run but waiting for the scheduler.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "BLOCKED state in thread lifecycle means the thread is waiting on a lock or I/O.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "A critical section should always be as large as possible to maximize parallelism.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-  {
-    "text": "C++11 std::thread is part of the standard library for threading.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "MPI_Init must be called before any other MPI function.",
-    "options": ["True", "False"],
-    "correctAnswer": "a"
-  },
-  {
-    "text": "Parallel programming reduces energy efficiency compared to single fast core execution.",
-    "options": ["True", "False"],
-    "correctAnswer": "b"
-  },
-    {
-    text: "Which best describes data parallelism?",
-    options: [
-      "Different operations executed on same data",
-      "Same operation applied to different data partitions",
-      "Sequential execution of tasks",
-      "Random task scheduling across cores"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism is characterized by:",
-    options: [
-      "Same operation over split data",
-      "Independent tasks executing concurrently",
-      "Single-thread execution",
-      "GPU-only execution model"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is a typical example of data parallelism?",
-    options: [
-      "Web server request handling",
-      "Matrix multiplication across rows",
-      "Compiler building multiple files",
-      "Operating system scheduling"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "SPMD stands for:",
-    options: [
-      "Single Program Multiple Data",
-      "Single Process Multi Device",
-      "Synchronized Parallel Multi Data",
-      "Single Parallel Multi Domain"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "Which architecture is most suitable for GPUs?",
-    options: [
-      "Task parallelism",
-      "Data parallelism",
-      "Serial execution",
-      "Pipeline only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Amdahl’s Law mainly describes:",
-    options: [
-      "GPU memory hierarchy",
-      "Limit of speedup due to sequential fraction",
-      "Thread creation cost",
-      "Cache coherence problems"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "If P = 1 in Amdahl’s Law, speedup equals:",
-    options: [
-      "0",
-      "1",
-      "N",
-      "Infinity"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Which is NOT a data-parallel workload?",
-    options: [
-      "Image processing",
-      "Neural network batch inference",
-      "Web server requests",
-      "Matrix operations"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Pipeline parallelism is best described as:",
-    options: [
-      "Random task execution",
-      "Sequential stages working concurrently on different items",
-      "Same operation on all data",
-      "Single-thread execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Pipeline throughput is limited by:",
-    options: [
-      "Fastest stage",
-      "Slowest stage",
-      "Number of cores only",
-      "Memory size"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "CUDA is primarily used for:",
-    options: [
-      "Database indexing",
-      "GPU general-purpose parallel computing",
-      "File compression",
-      "Network routing"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP parallel for is an example of:",
-    options: [
-      "Task parallelism",
-      "Data parallelism",
-      "Pipeline parallelism",
-      "Distributed databases"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which best describes task parallelism?",
-    options: [
-      "Same operation on data chunks",
-      "Different independent tasks executed in parallel",
-      "Single instruction execution",
-      "GPU vector operations only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "A task graph is also known as:",
-    options: [
-      "Cycle graph",
-      "Directed Acyclic Graph (DAG)",
-      "Binary tree only",
-      "Hash table"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Reduction operation refers to:",
-    options: [
-      "Splitting data",
-      "Combining partial results",
-      "Creating threads",
-      "Allocating memory"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is a disadvantage of task parallelism?",
-    options: [
-      "Easy scalability",
-      "Load imbalance",
-      "Uniform execution",
-      "SIMD execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is true about data parallelism?",
-    options: [
-      "Requires DAG scheduling",
-      "Same operation on different data partitions",
-      "Always irregular",
-      "Depends on task dependencies"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "CUDA execution model is closest to:",
-    options: [
-      "SISD",
-      "SIMT/SIMD-like",
-      "Sequential model",
-      "Task graph model"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP taskwait is used to:",
-    options: [
-      "Create threads",
-      "Wait for child tasks completion",
-      "Split arrays",
-      "Increase GPU cores"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is true about Cilk Plus?",
-    options: [
-      "GPU-only framework",
-      "C/C++ task parallel extension",
-      "Database engine",
-      "Python library"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism is best when:",
-    options: [
-      "All operations are identical",
-      "Tasks are independent and irregular",
-      "Only arrays are used",
-      "No concurrency exists"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which reduces performance in task parallelism?",
-    options: [
-      "Load imbalance",
-      "Uniform workload",
-      "SIMD execution",
-      "Data partitioning"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "Pipeline parallelism is limited by:",
-    options: [
-      "Fastest stage",
-      "Slowest stage",
-      "Memory bandwidth only",
-      "Thread count"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is NOT a benefit of data parallelism?",
-    options: [
-      "Easy scalability",
-      "GPU suitability",
-      "Handles irregular workloads well",
-      "Automatic load balancing (uniform data)"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "SIMD stands for:",
-    options: [
-      "Single Instruction Multiple Data",
-      "Single Input Multi Device",
-      "System Integrated Multi Data",
-      "Sequential Instruction Multi Data"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "OpenMP tasks are:",
-    options: [
-      "Executed only by creator thread",
-      "Queued and executed by any thread",
-      "Always sequential",
-      "GPU kernels only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism is advantageous because:",
-    options: [
-      "It removes all synchronization",
-      "It handles irregular workloads",
-      "It avoids threads",
-      "It requires no CPU"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Example of pipeline parallelism:",
-    options: [
-      "Matrix addition",
-      "Fetch-Decode-Execute pipeline",
-      "Vector scaling",
-      "Pixel-wise filter"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Data parallelism requires:",
-    options: [
-      "Task dependencies",
-      "Same operation across partitions",
-      "Different operations per thread",
-      "Graph execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "(1 − P) in Amdahl’s Law represents:",
-    options: [
-      "Parallel fraction",
-      "Sequential fraction",
-      "Memory fraction",
-      "GPU fraction"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "If P is small, speedup is:",
-    options: [
-      "Very high",
-      "Limited",
-      "Infinite",
-      "Constant regardless of N"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is NOT task parallel framework?",
-    options: [
-      "OpenMP tasks",
-      "Intel TBB",
-      "CUDA kernels",
-      "Cilk Plus"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Data parallelism works best when:",
-    options: [
-      "Tasks depend heavily",
-      "Computation is uniform",
-      "Tasks are unpredictable",
-      "Graph scheduling is needed"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "GPUs are optimized for:",
-    options: [
-      "Task parallelism",
-      "Data parallelism",
-      "Serial execution",
-      "Database queries"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism requires:",
-    options: [
-      "No dependencies",
-      "Dependency analysis",
-      "Only arrays",
-      "No scheduling"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Load imbalance occurs when:",
-    options: [
-      "All tasks equal size",
-      "Tasks vary in execution time",
-      "GPU is used",
-      "Data is uniform"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which is NOT property of data parallelism?",
-    options: [
-      "Same operation",
-      "Independent data partitions",
-      "Different operations per task",
-      "Scalability with data size"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Work-stealing is mainly used in:",
-    options: [
-      "Data parallelism",
-      "Task parallelism",
-      "Sequential execution",
-      "Pipeline only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP task construct was introduced in:",
-    options: [
-      "OpenMP 1.0",
-      "OpenMP 2.0",
-      "OpenMP 3.0",
-      "OpenMP 5.0"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Pipeline parallelism increases:",
-    options: [
-      "Latency only",
-      "Throughput",
-      "Memory fragmentation",
-      "Sequential delay"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Pipeline stages must be:",
-    options: [
-      "Identical in code",
-      "Able to run concurrently",
-      "Always independent only",
-      "Sequential only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism is closest to:",
-    options: [
-      "SIMD",
-      "MIMD",
-      "SISD",
-      "Vector only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Best example of data parallelism:",
-    options: [
-      "Web server",
-      "Batch ML processing",
-      "Event-driven system",
-      "Compiler pipeline"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Pipeline parallelism reduces:",
-    options: [
-      "Throughput",
-      "Idle time between stages",
-      "Parallelism",
-      "Data size"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "CUDA is designed for:",
-    options: [
-      "CPU-only execution",
-      "GPU parallel execution",
-      "Disk scheduling",
-      "Network routing"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task graph execution is:",
-    options: [
-      "Always linear",
-      "Based on dependencies",
-      "Random",
-      "Independent of structure"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Best fit for data parallelism:",
-    options: [
-      "Web servers",
-      "Scientific computing",
-      "Operating systems",
-      "Message queues"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Amdahl’s Law implies:",
-    options: [
-      "Unlimited speedup possible",
-      "Sequential portion limits scalability",
-      "GPUs remove bottlenecks",
-      "Tasks are always independent"
-    ],
-    correctAnswer: "b"
-  },
-    {
-    text: "Data parallelism applies the same operation on different data partitions simultaneously.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Task parallelism means executing identical operations on split data.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "SPMD stands for Single Program Multiple Data.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "GPUs are mainly optimized for task parallelism.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Data parallelism is suitable for matrix and image processing.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Task parallelism requires no dependency analysis.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Amdahl’s Law describes the limit of speedup due to sequential portions.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "If P = 1 in Amdahl’s Law, speedup is infinite.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Pipeline parallelism executes stages sequentially without overlap.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Pipeline throughput is limited by the slowest stage.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "CUDA is a platform for GPU general-purpose computing.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OpenMP parallel for is an example of task parallelism.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Data parallelism works best for irregular workloads.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism is suitable for independent tasks like web server requests.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "A task graph is also called a DAG (Directed Acyclic Graph).",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Reduction combines partial results into a final output.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Load imbalance is a major issue in task parallelism.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Data parallelism requires different operations per data element.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "SIMD means Single Instruction Multiple Data.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OpenMP taskwait waits for all tasks in the system globally.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Cilk Plus is a programming extension for C and C++.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Task parallelism always guarantees perfect load balancing.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Data parallelism scales well with large datasets.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Pipeline parallelism increases system throughput.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Pipeline parallelism eliminates all latency.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "CUDA kernels run on CPU cores.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism is based on independent tasks.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Data parallelism is also called SPMD.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Task parallelism is always faster than data parallelism.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Amdahl’s Law shows diminishing returns when adding more processors.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Pipeline stages must execute strictly one after another without overlap.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "GPU programming benefits strongly from data parallelism.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Task parallelism requires all tasks to be identical in execution time.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP tasks can be executed by any thread in the team.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Data parallelism is ideal for web servers and event-driven systems.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Pipeline parallelism is similar to an assembly line.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Task parallelism always requires GPU usage.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Work-stealing is used to balance tasks dynamically.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Sequential fraction in Amdahl’s Law is (1 − P).",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Data parallelism is best for irregular workloads.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Task parallelism often uses DAG-based scheduling.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "CUDA is mainly used for image processing and AI acceleration.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Pipeline throughput depends on the fastest stage.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Data parallelism divides data across processors.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Task parallelism is more flexible than data parallelism.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OpenMP was designed only for GPU programming.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Pipeline parallelism increases concurrency by overlapping stages.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Task graphs must always contain cycles.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Data parallelism is widely used in machine learning batch processing.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Amdahl’s Law assumes unlimited parallel scalability.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-     {
-    text: "What is the primary programming model used by OpenMP?",
-    options: [
-      "Message passing model",
-      "Shared-memory parallel model",
-      "Distributed-memory model",
-      "Functional programming model"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which directive is used to create a parallel region in OpenMP?",
-    options: [
-      "#pragma omp for",
-      "#pragma omp parallel",
-      "#pragma omp task",
-      "#pragma omp sections"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What happens at the end of an OpenMP parallel region?",
-    options: [
-      "Threads terminate immediately",
-      "Threads continue independently",
-      "Implicit barrier synchronization occurs",
-      "Threads are destroyed permanently"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Which function returns the number of threads in a team?",
-    options: [
-      "omp_get_thread_num()",
-      "omp_get_num_threads()",
-      "omp_set_num_threads()",
-      "omp_get_wtime()"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is the default behavior of variables in OpenMP parallel regions?",
-    options: [
-      "Always private",
-      "Always shared",
-      "Always firstprivate",
-      "Always thread-local static"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does private(var) mean in OpenMP?",
-    options: [
-      "Shared variable among threads",
-      "Each thread gets uninitialized private copy",
-      "Each thread gets initialized copy",
-      "Variable is global"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does firstprivate(var) do?",
-    options: [
-      "Uninitialized private copy",
-      "Initialized with master thread value",
-      "Shared among threads",
-      "Deleted after region"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does reduction(+:sum) ensure?",
-    options: [
-      "Race conditions occur",
-      "Sequential execution",
-      "Thread-local copies merged safely at end",
-      "Only master updates variable"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Which clause is best for independent loop iterations?",
-    options: [
-      "critical",
-      "parallel for",
-      "single",
-      "master"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is the main disadvantage of critical section?",
-    options: [
-      "Memory leak",
-      "Compiler error",
-      "Serializes execution",
-      "Increases thread count"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Which is faster in general?",
-    options: [
-      "critical",
-      "atomic",
-      "barrier",
-      "single"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does #pragma omp atomic guarantee?",
-    options: [
-      "Full loop synchronization",
-      "Hardware-level atomic update",
-      "Thread creation",
-      "Task parallelism"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is the purpose of barrier?",
-    options: [
-      "Reduce memory usage",
-      "Synchronize all threads",
-      "Create threads",
-      "Kill threads"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which schedule type is best for irregular workloads?",
-    options: [
-      "static",
-      "dynamic",
-      "sequential",
-      "single"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does schedule(static, 2) mean?",
-    options: [
-      "Random distribution",
-      "Fixed chunk distribution upfront",
-      "Dynamic assignment",
-      "Recursive splitting"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which scheduling method has highest overhead?",
-    options: [
-      "static",
-      "dynamic",
-      "none",
-      "single"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does guided scheduling do?",
-    options: [
-      "Maximum randomness",
-      "Decreasing chunk sizes over time",
-      "Only GPU execution",
-      "Single-thread execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does collapse(2) do?",
-    options: [
-      "Removes loops",
-      "Merges nested loops into one iteration space",
-      "Serial execution",
-      "Splits memory"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which directive executes only one thread?",
-    options: [
-      "master",
-      "single",
-      "atomic",
-      "barrier"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is true about master directive?",
-    options: [
-      "Any thread executes it",
-      "Only thread 0 executes it",
-      "All threads execute it",
-      "It creates tasks"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "What is a key feature of OpenMP tasks?",
-    options: [
-      "Only sequential execution",
-      "Useful for irregular parallelism",
-      "Only loop parallelism",
-      "GPU-only execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does taskwait do?",
-    options: [
-      "Terminates threads",
-      "Waits for all tasks to complete",
-      "Creates new threads",
-      "Skips execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What model is OpenMP based on?",
-    options: [
-      "Fork-Join model",
-      "Pipeline model",
-      "Actor model",
-      "Client-server model"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "At fork point, what happens?",
-    options: [
-      "Threads merge",
-      "Master creates additional threads",
-      "Threads are destroyed",
-      "Execution stops"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP compilation flag in GCC?",
-    options: [
-      "-pthread",
-      "-fopenmp",
-      "-openmp-enable",
-      "-mp"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which variable sets thread count?",
-    options: [
-      "OMP_THREADS",
-      "OMP_NUM_THREADS",
-      "OMP_COUNT",
-      "OMP_SIZE"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does OMP_SCHEDULE control?",
-    options: [
-      "Compiler optimization",
-      "Loop scheduling strategy",
-      "Memory allocation",
-      "Thread binding"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is omp_get_wtime() used for?",
-    options: [
-      "Thread ID",
-      "Wall clock timing",
-      "Memory check",
-      "Thread creation"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which clause prevents race conditions in sum?",
-    options: [
-      "atomic",
-      "reduction",
-      "single",
-      "master"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is false sharing?",
-    options: [
-      "Sharing code",
-      "Threads sharing same cache line causing slowdown",
-      "Correct sharing",
-      "Compiler optimization"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP is best for:",
-    options: [
-      "Multi-node clusters",
-      "Shared-memory systems",
-      "GPU only",
-      "Networking"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI is best for:",
-    options: [
-      "Single CPU",
-      "Distributed systems",
-      "GPU only",
-      "Small loops"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "CUDA runs on:",
-    options: [
-      "CPU cache",
-      "GPU",
-      "RAM only",
-      "Disk"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Speedup formula is:",
-    options: [
-      "T(p)/T(1)",
-      "T(1)/T(p)",
-      "p/T(1)",
-      "T(p)*T(1)"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Efficiency is defined as:",
-    options: [
-      "S × p",
-      "S / p",
-      "p / S",
-      "S + p"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Amdahl's Law describes:",
-    options: [
-      "Infinite speedup possible",
-      "Serial portion limits speedup",
-      "GPU performance only",
-      "Memory allocation"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "If serial fraction is 5%, max speedup is:",
-    options: [
-      "5",
-      "10",
-      "20",
-      "100"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Gustafson's Law assumes:",
-    options: [
-      "Fixed problem size",
-      "Increasing problem size with processors",
-      "No parallelism",
-      "Only serial execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What happens if threads are imbalanced?",
-    options: [
-      "Faster execution",
-      "Last thread dominates execution time",
-      "No effect",
-      "Compiler error"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Best practice before parallelizing:",
-    options: [
-      "Random optimization",
-      "Profile sequential code",
-      "Increase threads",
-      "Use GPU immediately"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does collapse(n) help with?",
-    options: [
-      "No loops exist",
-      "Nested loops load balancing",
-      "Single loop only",
-      "No computation"
-    ],
-    correctAnswer: "b"
-  },
-    {
-    text: "OpenMP is a shared-memory parallel programming model.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OpenMP is mainly used for distributed-memory systems.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "#pragma omp parallel creates multiple threads.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OpenMP programs always execute sequentially.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "There is an implicit barrier at the end of a parallel region.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "omp_get_thread_num() returns total number of threads.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "omp_get_num_threads() returns total number of threads.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Variables in OpenMP are shared by default in most cases.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "private variables are shared between threads.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "firstprivate initializes each thread with master value.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "reduction avoids race conditions.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "critical section allows multiple threads at once.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "atomic is usually faster than critical.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "barrier allows threads to continue immediately.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "single executes only one thread.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "master allows any thread to execute the block.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "schedule(static) gives predictable iteration distribution.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "schedule(dynamic) is best for balanced workloads.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "schedule(dynamic) has more overhead than static.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "guided scheduling decreases chunk size over time.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "collapse(2) merges nested loops into one iteration space.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "collapse only works on single loops.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP tasks are useful for recursive problems.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "taskwait waits for all spawned tasks to finish.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OpenMP follows a fork-join model.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "OpenMP is suitable for multi-node clusters.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI is used for distributed systems.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "CUDA runs on CPU only.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "OpenMP is good for loop-level parallelism.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Speedup is defined as T(p) / T(1).",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Speedup is T(1) / T(p).",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Efficiency is Speedup divided by number of processors.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Amdahl’s Law ignores serial portions of code.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Amdahl’s Law limits maximum speedup.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Gustafson’s Law assumes fixed problem size.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Gustafson’s Law allows scaling problem size.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "False sharing improves performance.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "False sharing can reduce performance due to cache conflicts.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OMP_NUM_THREADS sets number of threads.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OMP_SCHEDULE controls memory allocation.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "omp_get_wtime() is used for performance timing.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Profiling before optimization is recommended.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Parallelizing everything always improves performance.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Load imbalance can slow down parallel programs.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "NUMA awareness improves memory performance.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "SIMD directive enables vectorization.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Nested parallelism means parallel regions inside parallel regions.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "OpenMP works best on distributed-memory clusters.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Thread overhead includes creation and synchronization costs.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Best practice is to parallelize after identifying hotspots.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-    {
-    text: "What is the main purpose of MPI_Bcast?",
-    options: [
-      "Send different data to each process",
-      "Send same data from root to all processes",
-      "Collect data from all processes",
-      "Perform reduction operation"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which MPI operation distributes different chunks of data from root to processes?",
-    options: [
-      "MPI_Gather",
-      "MPI_Scatter",
-      "MPI_Reduce",
-      "MPI_Barrier"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What does MPI_Gather do?",
-    options: [
-      "Distributes data to all processes",
-      "Combines data from all processes to root",
-      "Broadcasts data",
-      "Synchronizes processes"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which operation combines values using an operator like SUM or MAX?",
-    options: [
-      "MPI_Scatter",
-      "MPI_Reduce",
-      "MPI_Bcast",
-      "MPI_Barrier"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is MPI_Allreduce?",
-    options: [
-      "Only root gets result",
-      "All processes get reduced result",
-      "Only scatter operation",
-      "One-to-one communication"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Barrier is used for:",
-    options: [
-      "Data distribution",
-      "Synchronization of all processes",
-      "Data reduction",
-      "Memory allocation"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which process usually provides input data in MPI_Bcast example?",
-    options: [
-      "All processes",
-      "Only root process",
-      "Random process",
-      "Last process"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "In MPI_Scatter, each process receives:",
-    options: [
-      "Same data",
-      "Different chunks of data",
-      "No data",
-      "Only metadata"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Gather is the reverse of:",
-    options: [
-      "MPI_Reduce",
-      "MPI_Scatter",
-      "MPI_Bcast",
-      "MPI_Barrier"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which MPI operation ensures all processes wait at a synchronization point?",
-    options: [
-      "MPI_Bcast",
-      "MPI_Barrier",
-      "MPI_Scatter",
-      "MPI_Reduce"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Which operation returns result only to root process?",
-    options: [
-      "MPI_Allreduce",
-      "MPI_Reduce",
-      "MPI_Bcast",
-      "MPI_Barrier"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which operation returns result to all processes?",
-    options: [
-      "MPI_Reduce",
-      "MPI_Allreduce",
-      "MPI_Gather",
-      "MPI_Scatter"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is required for MPI_Bcast correctness?",
-    options: [
-      "Only root calls it",
-      "All processes call it with same parameters",
-      "Only receivers call it",
-      "Random participation"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is the communication complexity of tree-based MPI_Bcast?",
-    options: [
-      "O(P)",
-      "O(log P)",
-      "O(P^2)",
-      "O(1)"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Scatter is mainly used for:",
-    options: [
-      "Collecting results",
-      "Distributing data",
-      "Synchronization",
-      "Memory allocation"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "MPI_Gatherv is used when:",
-    options: [
-      "All chunks are equal size",
-      "Chunks have variable size",
-      "No data exists",
-      "Only broadcasting"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which operation is NOT a collective operation?",
-    options: [
-      "MPI_Bcast",
-      "MPI_Send",
-      "MPI_Reduce",
-      "MPI_Scatter"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Reduce_scatter combines:",
-    options: [
-      "Scatter + Gather",
-      "Reduce + Scatter",
-      "Broadcast + Reduce",
-      "Barrier + Gather"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which MPI operation is most expensive in large systems?",
-    options: [
-      "MPI_Barrier",
-      "MPI_Send",
-      "MPI_Scatter",
-      "MPI_Reduce"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "Barrier overhead generally:",
-    options: [
-      "Decreases with more processes",
-      "Increases with more processes",
-      "Is constant",
-      "Becomes zero"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "In MPI_Scatter, only root has:",
-    options: [
-      "Valid receive buffer",
-      "Valid send buffer",
-      "No buffer",
-      "Random buffer"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Domain decomposition is used for:",
-    options: [
-      "Parallelizing data over processes",
-      "Sequential execution",
-      "Memory compression",
-      "Compilation"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "1D cyclic distribution is best for:",
-    options: [
-      "Uniform workloads only",
-      "Irregular workloads",
-      "No workloads",
-      "GPU memory"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "1D block distribution gives:",
-    options: [
-      "Random assignment",
-      "Contiguous chunks",
-      "No partitioning",
-      "Only root execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI cyclic distribution assigns data:",
-    options: [
-      "Contiguously",
-      "Round-robin fashion",
-      "Only to root",
-      "Randomly"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "In MPI π computation, each process uses:",
-    options: [
-      "Same indices",
-      "Stride equal to number of processes",
-      "Only root data",
-      "Random indexing"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Reduce in π example uses:",
-    options: [
-      "MPI_MAX",
-      "MPI_SUM",
-      "MPI_MIN",
-      "MPI_LAND"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Bcast is used in π computation to:",
-    options: [
-      "Broadcast N to all processes",
-      "Gather results",
-      "Reduce values",
-      "Synchronize only"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "π computation with MPI is best described as:",
-    options: [
-      "Serial problem",
-      "Embarrassingly parallel problem",
-      "I/O bound problem",
-      "Sequential recursion"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Non-blocking communication allows:",
-    options: [
-      "Only sequential execution",
-      "Overlap of computation and communication",
-      "No communication",
-      "Only root execution"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "MPI_Isend returns:",
-    options: [
-      "After completion",
-      "Immediately with request handle",
-      "Only after barrier",
-      "Error always"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Wait is used to:",
-    options: [
-      "Start communication",
-      "Ensure completion of non-blocking operation",
-      "Send data",
-      "Split processes"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Buffer must NOT be modified until:",
-    options: [
-      "MPI_Init",
-      "MPI_Wait completes",
-      "MPI_Bcast",
-      "MPI_Finalize"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Test differs from MPI_Wait because:",
-    options: [
-      "It blocks always",
-      "It is non-blocking check",
-      "It destroys data",
-      "It sends messages"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Deadlock is caused by:",
-    options: [
-      "Correct ordering",
-      "Circular Send/Recv dependency",
-      "Broadcast",
-      "Reduction"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "MPI_COMM_WORLD contains:",
-    options: [
-      "One process",
-      "All processes",
-      "No processes",
-      "Only root"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Comm_split is used to:",
-    options: [
-      "Kill processes",
-      "Create subgroups of processes",
-      "Reduce memory",
-      "Synchronize only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "In MPI_Comm_split, 'color' defines:",
-    options: [
-      "Process speed",
-      "Group membership",
-      "Memory size",
-      "Communication speed"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Cartesian topology is mainly used for:",
-    options: [
-      "Graphical rendering",
-      "Grid/mesh computations",
-      "Sorting algorithms",
-      "File systems"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Cart_shift is used to:",
-    options: [
-      "Create processes",
-      "Find neighbors in grid",
-      "Reduce values",
-      "Broadcast data"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Strong scaling means:",
-    options: [
-      "Increase problem size",
-      "Fixed problem size, more processors",
-      "Only single processor",
-      "Random scaling"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Weak scaling means:",
-    options: [
-      "Fixed problem size",
-      "Problem grows with processors",
-      "No scaling",
-      "Serial execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Best performance metric in MPI timing is:",
-    options: [
-      "Minimum time",
-      "Maximum time across processes",
-      "Average only",
-      "Random process time"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Load imbalance occurs when:",
-    options: [
-      "All processes finish together",
-      "Some processes take longer than others",
-      "No communication exists",
-      "Memory is shared"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Best MPI programming practice is:",
-    options: [
-      "Fine-grained communication",
-      "Minimize communication and use collectives",
-      "Avoid reduction",
-      "Avoid broadcasting"
-    ],
-    correctAnswer: "b"
-  },
-    {
-    text: "MPI_Comm_free is used to:",
-    options: [
-      "Create new processes",
-      "Release communicator resources",
-      "Send messages",
-      "Synchronize processes"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Finalize should be called:",
-    options: [
-      "Before MPI_Init",
-      "At the end of MPI program",
-      "Inside loops",
-      "Before communication"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which operation is best for computing global maximum?",
-    options: [
-      "MPI_Bcast",
-      "MPI_Reduce with MPI_MAX",
-      "MPI_Scatter",
-      "MPI_Send"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Allgather results in:",
-    options: [
-      "Only root gets data",
-      "All processes receive full gathered data",
-      "Data loss",
-      "Only scatter effect"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Non-blocking communication mainly helps to:",
-    options: [
-      "Increase deadlocks",
-      "Overlap computation with communication",
-      "Remove MPI usage",
-      "Reduce processes"
-    ],
-    correctAnswer: "b"
-  },
-      {
-    text: "MPI_Bcast sends the same data from root to all processes.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Scatter sends identical data to all processes.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Gather collects data from all processes to the root.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Reduce performs a collective computation like SUM or MAX.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Allreduce returns the result only to the root process.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Barrier allows all processes to continue immediately without waiting.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "All processes must call MPI_Bcast with the same parameters.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "In MPI_Scatter, each process receives a different chunk of data.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Gather is the inverse operation of MPI_Scatter.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Reduce_scatter performs both reduction and scattering.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "MPI_Barrier is always required after every collective operation.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Collective operations like MPI_Bcast already include synchronization.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Gatherv is used when all processes send equal-sized data.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Scatter distributes data from root to all processes.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Allgather gives each process the full combined dataset.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "Domain decomposition is used to split computation across processes.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "1D block distribution assigns contiguous chunks of data.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "1D cyclic distribution assigns data in a round-robin fashion.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "1D cyclic distribution is poor for load balancing irregular workloads.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI cyclic distribution improves load balance for irregular tasks.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "MPI π computation is an embarrassingly parallel problem.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Each MPI process computes the same indices in π computation.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Reduce with MPI_SUM is used to combine partial results in π computation.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Broadcast is used in π computation to distribute final result.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI communication overhead is minimal in π computation example.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "MPI_Isend is a blocking communication function.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Irecv allows overlapping computation and communication.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Wait ensures completion of non-blocking operations.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Buffers can be safely modified before MPI_Wait completes.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "MPI_Test blocks until communication completes.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Deadlock can occur due to circular send/receive dependencies.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Sendrecv helps avoid deadlock situations.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_COMM_WORLD contains all processes in a program.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Comm_split is used to merge all processes into one group.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Color parameter in MPI_Comm_split defines group membership.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "Cartesian topology is useful for grid-based computations.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Cart_shift is used to find neighboring processes.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Strong scaling increases problem size with number of processors.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Weak scaling increases problem size as processors increase.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Speedup is defined as T(1) / T(p).",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "Efficiency is speedup divided by number of processors.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Wtime is used for high-resolution timing.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI_Barrier is recommended inside every loop for performance.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Load imbalance means all processes finish at the same time.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Master-worker model assigns tasks dynamically in some MPI designs.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-
-  {
-    text: "MPI communication should be maximized for best performance.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Collective operations are usually optimized internally.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "MPI programs always require manual synchronization everywhere.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "Profiling MPI applications helps identify bottlenecks.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Using MPI_Comm_free helps avoid resource leaks.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-     {
-    text: "What is the main advantage of GPUs over CPUs?",
-    options: [
-      "Lower memory usage",
-      "High-throughput parallel processing",
-      "Better sequential execution",
-      "Lower clock speed"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "CUDA stands for:",
-    options: [
-      "Compute Unified Data Architecture",
-      "Compute Unified Device Architecture",
-      "Central Unified Device Allocation",
-      "Core Unified Data Access"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "A GPU is primarily optimized for:",
-    options: [
-      "Low-latency tasks",
-      "Serial execution",
-      "Massive parallel computation",
-      "Operating systems"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "What is a warp in CUDA?",
-    options: [
-      "A single thread",
-      "A group of 32 threads executing in SIMT",
-      "A CPU core",
-      "A memory unit"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "SIMT in CUDA stands for:",
-    options: [
-      "Single Instruction Multiple Threads",
-      "Single Input Multiple Tasks",
-      "Shared Instruction Multi Threading",
-      "System Integrated Multi Threading"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "How many CUDA cores are executed in parallel within a warp?",
-    options: [
-      "16",
-      "32",
-      "64",
-      "128"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Warp divergence occurs when:",
-    options: [
-      "All threads execute same path",
-      "Threads take different branches",
-      "Memory is full",
-      "GPU is idle"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Warp divergence leads to:",
-    options: [
-      "Better performance",
-      "Parallel execution improvement",
-      "Serialized execution of branches",
-      "No effect"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Each SM (Streaming Multiprocessor) contains:",
-    options: [
-      "Only CPU cores",
-      "CUDA cores, registers, shared memory",
-      "Only cache memory",
-      "Only threads"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Shared memory in CUDA is:",
-    options: [
-      "Global memory",
-      "Slow memory",
-      "Fast memory shared within a block",
-      "CPU memory"
-    ],
-    correctAnswer: "c"
-  },
-
-  {
-    text: "Global memory in GPU is:",
-    options: [
-      "Fastest memory",
-      "Shared within block only",
-      "Slow but large capacity memory",
-      "Register memory"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Registers in GPU are:",
-    options: [
-      "Slow memory",
-      "Per-thread fastest memory",
-      "Shared memory",
-      "Disk storage"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "A CUDA kernel runs on:",
-    options: [
-      "CPU only",
-      "GPU device",
-      "Disk",
-      "Network"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Host refers to:",
-    options: [
-      "GPU",
-      "CPU system",
-      "Memory controller",
-      "Kernel"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Device refers to:",
-    options: [
-      "CPU",
-      "GPU",
-      "RAM",
-      "Cache only"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "CUDA programming model is based on:",
-    options: [
-      "SPMD",
-      "MIMD only",
-      "SIMD only",
-      "Sequential execution"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "SPMD means:",
-    options: [
-      "Single Program Multiple Data",
-      "Single Process Multi Device",
-      "Shared Program Memory Data",
-      "System Parallel Multi Data"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "Threads in CUDA are identified using:",
-    options: [
-      "Process ID only",
-      "blockIdx and threadIdx",
-      "CPU ID",
-      "Memory address"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "A thread block is executed on:",
-    options: [
-      "Multiple SMs",
-      "Single SM",
-      "CPU core",
-      "Disk"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Maximum threads per block is typically:",
-    options: [
-      "128",
-      "256",
-      "1024",
-      "2048"
-    ],
-    correctAnswer: "c"
-  },
-
-  {
-    text: "Grid in CUDA represents:",
-    options: [
-      "Single thread",
-      "Collection of thread blocks",
-      "CPU threads",
-      "Memory unit"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Threads inside a block can synchronize using:",
-    options: [
-      "__sync()",
-      "__syncthreads()",
-      "barrier()",
-      "wait()"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Global memory access is:",
-    options: [
-      "Fastest",
-      "Slowest compared to shared memory",
-      "Same as registers",
-      "Free"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Occupancy refers to:",
-    options: [
-      "GPU temperature",
-      "Ratio of active warps to max warps",
-      "Memory size",
-      "Thread ID"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Higher occupancy generally means:",
-    options: [
-      "Lower performance",
-      "Better latency hiding",
-      "More divergence",
-      "Less computation"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "CUDA cores are responsible for:",
-    options: [
-      "File handling",
-      "Arithmetic operations",
-      "Disk access",
-      "Networking"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Warp size in CUDA is:",
-    options: [
-      "16 threads",
-      "32 threads",
-      "64 threads",
-      "128 threads"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Warp scheduler is responsible for:",
-    options: [
-      "Disk scheduling",
-      "Issuing instructions to warps",
-      "CPU scheduling",
-      "Memory allocation"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "SIMT execution means:",
-    options: [
-      "Each thread executes different instructions",
-      "All threads execute same instruction",
-      "No parallelism",
-      "CPU-only execution"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Latency hiding in GPU is achieved by:",
-    options: [
-      "Increasing CPU speed",
-      "Switching between warps",
-      "Reducing memory",
-      "Disabling threads"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Which memory is fastest in GPU?",
-    options: [
-      "Global memory",
-      "Shared memory",
-      "Registers",
-      "Disk memory"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "Shared memory is:",
-    options: [
-      "Shared between GPUs",
-      "Shared within a thread block",
-      "Global across device",
-      "CPU memory"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Each thread has its own:",
-    options: [
-      "Shared memory",
-      "Registers",
-      "Global memory",
-      "SM"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Kernel launch is done from:",
-    options: [
-      "GPU",
-      "Host (CPU)",
-      "RAM",
-      "Cache"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "CUDA execution model is:",
-    options: [
-      "Sequential",
-      "Heterogeneous CPU-GPU",
-      "Single core only",
-      "Disk based"
-    ],
-    correctAnswer: "b"
-  },
-
-  {
-    text: "Thread block size should be multiple of:",
-    options: [
-      "16",
-      "32",
-      "64",
-      "128"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Why 32 threads per warp is important?",
-    options: [
-      "CPU limitation",
-      "Hardware SIMT execution unit",
-      "Memory alignment only",
-      "Disk optimization"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What happens when threads diverge?",
-    options: [
-      "Faster execution",
-      "Serialized execution of branches",
-      "Memory increases",
-      "GPU resets"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Best way to avoid warp divergence is:",
-    options: [
-      "Random branching",
-      "Group similar threads together",
-      "Increase CPU usage",
-      "Reduce memory"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Each SM contains:",
-    options: [
-      "Only CPU cores",
-      "CUDA cores and scheduling units",
-      "Only memory",
-      "Only cache"
-    ],
-    correctAnswer: "b"
-  },
-      {
-    text: "What is the role of the SM (Streaming Multiprocessor)?",
-    options: [
-      "CPU scheduling unit",
-      "Basic execution unit that runs warps",
-      "Disk controller",
-      "Memory allocator only"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What is Tensor Core mainly used for?",
-    options: [
-      "Integer sorting",
-      "Matrix multiply operations in deep learning",
-      "File processing",
-      "CPU-GPU communication"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which memory type has highest capacity but highest latency?",
-    options: [
-      "Registers",
-      "Shared memory",
-      "Global memory",
-      "L1 cache"
-    ],
-    correctAnswer: "c"
-  },
-  {
-    text: "CUDA streams are used for:",
-    options: [
-      "CPU scheduling",
-      "Overlapping computation and memory transfer",
-      "Disk IO",
-      "Thread creation"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which unit schedules warps inside an SM?",
-    options: [
-      "CPU scheduler",
-      "Warp scheduler",
-      "Memory controller",
-      "Thread dispatcher"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Each warp executes:",
-    options: [
-      "Different instructions per thread",
-      "Same instruction in SIMT fashion",
-      "Only memory operations",
-      "Only arithmetic operations sequentially"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What limits GPU performance most often?",
-    options: [
-      "CPU speed",
-      "Memory bandwidth and latency",
-      "Disk speed",
-      "Compiler type"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which of the following is NOT part of GPU hierarchy?",
-    options: [
-      "Thread",
-      "Warp",
-      "SM",
-      "Process scheduler (CPU level)"
+      "Mobile Hardware",
+      "Mobile Software",
+      "Mobile/Wireless Communication",
+      "Mobile Database"
     ],
     correctAnswer: "d"
   },
   {
-    text: "Thread index in CUDA is accessed using:",
+    text: "Why are mobile devices often used as front-end applications?",
     options: [
-      "threadID",
-      "threadIdx",
-      "cpuIdx",
-      "warpIdx"
+      "They have unlimited memory",
+      "They have powerful processors",
+      "They have limited processing power and memory",
+      "They are always connected to servers"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What technology is commonly used to improve security while using public mobile networks?",
+    options: [
+      "GPS",
+      "VPN",
+      "Bluetooth",
+      "Firewall Hardware"
     ],
     correctAnswer: "b"
   },
   {
-    text: "Block index in CUDA is accessed using:",
+    text: "Which network technology generally provides faster mobile internet access than GPRS and EDGE?",
     options: [
-      "blockIdx",
-      "gridIdx",
-      "warpIdx",
-      "smIdx"
+      "2G",
+      "Dial-up",
+      "3G and 4G",
+      "PSTN"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which challenge arises when mobile devices depend entirely on batteries?",
+    options: [
+      "Transmission interference",
+      "Power consumption",
+      "Circuit switching",
+      "Packet switching"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does the concept of 'Greener IT' mainly focus on?",
+    options: [
+      "Increasing screen size",
+      "Improving wireless signals",
+      "Saving power and extending battery life",
+      "Reducing network traffic"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which factor can interfere with wireless signal reception?",
+    options: [
+      "Weather",
+      "Terrain",
+      "Distance from signal source",
+      "All of the above"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "What human-device interface issue is common in mobile computing?",
+    options: [
+      "Large screens",
+      "Large keyboards",
+      "Small screens and keyboards",
+      "No display support"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Who is credited with discovering radio transmission in 1895?",
+    options: [
+      "Edison",
+      "Marconi",
+      "Bell",
+      "Tesla"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which of the following is an application of wireless communication?",
+    options: [
+      "Cellular phones",
+      "Wireless LAN",
+      "TV broadcasting",
+      "All of the above"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "Cell phone systems primarily rely on which type of communication?",
+    options: [
+      "Optical communication",
+      "Radio frequency communication",
+      "Satellite-only communication",
+      "Cable communication"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In a cellular communication system, geographic service areas are divided into:",
+    options: [
+      "Zones",
+      "Blocks",
+      "Cells",
+      "Clusters"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is the main role of a base station in a cell?",
+    options: [
+      "Stores user data",
+      "Communicates with handsets within its coverage area",
+      "Provides internet cables",
+      "Replaces switching centers"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What happens when a user moves from one cell to another during a call?",
+    options: [
+      "The call disconnects",
+      "The handset reboots",
+      "The call is handed off to another base station",
+      "The network changes to PSTN"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What device allows digital data to be transmitted over a voice network?",
+    options: [
+      "Router",
+      "Switch",
+      "Modem",
+      "Repeater"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "PSTN mainly relies on which switching technique?",
+    options: [
+      "Packet switching",
+      "Circuit switching",
+      "Message switching",
+      "Cell switching"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which type of information can be transmitted through a data network?",
+    options: [
+      "Text only",
+      "Images only",
+      "Video only",
+      "Text, images, and video"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "Data networks commonly use which mechanism?",
+    options: [
+      "Store and Forward Packet Switching",
+      "Circuit Switching",
+      "Direct Broadcasting",
+      "Frequency Hopping"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "Why may data networks experience additional delays?",
+    options: [
+      "Every switch inspects packets before forwarding",
+      "They use radio communication only",
+      "They do not use routers",
+      "Data cannot be stored temporarily"
     ],
     correctAnswer: "a"
   },
 
+  // True / False Questions (21-40)
   {
-    text: "Grid size defines:",
-    options: [
-      "Number of threads per block",
-      "Number of blocks per kernel launch",
-      "Memory size",
-      "CPU threads"
-    ],
+    text: "True or False: Mobile computing requires physical cables between devices to transmit data.",
+    options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "A thread block can execute on:",
-    options: [
-      "Multiple SMs",
-      "Only one SM",
-      "Only CPU",
-      "Disk"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Which memory is shared within a thread block?",
-    options: [
-      "Global memory",
-      "Shared memory",
-      "Registers",
-      "CPU cache"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Registers are:",
-    options: [
-      "Slow memory",
-      "Private per thread fastest memory",
-      "Shared across GPU",
-      "Disk storage"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "What happens if block size is not multiple of 32?",
-    options: [
-      "Better performance",
-      "Partial warp underutilization",
-      "GPU crash",
-      "Memory leak"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "Occupancy improves:",
-    options: [
-      "Latency hiding",
-      "Disk speed",
-      "CPU usage",
-      "Serial execution"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "What is the smallest execution unit in CUDA?",
-    options: [
-      "Warp",
-      "Thread",
-      "Block",
-      "SM"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "GPU architecture is mainly optimized for:",
-    options: [
-      "Branch-heavy logic",
-      "Massively parallel arithmetic",
-      "File systems",
-      "Sequential logic"
-    ],
-    correctAnswer: "b"
-  },
-  {
-    text: "SIMT differs from SIMD because:",
-    options: [
-      "SIMT uses threads",
-      "SIMD uses threads",
-      "SIMT uses different instructions per thread",
-      "SIMT is serial"
-    ],
-    correctAnswer: "a"
-  },
-  {
-    text: "Which component connects GPU to CPU?",
-    options: [
-      "PCIe",
-      "L1 cache",
-      "SM",
-      "Warp scheduler"
-    ],
-    correctAnswer: "a"
-  },
-      {
-    text: "GPUs are optimized for high-throughput parallel computing.",
+    text: "True or False: Mobile hardware includes components such as CPU, sensors, and memory.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "CPUs typically have thousands of cores like GPUs.",
+    text: "True or False: Mobile devices typically have unlimited processing power.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "CUDA stands for Compute Unified Device Architecture.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "GPU memory bandwidth is usually higher than CPU memory bandwidth.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "A warp consists of 64 threads executing together.",
+    text: "True or False: Security is not a concern when using public mobile networks.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "A warp in CUDA contains 32 threads.",
+    text: "True or False: VPNs can help improve security in mobile computing environments.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "SIMT means Single Instruction Multiple Threads.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Each thread in a warp can execute a different instruction at the same time.",
+    text: "True or False: GPRS and EDGE generally provide faster internet access than modern 4G networks.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Warp divergence improves GPU performance.",
+    text: "True or False: Mobile computing should consider methods to save power and improve battery life.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Weather conditions can affect wireless signal reception.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Small screens and keyboards may create usability challenges for users.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Radio transmission was discovered by Marconi in 1895.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Wireless LAN is considered a wireless communication technology.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Cellular communication systems are based on radio frequency communication.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: A cell can function without a base station.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Warp divergence causes serialization of execution paths.",
+    text: "True or False: Each cell has a maximum number of simultaneous user connections it can support.",
     options: ["True", "False"],
     correctAnswer: "a"
+  },
+  {
+    text: "True or False: A base station is directly connected to a switching center.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Handoff occurs when a mobile user moves between cells during an active call.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Traditional telephone networks are examples of voice networks.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: PSTN primarily uses packet switching.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Data networks can transmit text, images, and video.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Packet inspection at switches may contribute to network delays.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+{
+    text: "Which of the following resources is managed by a mobile operating system?",
+    options: [
+      "Processor",
+      "Memory",
+      "Files",
+      "All of the above"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "Which interface is NOT typically managed by a mobile operating system?",
+    options: [
+      "User Interface",
+      "Network Interface",
+      "Device Interface",
+      "Compiler Interface"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "The shell layer of an operating system is mainly responsible for:",
+    options: [
+      "Managing memory",
+      "Providing user interaction with the kernel",
+      "Handling interrupts",
+      "Controlling hardware directly"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In which mode does the kernel execute?",
+    options: [
+      "User Mode",
+      "Guest Mode",
+      "Supervisor Mode",
+      "Application Mode"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which component is responsible for interrupt servicing and process management?",
+    options: [
+      "Shell",
+      "Application Layer",
+      "Kernel",
+      "Framework"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which of the following is considered a Monolithic Kernel operating system?",
+    options: [
+      "Android Runtime",
+      "Windows",
+      "Dalvik VM",
+      "Application Framework"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Why is the kernel called the memory-resident part of an operating system?",
+    options: [
+      "It is stored on disk permanently",
+      "It remains loaded in main memory after booting",
+      "It runs only when needed",
+      "It is executed remotely"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is a major disadvantage of the monolithic kernel design?",
+    options: [
+      "Easy maintenance",
+      "Small kernel size",
+      "Difficult to extend and maintain",
+      "Low performance"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What may happen if a bug occurs in monolithic kernel code?",
+    options: [
+      "Only one application crashes",
+      "The debugger becomes faster",
+      "The entire system may crash",
+      "The bug is isolated automatically"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is the main goal of the microkernel approach?",
+    options: [
+      "Increase kernel size",
+      "Minimize kernel code size",
+      "Eliminate user mode",
+      "Remove process management"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In a microkernel architecture, most operating system services run as:",
+    options: [
+      "Kernel-level modules",
+      "User-level processes",
+      "Hardware interrupts",
+      "Device drivers only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which advantage is associated with microkernel architecture?",
+    options: [
+      "More difficult maintenance",
+      "Harder portability",
+      "Easier extension and maintenance",
+      "Larger kernel size"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which company acquired Android in 2005?",
+    options: [
+      "Apple",
+      "Microsoft",
+      "Google",
+      "IBM"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "The Open Handset Alliance was established in:",
+    options: [
+      "2003",
+      "2005",
+      "2007",
+      "2010"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Android application developers primarily write code using:",
+    options: [
+      "Python",
+      "C#",
+      "Java",
+      "PHP"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which Android software stack layer provides managers and content providers?",
+    options: [
+      "Kernel",
+      "Application Framework",
+      "Runtime",
+      "Libraries"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What enables Android applications to access data from other applications?",
+    options: [
+      "Dalvik VM",
+      "SQLite",
+      "Content Providers",
+      "Surface Manager"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which database system is included in Android libraries?",
+    options: [
+      "Oracle",
+      "MySQL",
+      "SQLite",
+      "MongoDB"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is the role of the Dalvik Virtual Machine?",
+    options: [
+      "Manage network hardware",
+      "Translate Java applications and execute them",
+      "Provide graphical interfaces only",
+      "Replace the Linux kernel"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Android is considered a multitasking operating system because it:",
+    options: [
+      "Uses only one application at a time",
+      "Runs applications sequentially",
+      "Allows applications to run concurrently",
+      "Supports only background services"
+    ],
+    correctAnswer: "c"
   },
 
+  // True / False Questions (21-40)
   {
-    text: "An SM is a Streaming Multiprocessor.",
+    text: "True or False: A mobile operating system manages hardware resources such as memory and processors.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Each SM contains only one CUDA core.",
+    text: "True or False: The shell directly executes privileged instructions.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Shared memory is faster than global memory.",
+    text: "True or False: The kernel runs in supervisor mode.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Global memory is the fastest memory in GPU.",
+    text: "True or False: Shell programs are usually memory resident.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Registers are private to each thread.",
+    text: "True or False: Process management is a responsibility of the kernel.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Shared memory is shared across all GPU threads globally.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "A kernel is executed on the CPU.",
-    options: ["True", "False"],
-    correctAnswer: "b"
-  },
-  {
-    text: "A CUDA kernel runs on the GPU device.",
+    text: "True or False: Windows and Unix are examples of systems using a monolithic kernel.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Host refers to GPU memory.",
+    text: "True or False: Paging generally applies to kernel code in a monolithic kernel.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Device refers to the GPU.",
+    text: "True or False: Monolithic kernels are highly modular and easy to maintain.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: A kernel bug can potentially crash the entire system.",
     options: ["True", "False"],
     correctAnswer: "a"
+  },
+  {
+    text: "True or False: Microkernels move many operating system services into user mode.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: The microkernel approach increases the amount of code running in kernel mode.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Portability is one advantage of microkernel architecture.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Android was originally developed by Apple.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: The Open Handset Alliance develops Android as open-source software.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Android applications are commonly written in Java.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Android applications can directly control their own execution priorities.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: A Notification Manager allows applications to display alerts on the status bar.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: SQLite is one of the libraries included in Android.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Every Android application runs with its own Dalvik VM instance.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Android is based on a modified Linux kernel and supports multitasking.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+   {
+    text: "Why was web access using early mobile devices often considered frustrating?",
+    options: [
+      "Large screen sizes",
+      "Fast wireless networks",
+      "Slow networks, small screens, and frequent disconnections",
+      "Lack of operating systems"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which factor contributes to slower web access on mobile devices compared to wired networks?",
+    options: [
+      "Large memory size",
+      "Transmission media limitations",
+      "Powerful processors",
+      "High screen resolution"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which organization announced the creation of Compact HTML (C-HTML) in 1998?",
+    options: [
+      "IEEE",
+      "ISO",
+      "W3C",
+      "Open Handset Alliance"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What was the primary goal of Compact HTML (C-HTML)?",
+    options: [
+      "Increase graphics quality",
+      "Support larger web pages",
+      "Reduce bandwidth usage and computational load",
+      "Replace HTTP"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which of the following features was omitted from C-HTML?",
+    options: [
+      "Text content",
+      "Links",
+      "Tables and frames",
+      "Page titles"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is WAP primarily considered?",
+    options: [
+      "A markup language",
+      "A database engine",
+      "A complete protocol stack",
+      "An operating system"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Compared to C-HTML, WAP is:",
+    options: [
+      "Simpler but less effective",
+      "More complicated and more effective",
+      "Exactly the same",
+      "Only used for SMS"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the role of a WAP gateway?",
+    options: [
+      "Store web pages permanently",
+      "Convert WAP requests/responses into HTTP requests/responses",
+      "Replace mobile browsers",
+      "Provide database services"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Why must a WAP gateway be a powerful computer?",
+    options: [
+      "It stores all websites",
+      "It performs compute-intensive protocol conversions",
+      "It replaces TCP/IP",
+      "It generates wireless signals"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "WAP is often described as network-centric because:",
+    options: [
+      "All processing occurs on mobile devices",
+      "Most intelligence is embedded in the network",
+      "It requires no servers",
+      "It uses only SMS"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "WAP 2.0 provides support for counterparts of which protocols?",
+    options: [
+      "FTP, SMTP, POP3",
+      "DNS, ARP, ICMP",
+      "IP, TCP, and HTTP",
+      "PPP and GSM only"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What does bearer-independent mean in WAP 2.0?",
+    options: [
+      "It works only with GPRS",
+      "It can operate over different wireless bearer technologies",
+      "It requires TCP/IP only",
+      "It supports wired networks exclusively"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which language is used in WAP architecture for content description?",
+    options: [
+      "HTML",
+      "XML",
+      "WML",
+      "PHP"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is WMLS?",
+    options: [
+      "A database protocol",
+      "A client-side scripting language",
+      "A network driver",
+      "A security protocol"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which WAP protocol is responsible for establishing a web browsing session?",
+    options: [
+      "WTP",
+      "WTLS",
+      "WSP",
+      "WDP"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "WSP is primarily based on which Internet protocol?",
+    options: [
+      "FTP",
+      "SMTP",
+      "HTTP",
+      "UDP"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which WAP protocol is considered the equivalent of TCP?",
+    options: [
+      "WDP",
+      "WSP",
+      "WTP",
+      "WTLS"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Why does WTP handle packet loss better than TCP in wireless environments?",
+    options: [
+      "It ignores packet loss",
+      "It is adapted specifically for wireless communication",
+      "It uses wired channels",
+      "It removes all retransmissions"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which protocol provides security, privacy, and authentication in WAP?",
+    options: [
+      "WSP",
+      "WTP",
+      "WTLS",
+      "WDP"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is the main function of WDP?",
+    options: [
+      "Session management",
+      "Security services",
+      "Adaptation layer providing UDP-like services",
+      "Web page rendering"
+    ],
+    correctAnswer: "c"
   },
 
+  // True / False Questions (21-40)
   {
-    text: "CUDA follows a SPMD programming model.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "SPMD means Single Program Multiple Data.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "Threads in CUDA are identified using threadIdx and blockIdx.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "A thread block can span multiple SMs.",
+    text: "True or False: Mobile web access is generally faster than wired web access.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Each thread block executes on a single SM.",
+    text: "True or False: Frequent signal fading can affect mobile web browsing.",
     options: ["True", "False"],
     correctAnswer: "a"
+  },
+  {
+    text: "True or False: W3C is responsible for overseeing many web standards.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: C-HTML included advanced features such as frames and dynamic content.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: One purpose of C-HTML was to reduce computational overload on mobile devices.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WAP is a markup language similar to HTML.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: WAP defines both a protocol stack and a browser.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WAP gateways convert HTTP requests directly into FTP requests.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Most WAP-related computations are performed within the network rather than on the phone.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WAP protocol stack is designed to be compatible with the Internet.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WAP 2.0 can run over technologies such as SMS, GSM, GPRS, and 3G.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WML is the Wireless Markup Language used in WAP architecture.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WMLS is a server-side scripting language.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: WSP provides session state management for mobile browsing.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WTP is equivalent to the HTTP layer in TCP/IP.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Packet loss is common in wireless networks due to factors such as signal fading and handoff.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WTLS provides protection against denial-of-service attacks.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: WDP is the bottom-most protocol in the WAP protocol suite.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: A bearer is a low-level transport mechanism for network messages.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Packet-switched bearer services are generally better suited for mobile devices than circuit-switched services.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "What is the primary function of GPS?",
+    options: [
+      "Sending text messages",
+      "Providing location and time information",
+      "Storing satellite images",
+      "Increasing mobile battery life"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Who developed the Global Positioning System (GPS)?",
+    options: [
+      "European Space Agency",
+      "NASA",
+      "U.S. Department of Defense",
+      "Google"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "How many satellites are minimally required for GPS coverage globally?",
+    options: [
+      "12",
+      "18",
+      "24",
+      "30"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is the typical altitude of GPS satellites?",
+    options: [
+      "2,000 km",
+      "10,000 km",
+      "20,200 km",
+      "35,000 km"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which segment of GPS includes ground control stations?",
+    options: [
+      "Space Segment",
+      "Control Segment",
+      "User Segment",
+      "Network Segment"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the role of the user segment in GPS?",
+    options: [
+      "Monitor satellites",
+      "Transmit satellite signals",
+      "Receive and process GPS signals",
+      "Control orbital paths"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which signal band is used for civilian GPS use?",
+    options: [
+      "L2",
+      "L5",
+      "L1",
+      "X band"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is the speed used to calculate GPS signal travel distance?",
+    options: [
+      "Speed of sound",
+      "Speed of electricity",
+      "Speed of light",
+      "Orbital velocity"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What technique is used by GPS to differentiate satellite signals?",
+    options: [
+      "Frequency Division Multiplexing",
+      "Time Division Multiplexing",
+      "CDMA",
+      "AM modulation"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is required for accurate GPS distance measurement?",
+    options: [
+      "Battery power",
+      "Signal travel time",
+      "Internet connection",
+      "Bluetooth pairing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the main purpose of atomic clocks in satellites?",
+    options: [
+      "Increase signal strength",
+      "Store data",
+      "Maintain precise time synchronization",
+      "Control satellite speed"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Why do GPS receivers need 4 satellites instead of 3?",
+    options: [
+      "To increase speed",
+      "To reduce noise",
+      "To solve clock error and position",
+      "To compress data"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is trilateration based on?",
+    options: [
+      "Angle measurements",
+      "Distance measurements",
+      "Signal color",
+      "Frequency hopping"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In 2D trilateration, three circles intersect to determine:",
+    options: [
+      "Speed",
+      "Time",
+      "A unique position",
+      "Altitude only"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What does a sphere represent in 3D GPS trilateration?",
+    options: [
+      "Signal strength",
+      "Distance from a satellite",
+      "Battery level",
+      "Noise level"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is PDOP used to measure?",
+    options: [
+      "Battery efficiency",
+      "Signal encryption",
+      "Position accuracy based on satellite geometry",
+      "Data transfer speed"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which condition improves GPS accuracy?",
+    options: [
+      "Satellites clustered together",
+      "Low satellite visibility",
+      "Wide satellite distribution",
+      "Indoor usage"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which error is caused by signal bouncing off buildings?",
+    options: [
+      "Clock error",
+      "Multipath error",
+      "Orbital error",
+      "Almanac error"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which system improves GPS accuracy using ground reference stations?",
+    options: [
+      "WAP",
+      "DGPS",
+      "WML",
+      "GSM"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the main use of SBAS systems?",
+    options: [
+      "Gaming applications",
+      "Broadcast TV",
+      "Wide-area GPS correction and integrity",
+      "File transfer"
+    ],
+    correctAnswer: "c"
   },
 
+  // ===================== TRUE / FALSE (21–40) =====================
   {
-    text: "Maximum threads per block is typically 1024.",
+    text: "True or False: GPS works anywhere on Earth with line of sight to satellites.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Grid represents a single thread.",
+    text: "True or False: GPS satellites are located in geostationary orbit.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Grid contains multiple thread blocks.",
+    text: "True or False: A GPS system requires at least 24 satellites for global coverage.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Threads inside a block can synchronize using __syncthreads().",
+    text: "True or False: Signal travel time is used to calculate distance in GPS.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Threads from different blocks can synchronize using __syncthreads().",
+    text: "True or False: GPS signals travel slower than the speed of sound.",
     options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: A 1 microsecond error can cause about 300 meters position error.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: GPS receivers use atomic clocks internally.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Satellite clocks are continuously corrected by ground stations.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Trilateration uses distances from satellites to determine position.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Two satellites are enough to determine a unique 3D position.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Three satellites are sufficient for 2D position calculation.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: GPS accuracy is not affected by atmospheric conditions.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Ionospheric delay can affect GPS accuracy.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Multipath errors occur when signals reflect off surfaces.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Buildings and tunnels can block GPS signals.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: PDOP is lower when satellites are evenly distributed in the sky.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: DGPS can improve accuracy to about 1–3 meters.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: SBAS systems operate only at ground level without satellites.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: WAP and GPS are based on the same technology.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: GPS can be affected by signal interference and reflection.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+ {
+    text: "What is the main role of sensors in smartphones?",
+    options: [
+      "Increase battery life",
+      "Measure physical quantities and convert them into signals",
+      "Store application data",
+      "Improve internet speed"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A transducer is best defined as:",
+    options: [
+      "A device that stores memory",
+      "A device that converts one form of energy to another",
+      "A wireless communication module",
+      "A type of software algorithm"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A sensor is a transducer that converts:",
+    options: [
+      "Electric signal into storage data",
+      "Physical phenomenon into an electric signal",
+      "Software into hardware",
+      "Binary code into images"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "An actuator is a device that:",
+    options: [
+      "Converts physical motion into electricity",
+      "Stores sensor data",
+      "Converts electric signal into physical action",
+      "Processes network packets"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which type of sensor requires auxiliary power?",
+    options: [
+      "Passive sensors",
+      "Self-generating sensors",
+      "Active (modulating) sensors",
+      "Mechanical-only sensors"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which of the following is NOT a physical property sensor type?",
+    options: [
+      "Temperature sensor",
+      "Light sensor",
+      "Chemical detector",
+      "CPU scheduler"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "Hardware-based sensors are best described as:",
+    options: [
+      "Virtual software components",
+      "External cloud services",
+      "Physical components built into devices",
+      "Web APIs"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Software-based sensors mainly:",
+    options: [
+      "Replace hardware completely",
+      "Do not use any data sources",
+      "Derive data from hardware sensors",
+      "Only measure temperature"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which is a motion sensor?",
+    options: [
+      "GPS",
+      "Accelerometer",
+      "Light sensor",
+      "Microphone"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which sensor is used for position detection?",
+    options: [
+      "Gyroscope",
+      "Accelerometer",
+      "GPS",
+      "Microphone"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Environmental sensors measure:",
+    options: [
+      "CPU speed",
+      "Network bandwidth",
+      "Environmental parameters like light and temperature",
+      "Battery voltage only"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "In smartphone coordinate system, the Z-axis points:",
+    options: [
+      "Left",
+      "Right",
+      "Toward the screen",
+      "Outside the screen face"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "When a device is stationary on a table, the accelerometer reads approximately:",
+    options: [
+      "0g",
+      "1g",
+      "2g",
+      "10g"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does an accelerometer measure?",
+    options: [
+      "Angular velocity",
+      "Magnetic field",
+      "Proper acceleration",
+      "Signal strength"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which type of accelerometer is cheap and widely used in smartphones?",
+    options: [
+      "Piezoelectric",
+      "MEMS",
+      "Optical",
+      "Hydraulic"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Piezoelectric accelerometers are best for:",
+    options: [
+      "Low frequency and high amplitude signals",
+      "High frequency and low amplitude signals",
+      "No signal detection",
+      "Only temperature measurement"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Gyroscope sensors measure:",
+    options: [
+      "Temperature changes",
+      "Angular velocity",
+      "Light intensity",
+      "Battery charge"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Gyroscope output is typically measured in:",
+    options: [
+      "m/s",
+      "rad/s",
+      "kg",
+      "Hz only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which issue affects gyroscope accuracy over time?",
+    options: [
+      "Signal amplification",
+      "Drift",
+      "Battery loss",
+      "Screen delay"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Sensor fusion combines:",
+    options: [
+      "GPS and Wi-Fi",
+      "Accelerometer and gyroscope",
+      "Camera and microphone",
+      "CPU and GPU"
+    ],
     correctAnswer: "b"
   },
 
+  // ===================== TRUE / FALSE (21–40) =====================
   {
-    text: "Occupancy is the ratio of active warps to maximum warps.",
+    text: "True or False: Sensors convert physical quantities into electrical signals.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Higher occupancy always guarantees better performance.",
+    text: "True or False: Actuators convert electrical signals into physical actions.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Passive sensors require external power to function.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Latency hiding is achieved by switching between warps.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "GPU cores are designed for serial execution.",
+    text: "True or False: Active sensors are also called self-generating sensors.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "CUDA cores execute floating point and integer operations.",
+    text: "True or False: Hardware sensors are physical components inside a device.",
     options: ["True", "False"],
     correctAnswer: "a"
+  },
+  {
+    text: "True or False: Software sensors do not rely on hardware data.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: GPS is a position sensor.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Accelerometers measure angular velocity.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Accelerometers measure acceleration along three axes.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Gravity is included in accelerometer readings.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: A stationary device shows 0g on the accelerometer.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: MEMS accelerometers are large and expensive.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Piezoelectric accelerometers are good for high frequency signals.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Gyroscopes measure rotation around axes.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Gyroscope output is zero when the device is not rotating.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Gyroscopes are completely drift-free over time.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Sensor fusion improves accuracy by combining multiple sensors.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Environmental sensors include temperature and light sensors.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: The X-axis points upward in smartphone coordinate systems.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Accelerometer readings include gravitational force.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "What does a gyroscope sensor primarily measure?",
+    options: [
+      "Linear acceleration",
+      "Angular velocity",
+      "Temperature changes",
+      "Light intensity"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Angular velocity is defined as:",
+    options: [
+      "Change in linear distance per time",
+      "Change in rotational angle per unit time",
+      "Change in pressure over time",
+      "Change in mass over time"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Gyroscope readings are typically expressed in:",
+    options: [
+      "m/s",
+      "rad/s",
+      "kg/m³",
+      "Hz only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which of the following describes gyroscope output axes?",
+    options: [
+      "Pitch, Roll, Yaw",
+      "X, Y, Z position only",
+      "Latitude, Longitude, Altitude",
+      "Speed, Time, Distance"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "Pitch rotation occurs around which axis?",
+    options: [
+      "X-axis",
+      "Y-axis",
+      "Z-axis",
+      "All axes simultaneously"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "Roll rotation occurs around which axis?",
+    options: [
+      "X-axis",
+      "Y-axis",
+      "Z-axis",
+      "None"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Yaw rotation occurs around which axis?",
+    options: [
+      "X-axis",
+      "Y-axis",
+      "Z-axis",
+      "Gravity axis only"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What happens to gyroscope readings when the device is not rotating?",
+    options: [
+      "They increase",
+      "They become zero",
+      "They become random",
+      "They double"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is a major drawback of gyroscopes?",
+    options: [
+      "Low cost",
+      "Drift over time",
+      "No axis support",
+      "No motion detection"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Sensor fusion combines gyroscope with:",
+    options: [
+      "Light sensor",
+      "Microphone",
+      "Accelerometer",
+      "Proximity sensor"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which statement best describes an accelerometer?",
+    options: [
+      "Measures angular velocity",
+      "Measures linear acceleration",
+      "Measures sound waves",
+      "Measures humidity"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which sensor is better for detecting rotations?",
+    options: [
+      "Accelerometer",
+      "Gyroscope",
+      "Light sensor",
+      "Thermometer"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Accelerometer cannot distinguish between:",
+    options: [
+      "Gravity and linear movement",
+      "Light and sound",
+      "Rotation and temperature",
+      "Pressure and humidity"
+    ],
+    correctAnswer: "a"
+  },
+  {
+    text: "A gyroscope measures:",
+    options: [
+      "Only movement",
+      "Only rotation",
+      "Only temperature",
+      "Only pressure"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which combination provides both rotation and movement tracking?",
+    options: [
+      "GPS + Wi-Fi",
+      "Accelerometer + Gyroscope",
+      "Microphone + Light sensor",
+      "Barometer + Temperature sensor"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is a proximity sensor used for?",
+    options: [
+      "Measuring temperature",
+      "Detecting nearby objects without contact",
+      "Measuring rotation",
+      "Measuring light intensity"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Proximity sensors are commonly used to:",
+    options: [
+      "Detect screen brightness",
+      "Measure distance from user's face during calls",
+      "Measure altitude",
+      "Track GPS location"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Light sensors measure:",
+    options: [
+      "Sound levels",
+      "Illuminance (lux)",
+      "Pressure",
+      "Temperature"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the main use of light sensors in phones?",
+    options: [
+      "Increase CPU speed",
+      "Adjust screen brightness automatically",
+      "Improve GPS accuracy",
+      "Detect rotation"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A thermometer in mobile devices mainly measures:",
+    options: [
+      "External weather only",
+      "Internal device and battery temperature",
+      "Rotation speed",
+      "Light intensity"
+    ],
+    correctAnswer: "b"
   },
 
+  // ===================== TRUE / FALSE (21–40) =====================
   {
-    text: "Tensor cores are used mainly for matrix operations.",
+    text: "True or False: Gyroscopes measure angular velocity.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Tensor cores are optimized for deep learning workloads.",
+    text: "True or False: Angular velocity is measured in degrees per second or radians per second.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "GPU global memory has lower latency than registers.",
+    text: "True or False: Gyroscopes measure linear movement.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Register memory is the fastest memory in GPU.",
+    text: "True or False: Gyroscopes provide pitch, roll, and yaw values.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Each thread has its own private registers.",
+    text: "True or False: Gyroscope readings are always perfect and do not drift.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Sensor fusion helps correct gyroscope drift.",
     options: ["True", "False"],
     correctAnswer: "a"
+  },
+  {
+    text: "True or False: Accelerometers are ideal for rotation tracking.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Accelerometers are good for tilt detection.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Gyroscopes measure only rotation, not movement.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: A proximity sensor requires physical contact to detect objects.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Proximity sensors may return distance in centimeters.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Light sensors measure illuminance in lux units.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Light sensors are used to adjust screen brightness automatically.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Thermometers in phones are mainly used to monitor internal overheating.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Barometers measure atmospheric pressure.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Pressure sensors can help improve GPS accuracy.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Microphones convert sound into electrical signals.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Sound waves are captured using a diaphragm in microphones.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Gyroscopes and accelerometers provide identical types of data.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Sensor fusion combines multiple sensor inputs for better accuracy.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+   {
+    text: "What does MANET stand for?",
+    options: [
+      "Mobile Advanced Network Technology",
+      "Mobile Ad Hoc Network",
+      "Managed Access Network Environment Tool",
+      "Multi Access Node Ethernet Technology"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "How is a MANET best defined?",
+    options: [
+      "A fixed wired network with routers",
+      "A self-configuring network of mobile devices without infrastructure",
+      "A satellite-based network system",
+      "A cloud computing platform"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is NOT required in a MANET?",
+    options: [
+      "Base stations",
+      "Routers",
+      "Fixed infrastructure",
+      "All of the above"
+    ],
+    correctAnswer: "d"
+  },
+  {
+    text: "In MANETs, data is forwarded through:",
+    options: [
+      "Central server only",
+      "Direct satellite link",
+      "Neighboring mobile nodes",
+      "Fiber optic backbone"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Why is routing in MANETs complex?",
+    options: [
+      "Nodes are fixed in place",
+      "Routes never change",
+      "Dynamic topology and lack of global identifiers",
+      "No need for routing"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "In wired networks, routing is mainly based on:",
+    options: [
+      "Battery level",
+      "IP destination address",
+      "Signal strength",
+      "Node mobility"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which characteristic is NOT true for MANETs?",
+    options: [
+      "Dynamic topology",
+      "Fixed infrastructure",
+      "Energy constrained nodes",
+      "Multi-hop routing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What does 'multi-hop routing' mean in MANETs?",
+    options: [
+      "Direct communication only",
+      "Data is stored locally only",
+      "Packets are forwarded through multiple intermediate nodes",
+      "No routing is needed"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which environment is NOT a typical MANET application area?",
+    options: [
+      "Military operations",
+      "Emergency disaster recovery",
+      "Fixed data centers",
+      "Environmental monitoring"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "What is node density in MANETs?",
+    options: [
+      "Number of routers per country",
+      "Number of nodes per geographical area",
+      "Battery level of nodes",
+      "Speed of transmission"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Connectivity in MANET refers to:",
+    options: [
+      "Number of satellites",
+      "Number of neighbors within transmission range",
+      "Internet speed",
+      "Storage capacity"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Why is clustering used in large MANETs?",
+    options: [
+      "To increase battery usage",
+      "To reduce communication overhead",
+      "To eliminate routing",
+      "To increase packet loss"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is a major issue in MANET design?",
+    options: [
+      "Fixed topology",
+      "Energy constraints",
+      "Unlimited bandwidth",
+      "Centralized control"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "What is the main problem with energy in MANET nodes?",
+    options: [
+      "Nodes generate infinite energy",
+      "Battery drainage due to routing tasks",
+      "Energy is not needed",
+      "Energy is only used for display"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which strategy helps reduce energy consumption in MANETs?",
+    options: [
+      "Increasing packet size",
+      "Sleep mode for nodes",
+      "Increasing routing frequency",
+      "Removing routing protocols"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is a MANET characteristic?",
+    options: [
+      "Centralized administration",
+      "Fixed access points",
+      "Distributed peer-to-peer operation",
+      "Static topology"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "MANET links are generally:",
+    options: [
+      "Unlimited bandwidth",
+      "Fixed capacity",
+      "Bandwidth-constrained and variable",
+      "Optical only"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which protocol type discovers routes only when needed?",
+    options: [
+      "Proactive",
+      "Reactive",
+      "Hybrid",
+      "Static"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which routing protocol maintains periodic routing tables?",
+    options: [
+      "Reactive",
+      "Proactive",
+      "On-demand",
+      "Flooding-only"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which is an example of a reactive routing protocol?",
+    options: [
+      "OSPF",
+      "DSR",
+      "RIP",
+      "BGP"
+    ],
+    correctAnswer: "b"
   },
 
+  // ===================== TRUE / FALSE (21–40) =====================
   {
-    text: "CUDA streams are used for overlapping computation and data transfer.",
-    options: ["True", "False"],
-    correctAnswer: "a"
-  },
-  {
-    text: "GPU execution is purely sequential.",
+    text: "True or False: MANETs require fixed infrastructure like base stations.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Kernel launch is done from the host (CPU).",
+    text: "True or False: MANET nodes can act as routers.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "Device refers to CPU memory.",
+    text: "True or False: MANET topology is static and never changes.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Warp scheduler selects which warp executes next instruction.",
+    text: "True or False: Routing in MANET is easier than in wired networks.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Nodes in MANET forward packets for other nodes.",
     options: ["True", "False"],
     correctAnswer: "a"
+  },
+  {
+    text: "True or False: MANET networks are centrally managed.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Energy constraints are a major issue in MANETs.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Multi-hop routing is used in MANETs.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Connectivity depends on number of neighbors in range.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: MANETs are suitable for disaster recovery situations.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Bandwidth in MANET is always unlimited.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Node density affects routing protocol design.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Proactive routing builds routes only when needed.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Reactive routing uses flooding for route discovery.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Hybrid routing combines proactive and reactive approaches.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Routes in MANET are stable and never change.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: MANET nodes have limited battery life.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: In reactive routing, routes are always pre-stored.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: Clustering helps reduce communication overhead in large MANETs.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: MANETs cannot be used in military applications.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+   {
+    text: "What is the main idea of proactive routing protocols in MANETs?",
+    options: [
+      "Routes are discovered only when needed",
+      "Routes are established in advance and always maintained",
+      "No routing tables are used",
+      "Only one-hop communication is allowed"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which of the following is an example of a proactive routing protocol?",
+    options: [
+      "DSR",
+      "AODV",
+      "GSR",
+      "IERP"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Global State Routing (GSR) is based on which routing concept?",
+    options: [
+      "Distance vector routing",
+      "Link state routing",
+      "Flooding only",
+      "Random routing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In traditional Link State Routing, routing information is:",
+    options: [
+      "Only sent to destination nodes",
+      "Flooded to all nodes in the network",
+      "Sent only to neighbors of neighbors",
+      "Never updated"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In GSR, routing tables are broadcasted to:",
+    options: [
+      "All nodes immediately",
+      "Immediate neighbors only",
+      "Only the destination",
+      "Satellite nodes"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which algorithm is used in GSR to compute shortest paths?",
+    options: [
+      "Bellman-Ford",
+      "Dijkstra’s Algorithm",
+      "Kruskal’s Algorithm",
+      "Prim’s Algorithm"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "A key advantage of GSR is:",
+    options: [
+      "No control overhead at all",
+      "Global flooding of updates",
+      "Reduced control overhead compared to full link-state flooding",
+      "No need for routing tables"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "A disadvantage of GSR is:",
+    options: [
+      "Very fast convergence",
+      "No routing tables",
+      "High propagation latency of topology updates",
+      "No need for neighbors"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Hybrid routing protocols in MANETs combine:",
+    options: [
+      "Wired and wireless routing",
+      "Proactive and reactive approaches",
+      "Static and dynamic IP addressing",
+      "TCP and UDP protocols"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which protocol is an example of hybrid routing?",
+    options: [
+      "GSR",
+      "ZRP",
+      "DSR",
+      "LSR"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In Zone Routing Protocol (ZRP), a network is divided into:",
+    options: [
+      "Clusters based on servers",
+      "Zones based on hop radius",
+      "IP subnets only",
+      "Satellite regions"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In ZRP, the routing zone is defined by:",
+    options: [
+      "Number of users",
+      "Battery power",
+      "Hop count radius",
+      "IP address range"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Inside the zone, ZRP uses which approach?",
+    options: [
+      "Reactive routing",
+      "Proactive routing",
+      "Random routing",
+      "No routing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Outside the zone, ZRP uses:",
+    options: [
+      "Proactive routing",
+      "Reactive routing",
+      "Static routing",
+      "Broadcast-only routing"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which protocol is responsible for intra-zone routing in ZRP?",
+    options: [
+      "IERP",
+      "IARP",
+      "BRP",
+      "GSR"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "Which protocol is responsible for inter-zone routing in ZRP?",
+    options: [
+      "IARP",
+      "IERP",
+      "LSR",
+      "GSR"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "BRP in ZRP stands for:",
+    options: [
+      "Basic Routing Protocol",
+      "Bordercast Resolution Protocol",
+      "Binary Routing Process",
+      "Broadcast Relay Protocol"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "BRP is mainly used to:",
+    options: [
+      "Increase flooding in network",
+      "Reduce routing table size",
+      "Efficiently send route queries to border nodes",
+      "Disable routing updates"
+    ],
+    correctAnswer: "c"
+  },
+  {
+    text: "Which factor strongly affects ZRP performance?",
+    options: [
+      "Screen resolution",
+      "Zone radius",
+      "CPU type",
+      "Bluetooth version"
+    ],
+    correctAnswer: "b"
+  },
+  {
+    text: "In high-density MANETs, ZRP typically prefers:",
+    options: [
+      "Large zone radius",
+      "Small zone radius",
+      "No routing zones",
+      "Fixed routing only"
+    ],
+    correctAnswer: "b"
   },
 
+  // ===================== TRUE / FALSE (21–40) =====================
   {
-    text: "Block size must be multiple of warp size (32).",
+    text: "True or False: Proactive routing protocols always maintain routes to all nodes.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "CUDA is mainly designed for low-latency single-thread tasks.",
+    text: "True or False: GSR is a reactive routing protocol.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "Memory coalescing improves GPU performance.",
+    text: "True or False: GSR sends routing updates only to immediate neighbors.",
     options: ["True", "False"],
     correctAnswer: "a"
   },
   {
-    text: "All threads in a warp can execute different instructions without penalty.",
+    text: "True or False: Link State Routing floods routing updates to all nodes.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: GSR completely eliminates control overhead.",
     options: ["True", "False"],
     correctAnswer: "b"
   },
   {
-    text: "GPU performance depends heavily on memory bandwidth.",
+    text: "True or False: Dijkstra’s algorithm is used in GSR for path computation.",
     options: ["True", "False"],
     correctAnswer: "a"
-  }
+  },
+  {
+    text: "True or False: Hybrid routing combines proactive and reactive approaches.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: ZRP is an example of a hybrid routing protocol.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: In ZRP, each node has a fixed global zone shared by all nodes.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: The zone radius in ZRP is measured in hops.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: IARP handles routing outside the zone.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: IERP is used for inter-zone routing in ZRP.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: BRP helps reduce unnecessary flooding in ZRP.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: ZRP always behaves purely as a proactive protocol.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: ZRP performance depends on the zone radius selection.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: High mobility favors a larger zone radius in ZRP.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: High node density can increase control overhead in ZRP.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Proactive routing reduces latency for route discovery.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  },
+  {
+    text: "True or False: Reactive routing maintains routes all the time.",
+    options: ["True", "False"],
+    correctAnswer: "b"
+  },
+  {
+    text: "True or False: ZRP aims to balance overhead and latency.",
+    options: ["True", "False"],
+    correctAnswer: "a"
+  }         
 ];
 
 
